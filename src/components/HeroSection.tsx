@@ -15,9 +15,9 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          AI + Data
+          AI + Business
           <br />
-          <span className="text-muted-foreground">Readiness</span>
+          <span className="text-muted-foreground">Growth</span>
         </motion.h1>
         
         <motion.p
@@ -26,10 +26,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Turn your data into actionable insight that informs decision-making.
-          <br className="hidden md:block" />
-          We help companies with custom AI applications, consulting on best practices, and 
-          operationalizing AI-solutions with high-quality data.
+          Hey 👋 I'm Nicola — I create custom AI automations for companies that save time and supercharge their sales.
         </motion.p>
 
         <motion.div

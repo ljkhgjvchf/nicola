@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import nicolaProfile from '@/assets/nicola-profile.jpg';
 
 export const AboutSection = () => {
   const [currentTool, setCurrentTool] = useState(0);
@@ -34,15 +35,11 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              AI professional with expertise in automation and data readiness. 
-              I help businesses transform their operations through intelligent automation solutions 
-              that save time, reduce costs, and improve efficiency.
+              Hey 👋 I'm Nicola — I build AI automation! I help businesses save time, make more money, and get rid of boring, repetitive tasks. I show you how to let smart tech do the heavy lifting so your team can focus on the fun, important stuff.
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
-              With years of experience in AI development and business process optimization, 
-              I've helped companies across various industries implement cutting-edge automation 
-              solutions that deliver measurable results.
+              With years of experience in Growth Hacking Strategies, I've helped companies across various industries implement cutting-edge automation solutions that deliver measurable results.
             </p>
 
             <div className="space-y-4">
@@ -79,11 +76,11 @@ export const AboutSection = () => {
           >
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden glass-card p-1">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-muted/20 to-primary/10 flex items-center justify-center">
-                  <div className="w-72 h-72 rounded-full bg-muted/30 flex items-center justify-center">
-                    <span className="text-muted-foreground font-light">Nicola Da Dalto</span>
-                  </div>
-                </div>
+                <img 
+                  src={nicolaProfile} 
+                  alt="Nicola Da Dalto" 
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               
               <motion.div

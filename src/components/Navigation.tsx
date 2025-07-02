@@ -31,13 +31,15 @@ export const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-montserrat font-medium text-xl text-foreground">
+          <button
+            onClick={() => scrollToSection('hero')}
+            className="font-montserrat font-medium text-xl text-foreground hover:text-primary transition-colors cursor-pointer"
+          >
             Nicola Da Dalto
-          </div>
+          </button>
           
           <div className="hidden md:flex items-center space-x-8">
             {[
-              { label: 'Home', id: 'hero' },
               { label: 'Case Studies', id: 'case-studies' },
               { label: 'Services', id: 'services' },
               { label: 'About', id: 'about' },
