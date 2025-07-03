@@ -43,7 +43,7 @@ export const CaseStudiesSection = () => {
       }} viewport={{
         once: true
       }}>
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">Success Stories</h2>
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">What My Clients Achieved</h2>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automation</p>
         </motion.div>
 
@@ -68,23 +68,17 @@ export const CaseStudiesSection = () => {
                         <h3 className="text-2xl md:text-3xl font-medium text-foreground">
                           {study.service}
                         </h3>
-                        {study.link && (
-                          <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                        {study.link && <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
                             <ArrowSquareOut size={20} weight="light" />
-                          </a>
-                        )}
+                          </a>}
                       </div>
                       
                       <div className="flex items-center gap-3 mb-2">
                         <span className="text-foreground font-medium">Client:</span>
                         <img src={study.clientLogo} alt={study.client} className="w-8 h-8 rounded-full object-cover" />
-                        {study.link ? (
-                          <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-lg text-primary hover:text-primary/80 transition-colors">
+                        {study.link ? <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-lg text-primary hover:text-primary/80 transition-colors">
                             {study.client}
-                          </a>
-                        ) : (
-                          <span className="text-lg text-muted-foreground">{study.client}</span>
-                        )}
+                          </a> : <span className="text-lg text-muted-foreground">{study.client}</span>}
                       </div>
                       
                       <p className="text-muted-foreground mb-6 leading-relaxed">
