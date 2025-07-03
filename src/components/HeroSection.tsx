@@ -7,8 +7,16 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+      {/* Spline Background */}
+      <div className="absolute inset-0 z-0">
+        <div dangerouslySetInnerHTML={{
+          __html: '<spline-viewer url="https://prod.spline.design/NeWVRbrS4PovqbXK/scene.splinecode"></spline-viewer>'
+        }} />
+      </div>
+      
+      {/* Content Overlay */}
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h1
           className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground mb-8 leading-none"
           initial={{ opacity: 0, y: 50 }}

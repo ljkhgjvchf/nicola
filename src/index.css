@@ -128,7 +128,7 @@ All colors MUST be HSL.
 
   .glow-button-pulse {
     @apply relative overflow-hidden transition-all duration-300 ease-out;
-    animation: pulse-glow 2s infinite;
+    animation: pulse-glow 4s infinite;
   }
 
   .glow-button-pulse:hover {

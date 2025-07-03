@@ -60,7 +60,7 @@ export const CaseStudiesSection = () => {
         }} viewport={{
           once: true
         }}>
-              <Card className="glass-card p-8 md:p-12 transition-transform duration-300 hover:scale-105">
+              <Card className="glass-card p-8 md:p-12">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
@@ -82,7 +82,7 @@ export const CaseStudiesSection = () => {
                       </div>
                       
                       <p className="text-muted-foreground mb-6 leading-relaxed">
-                        <span className="text-foreground font-medium">Functions:</span> {study.functions}
+                        <span className="text-foreground font-medium">Request:</span> {study.functions}
                       </p>
 
                       <div className="space-y-2">

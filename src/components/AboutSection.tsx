@@ -79,7 +79,7 @@ export const AboutSection = () => {
                 <img 
                   src={nicolaProfile} 
                   alt="Nicola Da Dalto" 
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover object-center object-bottom rounded-xl"
                 />
               </div>
               
