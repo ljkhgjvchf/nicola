@@ -126,6 +126,25 @@ All colors MUST be HSL.
     box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
   }
 
+  .glow-button-pulse {
+    @apply relative overflow-hidden transition-all duration-300 ease-out;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .glow-button-pulse:hover {
+    @apply shadow-xl;
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.7);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+    }
+  }
+
   .nav-blur {
     @apply backdrop-blur-md bg-background/80 border-b border-border/50;
   }

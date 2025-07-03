@@ -21,7 +21,7 @@ export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,23 +68,23 @@ export const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            className="flex justify-center lg:justify-end"
-            initial={{ opacity: 0, x: 50 }}
+            className="flex justify-center lg:justify-start lg:order-first"
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden glass-card p-1">
+              <div className="w-96 h-96 overflow-hidden glass-card p-1 rounded-2xl">
                 <img 
                   src={nicolaProfile} 
                   alt="Nicola Da Dalto" 
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full object-cover rounded-xl"
                 />
               </div>
               
               <motion.div
-                className="absolute -top-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center"
+                className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center"
                 animate={{ 
                   scale: [1, 1.1, 1],
                   rotate: [0, 5, -5, 0]

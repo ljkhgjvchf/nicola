@@ -14,15 +14,15 @@ export const Footer = () => {
               href="https://www.linkedin.com/in/nicoladadalto/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-primary transition-colors p-2 bg-primary/10 rounded-full hover:bg-primary/20"
+              className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
             >
-              <LinkedinLogo size={28} weight="light" />
+              <LinkedinLogo size={24} weight="light" />
             </a>
             <a
               href="mailto:dadalto.nicola@gmail.com"
-              className="text-foreground hover:text-primary transition-colors p-2 bg-primary/10 rounded-full hover:bg-primary/20"
+              className="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
             >
-              <Envelope size={28} weight="light" />
+              <Envelope size={24} weight="light" />
             </a>
           </div>
         </div>

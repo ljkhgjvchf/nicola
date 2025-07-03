@@ -25,12 +25,12 @@ export const CaseStudiesSection = () => {
     service: "AI Phone Receptionist",
     client: "Hair Saloon Vincenzo",
     clientLogo: hairSalonLogo,
-    link: "https://eit-ris.eu/",
+    link: null,
     functions: "Work as a Phone Receptionist taking appointments via phone, check availability, schedule appointments, set SMS/email reminders",
     achievements: ["Handle +95 calls monthly", "Working 24/7 even when owner is on holiday", "100% appointment accuracy"],
     demo: "Voice AI demonstration available"
   }];
-  return <section id="case-studies" className="py-24 px-6 bg-[#1d1d1c]">
+  return <section id="case-studies" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div className="text-center mb-16" initial={{
         opacity: 0,
@@ -43,8 +43,8 @@ export const CaseStudiesSection = () => {
       }} viewport={{
         once: true
       }}>
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-white mb-6">Success Stories</h2>
-          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automation</p>
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">Success Stories</h2>
+          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automation</p>
         </motion.div>
 
         <div className="grid gap-8 md:gap-12">
@@ -60,7 +60,7 @@ export const CaseStudiesSection = () => {
         }} viewport={{
           once: true
         }}>
-              <Card className="glass-card p-8 md:p-12">
+              <Card className="glass-card p-8 md:p-12 transition-transform duration-300 hover:scale-105">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
@@ -68,15 +68,23 @@ export const CaseStudiesSection = () => {
                         <h3 className="text-2xl md:text-3xl font-medium text-foreground">
                           {study.service}
                         </h3>
-                        <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
-                          <ArrowSquareOut size={20} weight="light" />
-                        </a>
+                        {study.link && (
+                          <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                            <ArrowSquareOut size={20} weight="light" />
+                          </a>
+                        )}
                       </div>
                       
                       <div className="flex items-center gap-3 mb-2">
                         <span className="text-foreground font-medium">Client:</span>
                         <img src={study.clientLogo} alt={study.client} className="w-8 h-8 rounded-full object-cover" />
-                        <span className="text-lg text-muted-foreground">{study.client}</span>
+                        {study.link ? (
+                          <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-lg text-primary hover:text-primary/80 transition-colors">
+                            {study.client}
+                          </a>
+                        ) : (
+                          <span className="text-lg text-muted-foreground">{study.client}</span>
+                        )}
                       </div>
                       
                       <p className="text-muted-foreground mb-6 leading-relaxed">

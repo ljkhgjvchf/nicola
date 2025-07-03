@@ -26,7 +26,7 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 px-6">
+    <section id="faq" className="py-24 px-6 bg-[#1d1d1c]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -35,12 +35,12 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-white mb-6">
             Frequently Asked
             <br />
-            <span className="text-muted-foreground">Questions</span>
+            <span className="text-white/70">Questions</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
             Get answers to common questions about AI automation and our services
           </p>
         </motion.div>
@@ -58,10 +58,10 @@ export const FAQSection = () => {
                 value={`item-${index}`}
                 className="glass-card px-6 border-none"
               >
-                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
+                <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-primary transition-colors py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <AccordionContent className="text-white/70 leading-relaxed pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -45,12 +45,16 @@ export const Navigation = () => {
               { label: 'About', id: 'about' },
               { label: 'Clients', id: 'clients' },
               { label: 'FAQ', id: 'faq' },
-              { label: 'Contact', id: 'contact' }
+              { label: 'Contact', id: 'contact', highlight: true }
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-light"
+                className={`transition-colors duration-200 text-sm font-light ${
+                  item.highlight 
+                    ? 'text-primary hover:text-primary/80' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
               >
                 {item.label}
               </button>

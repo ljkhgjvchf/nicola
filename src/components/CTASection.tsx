@@ -25,7 +25,7 @@ export const CTASection = () => {
           
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed">Book a free 15-minute consultation to discover how AI automation can save time, and increase revenue.</p>
 
-          <Button onClick={handleBookCall} className="glow-button bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-full" size="lg">
+          <Button onClick={handleBookCall} className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-full transition-transform duration-300 hover:scale-105" size="lg">
             Book Your Free Consultation
           </Button>
 

@@ -36,7 +36,7 @@ export const HeroSection = () => {
         >
           <Button
             onClick={handleGetStarted}
-            className="glow-button bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full"
+            className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full transition-transform duration-300 hover:scale-105"
             size="lg"
           >
             Let's Automate Your Business
