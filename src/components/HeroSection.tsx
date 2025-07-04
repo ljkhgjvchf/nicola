@@ -7,15 +7,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* Spline Background */}
-      <div className="absolute inset-0 z-0">
-        <div dangerouslySetInnerHTML={{
-          __html: '<spline-viewer url="https://prod.spline.design/NeWVRbrS4PovqbXK/scene.splinecode"></spline-viewer>'
-        }} />
-      </div>
-      
-      {/* Content Overlay */}
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h1
           className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground mb-8 leading-none"
@@ -34,7 +26,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Hey 👋 I'm Nicola — I create custom AI automations for companies that save time and supercharge their sales.
+          Hey 👋 I'm Nicola — I create custom AI automations for companies that save time and supercharge sales.
         </motion.p>
 
         <motion.div
