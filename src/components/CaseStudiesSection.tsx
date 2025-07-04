@@ -44,7 +44,7 @@ export const CaseStudiesSection = () => {
         once: true
       }}>
           <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">What My Clients Achieved</h2>
-          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automations</p>
+          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automation</p>
         </motion.div>
 
         <div className="grid gap-8 md:gap-12">

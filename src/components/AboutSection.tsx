@@ -6,8 +6,8 @@ export const AboutSection = () => {
   const [currentTool, setCurrentTool] = useState(0);
 
   const tools = [
-    'n8n', 'Make.com', 'Apify', 'Instantly', 'MailChimp', 
-    'HubSpot', 'Apollo', 'Zapier', 'ChatGPT', 'Claude.ai', 'Deepseek'
+    'N8N', 'Make.com', 'Apify', 'Instantly', 'MailChimp', 
+    'HubSpot', 'Apollo', 'Zapier', 'ChatGPT', 'Cloud', 'Deepseek'
   ];
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              Hey 👋 I'm Nicola — I build AI automations!
+              Hey 👋 I'm Nicola — I build AI automation! I help businesses save time, make more money, and get rid of boring, repetitive tasks. I show you how to let smart tech do the heavy lifting so your team can focus on the fun, important stuff.
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
@@ -79,7 +79,7 @@ export const AboutSection = () => {
                 <img 
                   src={nicolaProfile} 
                   alt="Nicola Da Dalto" 
-                  className="w-full h-full object-cover object-center object-top rounded-xl"
+                  className="w-full h-full object-cover object-center object-bottom rounded-xl"
                 />
               </div>
               
