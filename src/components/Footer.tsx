@@ -29,7 +29,7 @@ export const Footer = () => {
         
         <div className="text-center mt-8 pt-8 border-t border-border">
           <p className="text-muted-foreground text-sm font-light">
-            © 2024 Nicola Da Dalto. All rights reserved.
+            © 2025 Nicola Da Dalto.
           </p>
         </div>
       </div>

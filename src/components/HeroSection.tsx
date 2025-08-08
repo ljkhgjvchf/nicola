@@ -9,6 +9,12 @@ export const HeroSection = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
       
+      {/* Top-left subtle blue glow */}
+      <div
+        className="absolute -top-32 -left-32 w-[640px] h-[640px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle at top left, hsl(var(--primary) / 0.18), transparent 60%)' }}
+        aria-hidden="true"
+      />
       {/* Content Overlay */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h1

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+import brandLogo from '@/assets/brand-logo.png';
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,9 +33,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('hero')}
-            className="font-montserrat font-medium text-xl text-foreground hover:text-primary transition-colors cursor-pointer"
+            className="font-montserrat font-medium text-xl text-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-2"
           >
-            Nicola Da Dalto
+            <img src={brandLogo} alt="Nicola Da Dalto logo" className="h-6 w-auto" />
+            <span>Nicola Da Dalto</span>
           </button>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -43,7 +44,7 @@ export const Navigation = () => {
               { label: 'Case Studies', id: 'case-studies' },
               { label: 'Services', id: 'services' },
               { label: 'About', id: 'about' },
-              { label: 'Clients', id: 'clients' },
+              
               { label: 'FAQ', id: 'faq' },
               { label: 'Contact', id: 'contact', highlight: true }
             ].map((item) => (
