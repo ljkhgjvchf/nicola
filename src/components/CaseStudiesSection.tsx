@@ -1,116 +1,171 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowSquareOut } from 'phosphor-react';
-import europeanUnionLogo from '@/assets/european-union-logo.png';
-import hairSalonLogo from '@/assets/hair-salon-logo.jpg';
-import wineBrandLogo from '@/assets/wine-brand-logo.jpg';
+import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
+import exclusibleLogo from '@/assets/exclusible-logo.png';
+import cryptodailyAward from '@/assets/cryptodaily-award.jpg';
 export const CaseStudiesSection = () => {
-  const caseStudies = [{
-    service: "AI Lead Generation Systems",
-    client: "Ca' di Rajo Wines",
-    clientLogo: wineBrandLogo,
-    link: "https://www.cadirajo.it/en/",
-    functions: "Lead generation system + Qualifies Leads + Sends Hyper-Personalised Emails",
-    achievements: ["Generate +1000 new potential leads per month", "CR (Conversion Rate) 10%", "Client sales € 200K after 60 days"],
-    demo: "Results dashboard with metrics"
+  const experiences = [{
+    role: "Web3 Marketing Manager",
+    client: "Cointelegraph",
+    clientLogo: cointelegraphLogo,
+    link: "https://cointelegraph.com",
+    period: "Jul 2024 - Sept 2025 · 1 yr 3 mos",
+    description: "In Cointelegraph's marketing agency department, I help top crypto clients (RWA, CEX, DEX, L1, DePIN) optimise their marketing strategies for successful campaigns.",
+    achievements: [
+      "Manage KOLs for top crypto firms, driving campaign success",
+      "Create marketing strategies, ensuring high performance and ROI", 
+      "Grow social media engagement by 40% (average) for crypto clients",
+      "Grow communities by 50% (average) within 6 months",
+      "Provide data-driven reports to track campaign success"
+    ]
   }, {
-    service: "AI Customer Support",
-    client: "European Union",
-    clientLogo: europeanUnionLogo,
-    link: "https://eit-ris.eu/",
-    functions: "Work as customer support and help users find the best funding for their needs",
-    achievements: ["Average conversations per month: +325", "Helped +145 companies find the best funding", "Saving +60 hrs a month"],
-    demo: "Live chatbot integration available"
-  }, {
-    service: "AI Phone Receptionist",
-    client: "Hair Saloon Vincenzo",
-    clientLogo: hairSalonLogo,
-    link: null,
-    functions: "Work as a Phone Receptionist taking appointments via phone, check availability, schedule appointments, set SMS/email reminders",
-    achievements: ["Handle +95 calls monthly", "Working 24/7 even when owner is on holiday", "100% appointment accuracy"],
-    demo: "Voice AI demonstration available"
+    role: "Digital Marketing Manager", 
+    client: "Exclusible",
+    clientLogo: exclusibleLogo,
+    link: "https://exclusible.com",
+    period: "Jul 2022 - Feb 2024 · 1 yr 8 mos",
+    description: "Led digital marketing initiatives for a premium Web3 platform, focusing on NFT collections and Fortune 500 client onboarding.",
+    achievements: [
+      "Launch 17 NFT collections raking in $10M in total revenues",
+      "Onboarded 29 Fortune 500 clients and luxury brands into Web3", 
+      "Achieving a +300% in B2B lead generation through strategic initiatives",
+      "Build a community of +50k members in 3 weeks for Alpine NFT collection",
+      "Build a community of +90K users in 3 weeks for AI client Doppl.ai",
+      "Increased marketing and sales team productivity by +40% by implementing Hubspot CRM automation",
+      "Improved exclusible.com SEO resulting in +30% traffic growth"
+    ],
+    award: {
+      title: "Selected as one of 12 winners of the 2023 CryptoDaily™ Awards",
+      subtitle: "Jury's runner-up pick title in the Marketing and PR category",
+      image: cryptodailyAward,
+      link: "https://cryptodaily.co.uk/2023/06/celebrating-the-12-winners-of-the-2023-cryptodaily-awards"
+    }
   }];
-  return <section id="case-studies" className="py-24 px-6">
+  return (
+    <section id="case-studies" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div className="text-center mb-16" initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.6
-      }} viewport={{
-        once: true
-      }}>
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">What My Clients Achieved</h2>
-          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">Real results from real clients who transformed their business with AI automations</p>
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
+            My Web3 Experience
+          </h2>
+          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+            Real results from Web3 projects that generated millions in revenue
+          </p>
         </motion.div>
 
         <div className="grid gap-8 md:gap-12">
-          {caseStudies.map((study, index) => <motion.div key={index} initial={{
-          opacity: 0,
-          y: 50
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: index * 0.2
-        }} viewport={{
-          once: true
-        }}>
+          {experiences.map((experience, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
               <Card className="glass-card p-8 md:p-12">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="grid md:grid-cols-2 gap-8 items-start">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
                         <h3 className="text-2xl md:text-3xl font-medium text-foreground">
-                          {study.service}
+                          {experience.role}
                         </h3>
-                        {study.link && <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
-                            <ArrowSquareOut size={20} weight="light" />
-                          </a>}
+                        <a 
+                          href={experience.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ArrowSquareOut size={20} weight="light" />
+                        </a>
                       </div>
                       
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="text-foreground font-medium">Client:</span>
-                        <img src={study.clientLogo} alt={study.client} className="w-8 h-8 rounded-full object-cover" />
-                        {study.link ? <a href={study.link} target="_blank" rel="noopener noreferrer" className="text-lg text-primary hover:text-primary/80 transition-colors">
-                            {study.client}
-                          </a> : <span className="text-lg text-muted-foreground">{study.client}</span>}
+                        <span className="text-foreground font-medium">Company:</span>
+                        <img 
+                          src={experience.clientLogo} 
+                          alt={experience.client} 
+                          className="w-8 h-8 rounded-full object-cover" 
+                        />
+                        <a 
+                          href={experience.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-lg text-primary hover:text-primary/80 transition-colors"
+                        >
+                          {experience.client}
+                        </a>
                       </div>
+
+                      <p className="text-sm text-muted-foreground mb-4">{experience.period}</p>
                       
                       <p className="text-muted-foreground mb-6 leading-relaxed">
-                        <span className="text-foreground font-medium">Request:</span> {study.functions}
+                        {experience.description}
                       </p>
 
                       <div className="space-y-2">
-                        <h4 className="text-foreground font-medium mb-3">Achievements:</h4>
-                        {study.achievements.map((achievement, idx) => <div key={idx} className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                            <span className="text-muted-foreground">{achievement}</span>
-                          </div>)}
+                        <h4 className="text-foreground font-medium mb-3">Key Achievements:</h4>
+                        {experience.achievements.map((achievement, idx) => (
+                          <div key={idx} className="flex items-start gap-2">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-muted-foreground text-sm">{achievement}</span>
+                          </div>
+                        ))}
                       </div>
+
+                      {experience.award && (
+                        <div className="mt-8 p-4 glass-card bg-primary/5 border-primary/20">
+                          <div className="flex items-start gap-4">
+                            <img 
+                              src={experience.award.image} 
+                              alt="CryptoDaily Award" 
+                              className="w-16 h-16 object-cover rounded-lg"
+                            />
+                            <div>
+                              <a 
+                                href={experience.award.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 transition-colors"
+                              >
+                                <h5 className="font-medium text-sm mb-1">{experience.award.title}</h5>
+                                <p className="text-xs text-muted-foreground">{experience.award.subtitle}</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div className="glass-card p-6 bg-muted/10">
                       <div className="text-center">
                         <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center mb-4">
                           <span className="text-muted-foreground font-light">
-                            {study.demo}
+                            Case Study Available
                           </span>
                         </div>
-                        <p className="text-sm text-muted-foreground">
-                          Live Demo Available
+                        <p className="text-sm text-muted-foreground mb-2">
+                          View detailed case studies
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Contact me for more details
                         </p>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>)}
+            </motion.div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

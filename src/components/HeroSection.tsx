@@ -12,7 +12,7 @@ export const HeroSection = () => {
       {/* Top-left subtle blue glow */}
       <div
         className="absolute -top-32 -left-32 w-[640px] h-[640px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle at top left, hsl(var(--primary) / 0.18), transparent 60%)' }}
+        style={{ background: 'radial-gradient(circle at top left, hsl(var(--primary) / 0.35), transparent 60%)' }}
         aria-hidden="true"
       />
       {/* Content Overlay */}
@@ -23,9 +23,9 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          AI + Business
+          AI + Marketing =
           <br />
-          <span className="text-muted-foreground">Growth</span>
+          <span className="text-muted-foreground">Business Growth</span>
         </motion.h1>
         
         <motion.p
@@ -34,7 +34,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Hey 👋 I'm Nicola — I create custom AI automations for companies that save time and supercharge sales.
+          Hey 👋 I'm Nicola — I generated $10M revenue in NFTs & Onboarded Fortune 500 clients into Web3.
         </motion.p>
 
         <motion.div
@@ -47,7 +47,7 @@ export const HeroSection = () => {
             className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full transition-transform duration-300 hover:scale-105"
             size="lg"
           >
-            Let's Automate Your Business
+            Let's Grow Your Business
           </Button>
         </motion.div>
       </div>

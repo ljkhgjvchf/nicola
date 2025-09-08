@@ -35,11 +35,11 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              Hey 👋 I'm Nicola — I build AI automations! I help businesses save time, make more money, and get rid of boring, repetitive tasks. I show you how to let smart tech do the heavy lifting so your team can focus on the fun, important stuff.
+              Hey 👋 I'm Nicola — I'm a Web3 marketing expert who generated $10M in NFT revenue and onboarded Fortune 500 clients into the blockchain space. I specialize in building communities, launching successful projects, and creating marketing strategies that deliver real results.
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
-              With years of experience in Growth Hacking Strategies, I've helped companies across various industries implement cutting-edge automation solutions that deliver measurable results.
+              With years of experience in digital marketing and Web3 strategy, I've helped crypto projects, luxury brands, and enterprises successfully navigate the blockchain ecosystem and achieve remarkable growth.
             </p>
 
             <div className="space-y-4">

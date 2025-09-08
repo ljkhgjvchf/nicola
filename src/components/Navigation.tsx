@@ -35,7 +35,7 @@ export const Navigation = () => {
             onClick={() => scrollToSection('hero')}
             className="font-montserrat font-medium text-xl text-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-2"
           >
-            <img src={brandLogo} alt="Nicola Da Dalto logo" className="h-6 w-auto" />
+            <img src={brandLogo} alt="Nicola Da Dalto logo" className="h-6 w-auto" style={{ animation: 'rotate-360 12s linear infinite' }} />
             <span>Nicola Da Dalto</span>
           </button>
           

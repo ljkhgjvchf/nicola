@@ -4,24 +4,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 export const FAQSection = () => {
   const faqs = [
     {
-      question: "How much can we save with AI automation?",
-      answer: "Most clients see 15-30 hours saved per week per automated process, plus significant error reduction. At an average hourly cost of $50 for knowledge work, that's $39,000-78,000 in annual savings per automation. Our ROI projections are conservative — reality often exceeds expectations."
+      question: "What makes your Web3 marketing approach different?",
+      answer: "I combine traditional marketing expertise with deep Web3 knowledge, having generated $10M in NFT revenue and onboarded Fortune 500 clients. My data-driven approach focuses on community building and measurable results."
     },
     {
-      question: "Do we own the automations and agents you build?",
-      answer: "Completely. Every system, workflow, and piece of documentation becomes your property. With the Fractional service, we maintain and optimise them for you, but you retain full ownership and can transition to internal management anytime."
+      question: "How quickly can you build a community for my project?",
+      answer: "Results vary by project, but I've built communities of 50k+ members in just 3 weeks for NFT collections and 90k+ users for AI projects. Success depends on strategy execution and project uniqueness."
     },
     {
-      question: "Do you offer a guarantee?",
-      answer: "Yes! We offer a 30-day satisfaction guarantee. If you're not completely satisfied with the automation solution we deliver, we'll work with you to make it right or provide a full refund. We're confident in our ability to deliver results that exceed your expectations."
+      question: "Do you work with both crypto startups and established brands?",
+      answer: "Yes! I've worked with both emerging crypto projects and Fortune 500 companies entering Web3. My experience spans from startup NFT collections to enterprise blockchain adoption strategies."
     },
     {
-      question: "How long does it take to implement an AI automation solution?",
-      answer: "Implementation time varies based on complexity. Simple automations like chatbots can be deployed in 1-2 weeks, while comprehensive systems like lead generation platforms typically take 4-6 weeks. We provide detailed timelines during our initial consultation."
+      question: "What's your approach to NFT collection launches?",
+      answer: "I use a comprehensive strategy covering community building, influencer partnerships, strategic marketing campaigns, and launch coordination. My 17 NFT launches generated over $10M in total revenue."
     },
     {
-      question: "What kind of ongoing support do you provide?",
-      answer: "We offer comprehensive ongoing support including system monitoring, performance optimization, updates, and training for your team. Our support packages are flexible and can be customized based on your specific needs and technical capabilities."
+      question: "How do you measure marketing campaign success?",
+      answer: "I provide detailed data-driven reports tracking key metrics like community growth, engagement rates, conversion rates, and revenue generation. Transparency and measurable results are core to my approach."
+    },
+    {
+      question: "Can you help traditional companies enter Web3?",
+      answer: "Absolutely! I specialize in helping traditional businesses understand and enter the Web3 space safely. I've successfully onboarded 29 Fortune 500 clients and luxury brands into blockchain technology."
     }
   ];
 
@@ -41,7 +45,7 @@ export const FAQSection = () => {
             <span className="text-white/70">Questions</span>
           </h2>
           <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-            Get answers to common questions about AI automation and our services
+            Get answers to common questions about Web3 marketing and my services
           </p>
         </motion.div>
 
