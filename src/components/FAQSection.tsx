@@ -4,28 +4,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 export const FAQSection = () => {
   const faqs = [
     {
-      question: "What makes your Web3 marketing approach different?",
-      answer: "I combine traditional marketing expertise with deep Web3 knowledge, having generated $10M in NFT revenue and onboarded Fortune 500 clients. My data-driven approach focuses on community building and measurable results."
+      question: "What services do you offer?",
+      answer: "I specialize in Web3 marketing, community building, AI SEO, enterprise blockchain onboarding, and performance marketing. My focus is on generating measurable results and revenue growth."
     },
     {
-      question: "How quickly can you build a community for my project?",
-      answer: "Results vary by project, but I've built communities of 50k+ members in just 3 weeks for NFT collections and 90k+ users for AI projects. Success depends on strategy execution and project uniqueness."
+      question: "How much does it cost to work with you?",
+      answer: "Pricing depends on project scope and requirements. I offer both project-based and retainer arrangements. Contact me for a personalized quote based on your specific needs."
     },
     {
-      question: "Do you work with both crypto startups and established brands?",
-      answer: "Yes! I've worked with both emerging crypto projects and Fortune 500 companies entering Web3. My experience spans from startup NFT collections to enterprise blockchain adoption strategies."
+      question: "How long does it take to see results?",
+      answer: "Timeline varies by service - community building can show results in 2-4 weeks, while SEO typically takes 3-6 months. I've built 50k+ communities in just 3 weeks for successful projects."
     },
     {
-      question: "What's your approach to NFT collection launches?",
-      answer: "I use a comprehensive strategy covering community building, influencer partnerships, strategic marketing campaigns, and launch coordination. My 17 NFT launches generated over $10M in total revenue."
+      question: "Do you work with small businesses or just enterprises?",
+      answer: "I work with businesses of all sizes, from crypto startups to Fortune 500 companies. My approach is tailored to each client's budget, goals, and market position."
     },
     {
-      question: "How do you measure marketing campaign success?",
-      answer: "I provide detailed data-driven reports tracking key metrics like community growth, engagement rates, conversion rates, and revenue generation. Transparency and measurable results are core to my approach."
+      question: "Can you guarantee specific results?",
+      answer: "While I can't guarantee specific numbers, I have a proven track record: $10M in NFT revenue, 29 Fortune 500 clients onboarded, and consistent community growth. I focus on data-driven strategies with measurable outcomes."
     },
     {
-      question: "Can you help traditional companies enter Web3?",
-      answer: "Absolutely! I specialize in helping traditional businesses understand and enter the Web3 space safely. I've successfully onboarded 29 Fortune 500 clients and luxury brands into blockchain technology."
+      question: "What makes you different from other marketing agencies?",
+      answer: "I combine hands-on experience in Web3 with traditional marketing expertise. Having personally managed $10M+ campaigns and won industry awards, I offer both strategic vision and tactical execution."
     }
   ];
 
