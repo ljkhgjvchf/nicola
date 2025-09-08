@@ -4,6 +4,7 @@ import { ArrowSquareOut } from 'phosphor-react';
 import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
 import exclusibleLogo from '@/assets/exclusible-logo.png';
 import cryptodailyAward from '@/assets/cryptodaily-award.jpg';
+
 export const CaseStudiesSection = () => {
   const experiences = [{
     role: "Web3 Marketing Manager",
@@ -42,6 +43,7 @@ export const CaseStudiesSection = () => {
       link: "https://cryptodaily.co.uk/2023/06/celebrating-the-12-winners-of-the-2023-cryptodaily-awards"
     }
   }];
+
   return (
     <section id="case-studies" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
