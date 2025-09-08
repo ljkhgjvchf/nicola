@@ -16,8 +16,8 @@ export const ServicesSection = () => {
     },
     {
       icon: Diamond,
-      title: "AI SEO",
-      description: "Advanced AI-powered SEO strategies that boost organic traffic and improve search rankings for Web3 and traditional businesses."
+      title: "NFT Collection Launch",
+      description: "End-to-end NFT collection launches that generate millions in revenue through strategic marketing and community engagement."
     },
     {
       icon: Buildings,
