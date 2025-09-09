@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
 import exclusibleLogo from '@/assets/exclusible-logo.png';
-import europeanUnionLogo from '@/assets/european-union-logo.png';
-import wineBrandLogo from '@/assets/wine-brand-logo.jpg';
-import hairSalonLogo from '@/assets/hair-salon-logo.jpg';
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Cointelegraph', logo: cointelegraphLogo },
-    { name: 'Exclusible', logo: exclusibleLogo },
-    { name: 'European Union', logo: europeanUnionLogo },
-    { name: 'Wine Brand', logo: wineBrandLogo },
-    { name: 'Hair Salon', logo: hairSalonLogo }
+    { name: 'Alpine', logo: 'https://via.placeholder.com/120x60/333/fff?text=Alpine' },
+    { name: 'Bugatti', logo: 'https://via.placeholder.com/120x60/333/fff?text=Bugatti' },
+    { name: 'Coty', logo: 'https://via.placeholder.com/120x60/333/fff?text=Coty' },
+    { name: 'Hublot', logo: 'https://via.placeholder.com/120x60/333/fff?text=Hublot' },
+    { name: 'Hugo Boss', logo: 'https://via.placeholder.com/120x60/333/fff?text=Hugo+Boss' },
+    { name: 'McDonalds', logo: 'https://via.placeholder.com/120x60/333/fff?text=McDonalds' },
+    { name: 'Shiseido', logo: 'https://via.placeholder.com/120x60/333/fff?text=Shiseido' },
+    { name: 'Vogue', logo: 'https://via.placeholder.com/120x60/333/fff?text=Vogue' }
   ];
 
   return (
@@ -33,7 +33,7 @@ export const CompanyLogosSection = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}

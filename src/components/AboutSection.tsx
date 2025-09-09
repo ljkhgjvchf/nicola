@@ -35,7 +35,7 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              Hey 👋 I'm Nicola — I'm a Web3 marketing expert who generated $10M in NFT revenue and onboarded Fortune 500 clients into the blockchain space. I specialize in building communities, launching successful projects, and creating marketing strategies that deliver real results.
+              Hey 👋 I'm Nicola — I'm a Web3 marketing expert with +6 years of experience and +4 years in crypto. I specialize in building communities, launching successful projects, and creating marketing strategies that deliver real results.
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
