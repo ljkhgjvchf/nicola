@@ -62,7 +62,7 @@ export const CaseStudiesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           {experiences.map((experience, index) => (
             <motion.div 
               key={index}
@@ -71,97 +71,76 @@ export const CaseStudiesSection = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="glass-card p-8 md:p-12">
+              <Card className="glass-card p-8 md:p-10">
                 <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2 gap-8 items-start">
-                    <div>
-                      <div className="flex items-center gap-3 mb-4">
-                        <h3 className="text-2xl md:text-3xl font-medium text-foreground">
-                          {experience.role}
-                        </h3>
-                        <a 
-                          href={experience.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-primary hover:text-primary/80 transition-colors"
-                        >
-                          <ArrowSquareOut size={20} weight="light" />
-                        </a>
-                      </div>
-                      
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-foreground font-medium">Company:</span>
-                        <img 
-                          src={experience.clientLogo} 
-                          alt={experience.client} 
-                          className="w-8 h-8 rounded-full object-cover" 
-                        />
-                        <a 
-                          href={experience.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-lg text-primary hover:text-primary/80 transition-colors"
-                        >
-                          {experience.client}
-                        </a>
-                      </div>
-
-                      <p className="text-sm text-muted-foreground mb-4">{experience.period}</p>
-                      
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {experience.description}
-                      </p>
-
-                      <div className="space-y-2">
-                        <h4 className="text-foreground font-medium mb-3">Key Achievements:</h4>
-                        {experience.achievements.map((achievement, idx) => (
-                          <div key={idx} className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-muted-foreground text-sm">{achievement}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {experience.award && (
-                        <div className="mt-8 p-4 glass-card bg-primary/5 border-primary/20">
-                          <div className="flex items-start gap-4">
-                            <img 
-                              src={experience.award.image} 
-                              alt="CryptoDaily Award" 
-                              className="w-16 h-16 object-cover rounded-lg"
-                            />
-                            <div>
-                              <a 
-                                href={experience.award.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary hover:text-primary/80 transition-colors"
-                              >
-                                <h5 className="font-medium text-sm mb-1">{experience.award.title}</h5>
-                                <p className="text-xs text-muted-foreground">{experience.award.subtitle}</p>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="glass-card p-6 bg-muted/10">
-                      <div className="text-center">
-                        <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center mb-4">
-                          <span className="text-muted-foreground font-light">
-                            Case Study Available
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-2">
-                          View detailed case studies
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          Contact me for more details
-                        </p>
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <h3 className="text-2xl md:text-3xl font-medium text-foreground">
+                      {experience.role}
+                    </h3>
+                    <a 
+                      href={experience.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <ArrowSquareOut size={20} weight="light" />
+                    </a>
                   </div>
+                  
+                  <div className="flex items-center gap-3 mb-2">
+                    <img 
+                      src={experience.clientLogo} 
+                      alt={experience.client} 
+                      className="w-8 h-8 rounded-full object-cover" 
+                    />
+                    <a 
+                      href={experience.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-lg text-primary hover:text-primary/80 transition-colors"
+                    >
+                      {experience.client}
+                    </a>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground mb-4">{experience.period}</p>
+                  
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {experience.description}
+                  </p>
+
+                  <div className="space-y-2">
+                    <h4 className="text-foreground font-medium mb-3">Key Achievements:</h4>
+                    {experience.achievements.map((achievement, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-muted-foreground text-sm">{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {experience.award && (
+                    <div className="mt-8 p-4 glass-card bg-primary/5 border-primary/20">
+                      <div className="flex items-start gap-4">
+                        <img 
+                          src={experience.award.image} 
+                          alt="CryptoDaily Award" 
+                          className="w-16 h-16 object-cover rounded-lg"
+                        />
+                        <div>
+                          <a 
+                            href={experience.award.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary/80 transition-colors"
+                          >
+                            <h5 className="font-medium text-sm mb-1">{experience.award.title}</h5>
+                            <p className="text-xs text-muted-foreground">{experience.award.subtitle}</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Rocket, Users, Diamond, Buildings, ChartBar, Target } from 'phosphor-react';
+import { Rocket, Users, Robot, Buildings, ChartBar, Target } from 'phosphor-react';
 
 export const ServicesSection = () => {
   const services = [
@@ -15,9 +15,9 @@ export const ServicesSection = () => {
       description: "Build and grow engaged communities of 50k+ members through strategic social media campaigns and KOL management."
     },
     {
-      icon: Diamond,
-      title: "NFT Collection Launch",
-      description: "End-to-end NFT collection launches that generate millions in revenue through strategic marketing and community engagement."
+      icon: Robot,
+      title: "AI-Powered Marketing",
+      description: "Leverage artificial intelligence and automation tools to optimize marketing campaigns, improve SEO performance, and drive scalable growth."
     },
     {
       icon: Buildings,

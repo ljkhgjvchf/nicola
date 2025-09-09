@@ -1,13 +1,17 @@
 import { motion } from 'framer-motion';
+import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
+import exclusibleLogo from '@/assets/exclusible-logo.png';
+import europeanUnionLogo from '@/assets/european-union-logo.png';
+import wineBrandLogo from '@/assets/wine-brand-logo.jpg';
+import hairSalonLogo from '@/assets/hair-salon-logo.jpg';
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Cointelegraph', logo: 'https://cryptonews.com/wp-content/uploads/2019/10/Cointelegraph-Logo.png' },
-    { name: 'Exclusible', logo: 'https://exclusible.com/images/exclusible-logo.png' },
-    { name: 'Alpine', logo: 'https://pbs.twimg.com/profile_images/1565725687914643456/k3F3gRWe_400x400.jpg' },
-    { name: 'Doppl.ai', logo: 'https://doppl.ai/logo.png' },
-    { name: 'HubSpot', logo: 'https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png' },
-    { name: 'Make.com', logo: 'https://www.make.com/en/favicon.ico' }
+    { name: 'Cointelegraph', logo: cointelegraphLogo },
+    { name: 'Exclusible', logo: exclusibleLogo },
+    { name: 'European Union', logo: europeanUnionLogo },
+    { name: 'Wine Brand', logo: wineBrandLogo },
+    { name: 'Hair Salon', logo: hairSalonLogo }
   ];
 
   return (
