@@ -1,17 +1,23 @@
 import { motion } from 'framer-motion';
-import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
-import exclusibleLogo from '@/assets/exclusible-logo.png';
+import alpineLogo from '@/assets/company-logos/alpine.svg';
+import bugattiLogo from '@/assets/company-logos/bugatti.svg';
+import cotyLogo from '@/assets/company-logos/coty.svg';
+import hublotLogo from '@/assets/company-logos/hublot.svg';
+import hugoBossLogo from '@/assets/company-logos/hugo-boss.svg';
+import mcdonaldsLogo from '@/assets/company-logos/mcdonalds.svg';
+import shiseidoLogo from '@/assets/company-logos/shiseido.svg';
+import vogueLogo from '@/assets/company-logos/vogue.svg';
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Alpine', logo: 'https://via.placeholder.com/120x60/333/fff?text=Alpine' },
-    { name: 'Bugatti', logo: 'https://via.placeholder.com/120x60/333/fff?text=Bugatti' },
-    { name: 'Coty', logo: 'https://via.placeholder.com/120x60/333/fff?text=Coty' },
-    { name: 'Hublot', logo: 'https://via.placeholder.com/120x60/333/fff?text=Hublot' },
-    { name: 'Hugo Boss', logo: 'https://via.placeholder.com/120x60/333/fff?text=Hugo+Boss' },
-    { name: 'McDonalds', logo: 'https://via.placeholder.com/120x60/333/fff?text=McDonalds' },
-    { name: 'Shiseido', logo: 'https://via.placeholder.com/120x60/333/fff?text=Shiseido' },
-    { name: 'Vogue', logo: 'https://via.placeholder.com/120x60/333/fff?text=Vogue' }
+    { name: 'Alpine', logo: alpineLogo },
+    { name: 'Bugatti', logo: bugattiLogo },
+    { name: 'Coty', logo: cotyLogo },
+    { name: 'Hublot', logo: hublotLogo },
+    { name: 'Hugo Boss', logo: hugoBossLogo },
+    { name: 'McDonalds', logo: mcdonaldsLogo },
+    { name: 'Shiseido', logo: shiseidoLogo },
+    { name: 'Vogue', logo: vogueLogo }
   ];
 
   return (
