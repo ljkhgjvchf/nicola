@@ -45,25 +45,28 @@ export const CompanyLogosSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {companies.map((company, index) => (
-            <motion.div
-              key={company.name}
-              className="flex items-center justify-center p-4 glass-card hover:bg-muted/20 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
-            </motion.div>
-          ))}
+          {companies.map((company, index) => {
+            const isLargerLogo = ['Bugatti', 'Vogue', 'Coty'].includes(company.name);
+            return (
+              <motion.div
+                key={company.name}
+                className="flex items-center justify-center p-4 glass-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  className={`w-auto object-contain ${isLargerLogo ? 'h-16' : 'h-8'}`}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
