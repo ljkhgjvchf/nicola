@@ -10,14 +10,14 @@ import vogueLogo from '@/assets/company-logos/vogue.svg';
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Alpine', logo: alpineLogo },
-    { name: 'Bugatti', logo: bugattiLogo },
-    { name: 'Coty', logo: cotyLogo },
-    { name: 'Hublot', logo: hublotLogo },
-    { name: 'Hugo Boss', logo: hugoBossLogo },
-    { name: 'McDonalds', logo: mcdonaldsLogo },
-    { name: 'Shiseido', logo: shiseidoLogo },
-    { name: 'Vogue', logo: vogueLogo }
+    { name: 'Alpine', logo: alpineLogo, size: 'normal' },
+    { name: 'Bugatti', logo: bugattiLogo, size: 'large' },
+    { name: 'Coty', logo: cotyLogo, size: 'large' },
+    { name: 'Hublot', logo: hublotLogo, size: 'normal' },
+    { name: 'Hugo Boss', logo: hugoBossLogo, size: 'normal' },
+    { name: 'McDonalds', logo: mcdonaldsLogo, size: 'normal' },
+    { name: 'Shiseido', logo: shiseidoLogo, size: 'normal' },
+    { name: 'Vogue', logo: vogueLogo, size: 'large' }
   ];
 
   return (
@@ -48,7 +48,7 @@ export const CompanyLogosSection = () => {
           {companies.map((company, index) => (
             <motion.div
               key={company.name}
-              className="flex items-center justify-center p-4 glass-card hover:bg-muted/20 transition-all duration-300"
+              className="flex items-center justify-center p-4 glass-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -57,7 +57,9 @@ export const CompanyLogosSection = () => {
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
-                className="h-8 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                className={`w-auto object-contain ${
+                  company.size === 'large' ? 'h-16' : 'h-8'
+                }`}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                 }}
