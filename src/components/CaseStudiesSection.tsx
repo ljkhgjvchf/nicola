@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowSquareOut } from 'phosphor-react';
 import cointelegraphLogo from '@/assets/cointelegraph-logo.png';
 import exclusibleLogo from '@/assets/exclusible-logo.png';
-import cryptodailyAward from '@/assets/cryptodaily-award.jpg';
 
 export const CaseStudiesSection = () => {
   const experiences = [{
@@ -35,13 +34,7 @@ export const CaseStudiesSection = () => {
       "Build a community of +90K users in 3 weeks for AI client Doppl.ai",
       "Increased marketing and sales team productivity by +40% by implementing Hubspot CRM automation",
       "Improved exclusible.com SEO resulting in +30% traffic growth"
-    ],
-    award: {
-      title: "Selected as one of 12 winners of the 2023 CryptoDaily™ Awards",
-      subtitle: "Jury's runner-up pick title in the Marketing and PR category",
-      image: cryptodailyAward,
-      link: "https://cryptodaily.co.uk/2023/06/celebrating-the-12-winners-of-the-2023-cryptodaily-awards"
-    }
+    ]
   }];
 
   return (
@@ -118,29 +111,6 @@ export const CaseStudiesSection = () => {
                       </div>
                     ))}
                   </div>
-
-                  {experience.award && (
-                    <div className="mt-8 p-4 glass-card bg-primary/5 border-primary/20">
-                      <div className="flex items-start gap-4">
-                        <img 
-                          src={experience.award.image} 
-                          alt="CryptoDaily Award" 
-                          className="w-16 h-16 object-cover rounded-lg"
-                        />
-                        <div>
-                          <a 
-                            href={experience.award.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
-                            <h5 className="font-medium text-sm mb-1">{experience.award.title}</h5>
-                            <p className="text-xs text-muted-foreground">{experience.award.subtitle}</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             </motion.div>
