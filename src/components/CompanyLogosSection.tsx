@@ -135,14 +135,14 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Company 1', logo: newLogo1, height: 24 },
-    { name: 'Company 2', logo: newLogo2, height: 24 },
-    { name: 'Company 3', logo: newLogo3, height: 24 },
-    { name: 'Company 4', logo: newLogo4, height: 24 },
-    { name: 'Company 5', logo: newLogo5, height: 24 },
-    { name: 'Company 6', logo: newLogo6, height: 24 },
-    { name: 'Company 7', logo: newLogo7, height: 24 },
-    { name: 'Company 8', logo: newLogo8, height: 24 }
+    { name: 'Company 1', logo: newLogo1, height: 40 },
+    { name: 'Company 2', logo: newLogo2, height: 40 },
+    { name: 'Company 3', logo: newLogo3, height: 40 },
+    { name: 'Company 4', logo: newLogo4, height: 40 },
+    { name: 'Company 5', logo: newLogo5, height: 40 },
+    { name: 'Company 6', logo: newLogo6, height: 40 },
+    { name: 'Company 7', logo: newLogo7, height: 40 },
+    { name: 'Company 8', logo: newLogo8, height: 40 }
   ];
 
   return (
