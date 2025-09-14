@@ -41,7 +41,7 @@ export const Navigation = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             {[
-              { label: 'Experiences', id: 'case-studies' },
+              { label: 'Case Studies', id: 'case-studies' },
               { label: 'Services', id: 'services' },
               { label: 'About', id: 'about' },
               
