@@ -162,13 +162,13 @@ export const CompanyLogosSection = () => {
               fadeWidth={80}
             >
               {companies.map((company) => (
-                <div key={company.name} className="flex">
+                <div key={company.name} className="flex h-12 items-center">
                   <img
-                    className="mx-auto w-fit dark:invert"
+                    className="mx-auto w-fit dark:invert block"
                     src={company.logo}
                     alt={`${company.name} logo`}
                     style={{ height: `${company.height}px` }}
-                    width="auto"
+                    loading="lazy"
                   />
                 </div>
               ))}
