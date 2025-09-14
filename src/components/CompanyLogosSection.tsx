@@ -2,14 +2,7 @@ import { animate, motion, useMotionValue } from 'framer-motion';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
-import newLogo1 from '@/assets/company-logos/new-logo-1.svg';
-import newLogo2 from '@/assets/company-logos/new-logo-2.svg';
-import newLogo3 from '@/assets/company-logos/new-logo-3.svg';
-import newLogo4 from '@/assets/company-logos/new-logo-4.svg';
-import newLogo5 from '@/assets/company-logos/new-logo-5.svg';
-import newLogo6 from '@/assets/company-logos/new-logo-6.svg';
-import newLogo7 from '@/assets/company-logos/new-logo-7.svg';
-import newLogo8 from '@/assets/company-logos/new-logo-8.svg';
+
 type InfiniteSliderProps = {
     children: React.ReactNode;
     gap?: number;
@@ -134,14 +127,14 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Company 1', logo: newLogo1, height: 40 },
-    { name: 'Company 2', logo: newLogo2, height: 40 },
-    { name: 'Company 3', logo: newLogo3, height: 40 },
-    { name: 'Company 4', logo: newLogo4, height: 40 },
-    { name: 'Company 5', logo: newLogo5, height: 40 },
-    { name: 'Company 6', logo: newLogo6, height: 40 },
-    { name: 'Company 7', logo: newLogo7, height: 40 },
-    { name: 'Company 8', logo: newLogo8, height: 40 }
+    { name: 'Company 1', logo: 'https://drive.google.com/uc?export=view&id=1zlUP765yX3G76DApB9oaOfh-aYWKl5OC', height: 40 },
+    { name: 'Company 2', logo: 'https://drive.google.com/uc?export=view&id=16Q8N5WfM9dBs27XIabFJz7V3aULePaXr', height: 40 },
+    { name: 'Company 3', logo: 'https://drive.google.com/uc?export=view&id=1iObcxJiZos_sBNB2Z-arJxvC3hAAQBjQ', height: 40 },
+    { name: 'Company 4', logo: 'https://drive.google.com/uc?export=view&id=1EQWE1A260TWaGYgDd_vPwNR_fLWDqSUq', height: 40 },
+    { name: 'Company 5', logo: 'https://drive.google.com/uc?export=view&id=1q-Gg7hlDcKUp7JOX7RC8CsRDz0PINiEu', height: 40 },
+    { name: 'Company 6', logo: 'https://drive.google.com/uc?export=view&id=1kf9mm6-qs4kzR3xHQeF0a-c_RbmzamW3', height: 40 },
+    { name: 'Company 7', logo: 'https://drive.google.com/uc?export=view&id=13q5VagjKjeroDn6wrV_RGk0M5-YjAYFw', height: 40 },
+    { name: 'Company 8', logo: 'https://drive.google.com/uc?export=view&id=1Cub5v_fn6vEmO4PQFYW4hxJ3_1uU-eaQ', height: 40 }
   ];
 
   return (
@@ -166,14 +159,8 @@ export const CompanyLogosSection = () => {
                     className="mx-auto w-fit dark:invert block"
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    height={company.height}
                     style={{ height: `${company.height}px` }}
                     loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      const img = e.currentTarget;
-                      if (img.src !== '/placeholder.svg') img.src = '/placeholder.svg';
-                    }}
                   />
                 </div>
               ))}
