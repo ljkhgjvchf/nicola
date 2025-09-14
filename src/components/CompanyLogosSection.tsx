@@ -2,14 +2,14 @@ import { animate, motion, useMotionValue } from 'framer-motion';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
-import alpineLogo from '@/assets/company-logos/alpine.svg';
-import bugattiLogo from '@/assets/company-logos/bugatti.svg';
-import cotyLogo from '@/assets/company-logos/coty.svg';
-import hublotLogo from '@/assets/company-logos/hublot.svg';
-import hugoBossLogo from '@/assets/company-logos/hugo-boss.svg';
-import mcdonaldsLogo from '@/assets/company-logos/mcdonalds.svg';
-import shiseidoLogo from '@/assets/company-logos/shiseido.svg';
-import vogueLogo from '@/assets/company-logos/vogue.svg';
+import newLogo1 from '@/assets/company-logos/new-logo-1.svg';
+import newLogo2 from '@/assets/company-logos/new-logo-2.svg';
+import newLogo3 from '@/assets/company-logos/new-logo-3.svg';
+import newLogo4 from '@/assets/company-logos/new-logo-4.svg';
+import newLogo5 from '@/assets/company-logos/new-logo-5.svg';
+import newLogo6 from '@/assets/company-logos/new-logo-6.svg';
+import newLogo7 from '@/assets/company-logos/new-logo-7.svg';
+import newLogo8 from '@/assets/company-logos/new-logo-8.svg';
 
 type InfiniteSliderProps = {
     children: React.ReactNode;
@@ -135,14 +135,14 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Alpine', logo: alpineLogo, height: 20 },
-    { name: 'Bugatti', logo: bugattiLogo, height: 32 },
-    { name: 'Coty', logo: cotyLogo, height: 32 },
-    { name: 'Hublot', logo: hublotLogo, height: 20 },
-    { name: 'Hugo Boss', logo: hugoBossLogo, height: 20 },
-    { name: 'McDonalds', logo: mcdonaldsLogo, height: 20 },
-    { name: 'Shiseido', logo: shiseidoLogo, height: 20 },
-    { name: 'Vogue', logo: vogueLogo, height: 32 }
+    { name: 'Company 1', logo: newLogo1, height: 24 },
+    { name: 'Company 2', logo: newLogo2, height: 24 },
+    { name: 'Company 3', logo: newLogo3, height: 24 },
+    { name: 'Company 4', logo: newLogo4, height: 24 },
+    { name: 'Company 5', logo: newLogo5, height: 24 },
+    { name: 'Company 6', logo: newLogo6, height: 24 },
+    { name: 'Company 7', logo: newLogo7, height: 24 },
+    { name: 'Company 8', logo: newLogo8, height: 24 }
   ];
 
   return (
