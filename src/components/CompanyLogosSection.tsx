@@ -147,13 +147,8 @@ export const CompanyLogosSection = () => {
   return (
     <section className="bg-background overflow-hidden py-16 w-full border-b border-border">
       <div className="m-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center md:flex-row">
-          <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-border md:pr-6">
-            <p className="text-sm text-muted-foreground">
-              Trusted by Industry Leaders
-            </p>
-          </div>
-          <div className="w-full py-6 md:w-auto md:flex-1">
+        <div className="flex flex-col items-center">
+          <div className="w-full py-6">
             <BlurredInfiniteSlider
               speedOnHover={20}
               speed={40}
@@ -178,6 +173,11 @@ export const CompanyLogosSection = () => {
                 </div>
               ))}
             </BlurredInfiniteSlider>
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">
+              Trusted by Industry Leaders
+            </p>
           </div>
         </div>
       </div>
