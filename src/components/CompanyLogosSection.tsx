@@ -3,6 +3,16 @@ import React, { CSSProperties, useEffect, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
 
+// Import company logos
+import alpineLogo from '@/assets/company-logos/alpine.svg';
+import bugattiLogo from '@/assets/company-logos/bugatti.svg';
+import cotyLogo from '@/assets/company-logos/coty.svg';
+import hublotLogo from '@/assets/company-logos/hublot.svg';
+import hugoBossLogo from '@/assets/company-logos/hugo-boss.svg';
+import mcdonaldsLogo from '@/assets/company-logos/mcdonalds.svg';
+import shiseidoLogo from '@/assets/company-logos/shiseido.svg';
+import vogueLogo from '@/assets/company-logos/vogue.svg';
+
 type InfiniteSliderProps = {
     children: React.ReactNode;
     gap?: number;
@@ -127,14 +137,14 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Company 1', logo: 'https://drive.google.com/uc?export=view&id=1zlUP765yX3G76DApB9oaOfh-aYWKl5OC', height: 40 },
-    { name: 'Company 2', logo: 'https://drive.google.com/uc?export=view&id=16Q8N5WfM9dBs27XIabFJz7V3aULePaXr', height: 40 },
-    { name: 'Company 3', logo: 'https://drive.google.com/uc?export=view&id=1iObcxJiZos_sBNB2Z-arJxvC3hAAQBjQ', height: 40 },
-    { name: 'Company 4', logo: 'https://drive.google.com/uc?export=view&id=1EQWE1A260TWaGYgDd_vPwNR_fLWDqSUq', height: 40 },
-    { name: 'Company 5', logo: 'https://drive.google.com/uc?export=view&id=1q-Gg7hlDcKUp7JOX7RC8CsRDz0PINiEu', height: 40 },
-    { name: 'Company 6', logo: 'https://drive.google.com/uc?export=view&id=1kf9mm6-qs4kzR3xHQeF0a-c_RbmzamW3', height: 40 },
-    { name: 'Company 7', logo: 'https://drive.google.com/uc?export=view&id=13q5VagjKjeroDn6wrV_RGk0M5-YjAYFw', height: 40 },
-    { name: 'Company 8', logo: 'https://drive.google.com/uc?export=view&id=1Cub5v_fn6vEmO4PQFYW4hxJ3_1uU-eaQ', height: 40 }
+    { name: 'Alpine', logo: alpineLogo, height: 40 },
+    { name: 'Bugatti', logo: bugattiLogo, height: 40 },
+    { name: 'Coty', logo: cotyLogo, height: 40 },
+    { name: 'Hublot', logo: hublotLogo, height: 40 },
+    { name: 'Hugo Boss', logo: hugoBossLogo, height: 40 },
+    { name: 'McDonalds', logo: mcdonaldsLogo, height: 40 },
+    { name: 'Shiseido', logo: shiseidoLogo, height: 40 },
+    { name: 'Vogue', logo: vogueLogo, height: 40 }
   ];
 
   return (
