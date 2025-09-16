@@ -137,14 +137,14 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const companies = [
-    { name: 'Alpine', logo: alpineLogo, height: 40 },
-    { name: 'Bugatti', logo: bugattiLogo, height: 40 },
-    { name: 'Coty', logo: cotyLogo, height: 40 },
-    { name: 'Hublot', logo: hublotLogo, height: 40 },
-    { name: 'Hugo Boss', logo: hugoBossLogo, height: 40 },
-    { name: 'McDonalds', logo: mcdonaldsLogo, height: 40 },
-    { name: 'Shiseido', logo: shiseidoLogo, height: 40 },
-    { name: 'Vogue', logo: vogueLogo, height: 40 }
+    { name: 'Alpine', logo: alpineLogo, height: 32 },
+    { name: 'Bugatti', logo: bugattiLogo, height: 32 },
+    { name: 'Coty', logo: cotyLogo, height: 32 },
+    { name: 'Hublot', logo: hublotLogo, height: 32 },
+    { name: 'Hugo Boss', logo: hugoBossLogo, height: 32 },
+    { name: 'McDonalds', logo: mcdonaldsLogo, height: 32 },
+    { name: 'Shiseido', logo: shiseidoLogo, height: 32 },
+    { name: 'Vogue', logo: vogueLogo, height: 32 }
   ];
 
   return (
@@ -160,7 +160,7 @@ export const CompanyLogosSection = () => {
             <BlurredInfiniteSlider
               speedOnHover={20}
               speed={40}
-              gap={112}
+              gap={67}
               fadeWidth={80}
             >
               {companies.map((company) => (
