@@ -4,14 +4,14 @@ import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
 
 // Import company logos
-import alpineLogo from '@/assets/company-logos/alpine.svg';
-import bugattiLogo from '@/assets/company-logos/bugatti.svg';
-import cotyLogo from '@/assets/company-logos/coty.svg';
-import hublotLogo from '@/assets/company-logos/hublot.svg';
-import hugoBossLogo from '@/assets/company-logos/hugo-boss.svg';
-import mcdonaldsLogo from '@/assets/company-logos/mcdonalds.svg';
-import shiseidoLogo from '@/assets/company-logos/shiseido.svg';
-import vogueLogo from '@/assets/company-logos/vogue.svg';
+import alpineLogo from '@/assets/company-logos/alpine-new.svg';
+import bugattiLogo from '@/assets/company-logos/bugatti-new.svg';
+import cotyLogo from '@/assets/company-logos/coty-new.svg';
+import hublotLogo from '@/assets/company-logos/hublot-new.svg';
+import hugoBossLogo from '@/assets/company-logos/hugo-boss-new.svg';
+import mcdonaldsLogo from '@/assets/company-logos/mcdonalds-new.svg';
+import shiseidoLogo from '@/assets/company-logos/shiseido-new.svg';
+import vogueLogo from '@/assets/company-logos/vogue-new.svg';
 
 type InfiniteSliderProps = {
     children: React.ReactNode;
