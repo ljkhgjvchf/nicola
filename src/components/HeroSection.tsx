@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { CompanyLogosSection } from '@/components/CompanyLogosSection';
 
 export const HeroSection = () => {
   const handleGetStarted = () => {
@@ -49,6 +50,16 @@ export const HeroSection = () => {
           >
             Let's Grow Your Business
           </Button>
+        </motion.div>
+        
+        {/* Company Logos Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          className="mt-16"
+        >
+          <CompanyLogosSection />
         </motion.div>
       </div>
     </section>
