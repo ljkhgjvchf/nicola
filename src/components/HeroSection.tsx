@@ -36,7 +36,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Hey 👋 I'm Nicola — I generated $10M revenue in NFTs & Onboarded Fortune 500 clients into Web3.
+            Hey 👋 I'm Nicola — I generated $10M revenue & Onboarded Fortune 500 clients into Web3.
           </motion.p>
 
           <motion.div
