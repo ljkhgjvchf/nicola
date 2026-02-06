@@ -16,7 +16,7 @@ export const ServicesSection = () => {
     },
     {
       icon: Robot,
-      title: "AI-Powered Marketing",
+      title: "AI-Powered Automations",
       description: "Leverage artificial intelligence and automation tools to optimize marketing campaigns, improve SEO performance, and drive scalable growth."
     },
     {

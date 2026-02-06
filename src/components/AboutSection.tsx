@@ -5,18 +5,17 @@ import nicolaProfile from '@/assets/nicola-profile.jpg';
 export const AboutSection = () => {
   const [currentTool, setCurrentTool] = useState(0);
 
-  const tools = [
-    'n8n', 'Make.com', 'Apify', 'Instantly', 'MailChimp', 
-    'HubSpot', 'Apollo', 'Zapier', 'ChatGPT', 'Claude.ai', 'Deepseek'
+  const sectors = [
+    'Public Sector & Government', 'Crypto & Web3', 'Startups', 'Fintech (B2B & B2C)'
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTool((prev) => (prev + 1) % tools.length);
+      setCurrentTool((prev) => (prev + 1) % sectors.length);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [tools.length]);
+  }, [sectors.length]);
 
   return (
     <section id="about" className="py-24 px-6">
@@ -43,11 +42,11 @@ export const AboutSection = () => {
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-foreground">Tools & Technologies</h3>
+              <h3 className="text-lg font-medium text-foreground">Sectors I worked in</h3>
               <div className="flex flex-wrap gap-3">
-                {tools.map((tool, index) => (
+                {sectors.map((sector, index) => (
                   <motion.div
-                    key={tool}
+                    key={sector}
                     className={`px-4 py-2 rounded-full border transition-all duration-300 ${
                       index === currentTool 
                         ? 'bg-primary text-primary-foreground border-primary' 
@@ -60,7 +59,7 @@ export const AboutSection = () => {
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    <span className="text-sm font-light">{tool}</span>
+                    <span className="text-sm font-light">{sector}</span>
                   </motion.div>
                 ))}
               </div>
