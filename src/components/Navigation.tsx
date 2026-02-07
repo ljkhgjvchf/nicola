@@ -41,10 +41,9 @@ export const Navigation = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             {[
-              { label: 'Web3 Experiences', id: 'case-studies' },
+              { label: 'Success Stories', id: 'case-studies-showcase' },
               { label: 'Services', id: 'services' },
               { label: 'About', id: 'about' },
-              
               { label: 'FAQ', id: 'faq' },
               { label: 'Contact', id: 'contact', highlight: true }
             ].map((item) => (

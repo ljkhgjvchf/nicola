@@ -24,10 +24,10 @@ export const CaseStudiesShowcase = () => {
     imageUrl: 'https://cdn.group.renault.com/alp/master/alpine-new-cars/product-plans/a110-obvious/hero-zone/alpine-obvious-hero-zone-001.jpg.ximg.largex2.webp/ff4ea1c853.webp',
     subtitle: 'Community of +50k members in 3 weeks'
   }, {
-    slug: 'dopple',
-    clientName: 'Dopple.ai',
+    slug: 'doppl',
+    clientName: 'Doppl.ai',
     clientUrl: 'https://www.dopple.ai/',
-    imageUrl: 'https://www.outrightcrm.com/wp-content/uploads/2025/07/Dopple-ai.jpg',
+    imageUrl: 'https://framerusercontent.com/images/RiFO6DG3N8ND8frQEjw0ROHrtlk.png',
     subtitle: '+90K waiting list subscribers in 3 weeks'
   }, {
     slug: 'highloop',
@@ -48,9 +48,9 @@ export const CaseStudiesShowcase = () => {
         duration: 0.6
       }} viewport={{
         once: true
-      }}>
+        }}>
           <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            Proven Results
+            Success Stories
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
             Real results and achievements from clients I've worked with
