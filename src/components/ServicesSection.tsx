@@ -1,37 +1,27 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Rocket, Users, Robot, Buildings, ChartBar, Target } from 'phosphor-react';
+import { Robot, PencilLine, MagnifyingGlass, Megaphone } from 'phosphor-react';
 
 export const ServicesSection = () => {
   const services = [
     {
-      icon: Rocket,
-      title: "Web3 Marketing Strategy",
-      description: "Comprehensive marketing strategies for crypto, NFT, and blockchain projects that drive community growth and revenue."
-    },
-    {
-      icon: Users,
-      title: "Community Building",
-      description: "Build and grow engaged communities of 50k+ members through strategic social media campaigns and KOL management."
-    },
-    {
       icon: Robot,
-      title: "AI-Powered Automations",
-      description: "Leverage artificial intelligence and automation tools to optimize marketing campaigns, improve SEO performance, and drive scalable growth."
+      title: "AI Marketing & Growth",
+      description: "A full AI marketing engine — from campaign automation to lead scoring — so you move faster, convert more, and waste less budget."
     },
     {
-      icon: Buildings,
-      title: "Enterprise Web3 Onboarding",
-      description: "Help Fortune 500 companies and luxury brands successfully transition into Web3 with strategic guidance and execution."
+      icon: PencilLine,
+      title: "AI Content Creation",
+      description: "From blog posts to social content and video scripts, a system that produces high-quality content that builds authority, drives traffic, and converts readers into leads."
     },
     {
-      icon: ChartBar,
-      title: "Performance Marketing",
-      description: "Data-driven marketing campaigns that deliver measurable ROI with detailed analytics and optimization strategies."
+      icon: MagnifyingGlass,
+      title: "SEO",
+      description: "Data-driven SEO strategies that increase your organic visibility, attract qualified traffic, and compound results over time."
     },
     {
-      icon: Target,
-      title: "KOL & Influencer Management",
+      icon: Megaphone,
+      title: "KOL, Influencer Marketing & PR",
       description: "Strategic influencer partnerships and KOL management that amplify your brand reach and drive conversions."
     }
   ];
@@ -50,11 +40,11 @@ export const ServicesSection = () => {
             Services
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Expert Web3 and marketing services that drive growth, build communities, and generate revenue
+            Expert marketing services powered by AI that drive growth and generate revenue
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
