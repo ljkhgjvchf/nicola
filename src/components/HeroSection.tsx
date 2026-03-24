@@ -36,7 +36,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Hey 👋 I'm Nicola — I generated $10M revenue & Onboarded Fortune 500 clients into Web3.
+            Hey 👋 I'm Nicola — I generated $10M revenue & create Marketing Campaigns for Fortune 500 clients.
           </motion.p>
 
           <motion.div
@@ -49,7 +49,7 @@ export const HeroSection = () => {
               className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full transition-transform duration-300 hover:scale-105"
               size="lg"
             >
-              Let's Grow Your Business
+              Book a Free Audit
             </Button>
           </motion.div>
         </div>
