@@ -34,11 +34,11 @@ export const AboutSection = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              Hey 👋 I'm Nicola — I'm a Web3 marketing expert with +6 years of experience and +4 years in crypto. I specialize in building communities, launching successful projects, and creating marketing strategies that deliver real results.
+              Hey 👋 I'm Nicola — a digital marketing strategist with 6+ years of experience across B2B, B2C, and AI-powered marketing. I specialise in building growth systems, running multi-channel campaigns, and turning data into strategies that deliver measurable results.
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
-              With years of experience in digital marketing and Web3 strategy, I've helped crypto projects, luxury brands, and enterprises successfully navigate the blockchain ecosystem and achieve remarkable growth.
+              From Fortune 500 brands to EU institutions and fast-growing startups, I've helped organisations scale their marketing, generate qualified leads, and build audiences that convert — combining proven frameworks with the latest AI tools to move faster and smarter.
             </p>
 
             <div className="space-y-4">
