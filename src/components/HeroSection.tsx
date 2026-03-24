@@ -36,7 +36,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Hey 👋 I'm Nicola — I generated $10M revenue & create Marketing Campaigns for Fortune 500 clients.
+            Hey 👋 I'm Nicola — a marketing strategist who's driven $10M+ in revenue, 1.2M+ PR views, and growth for Fortune 500 clients. I build AI-powered systems that make marketing predictable.
           </motion.p>
 
           <motion.div

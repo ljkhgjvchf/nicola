@@ -1,15 +1,12 @@
 import { LinkedinLogo, Envelope } from 'phosphor-react';
-import { Funnel } from 'phosphor-react';
 
 export const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="font-montserrat text-xl text-foreground flex items-center gap-1">
-            <Funnel size={18} weight="bold" className="text-primary" />
-            <span className="font-light">Convert</span>
-            <span className="font-bold text-primary">Leads</span>
+          <div className="font-montserrat text-xl text-foreground">
+            Convertleads
           </div>
           
           <div className="flex items-center gap-6">

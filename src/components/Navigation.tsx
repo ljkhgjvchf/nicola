@@ -33,11 +33,9 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('hero')}
-            className="font-montserrat text-xl text-foreground hover:text-primary transition-colors cursor-pointer flex items-center gap-1"
+            className="font-montserrat text-xl text-foreground hover:text-foreground transition-colors cursor-pointer"
           >
-            <Funnel size={18} weight="bold" className="text-primary -mr-0.5" />
-            <span className="font-light">Convert</span>
-            <span className="font-bold text-primary">Leads</span>
+            Convertleads
           </button>
           
           <div className="hidden md:flex items-center space-x-8">
