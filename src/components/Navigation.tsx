@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Funnel } from 'phosphor-react';
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
