@@ -2,8 +2,9 @@ import { useParams, Link } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Target, Trophy, CookingPot, Wrench, ShoppingCart, Briefcase, CurrencyDollar, Link as LinkIcon, Image, WarningCircle, Newspaper } from 'phosphor-react';
+import { ArrowLeft, Target, Trophy, CookingPot, Wrench, ShoppingCart, Briefcase, CurrencyDollar, Link as LinkIcon, Image, WarningCircle, Newspaper, LinkedinLogo } from 'phosphor-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 interface PressItem {
   source: string;
@@ -37,9 +38,121 @@ interface CaseStudyData {
     description: string;
     items: PressItem[];
   };
+  socialHighlights?: { platform: string; title: string; url: string }[];
+  customGallery?: { images: string[] };
 }
 
+const EITGallery = ({ images }: { images: string[] }) => {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  
+  return (
+    <div className="w-full max-w-4xl mx-auto mt-6" style={{ height: '400px' }}>
+      <div className="flex gap-2 h-full overflow-hidden">
+        {images.map((img, idx) => (
+          <div
+            key={idx}
+            className="h-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              flex: hoveredIdx === idx ? 8 : 1,
+              borderTopLeftRadius: idx === 0 ? '40px' : 0,
+              borderBottomRightRadius: idx === images.length - 1 ? '40px' : 0,
+            }}
+            onMouseEnter={() => setHoveredIdx(idx)}
+            onMouseLeave={() => setHoveredIdx(null)}
+          >
+            <img
+              src={img}
+              alt={`EIT Gallery ${idx + 1}`}
+              className="w-full h-full object-cover block"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const caseStudiesData: Record<string, CaseStudyData> = {
+  eit: {
+    clientName: 'EIT Jumpstarter',
+    clientUrl: 'https://eitjumpstarter.eu',
+    imageUrl: 'https://eitjumpstarter.eu/wp-content/uploads/2025/11/Awards_advance_logo-32.jpg',
+    subtitle: '+49% YoY increase in programme applications',
+    tagline: 'User Acquisition & Digital Communications Strategy',
+    sections: [
+      {
+        icon: <Target size={24} weight="duotone" />,
+        title: 'About the Programme',
+        content: 'EIT Jumpstarter is a European pre-accelerator programme funded by the European Institute of Innovation & Technology (EIT), supporting early-stage EU startups with mentorship, visibility, and access to one of Europe\'s largest innovation networks.',
+      },
+      {
+        icon: <Target size={24} weight="duotone" />,
+        title: 'Requests',
+        items: [
+          '**Programme Acquisition** — Scale qualified applications to EIT Jumpstarter across 2024 & 2025 cycles',
+          '**User Acquisition Funnel** — Build end-to-end funnel from awareness to submission',
+          '**Digital Communications** — Own SM strategy, content creation, and newsletter across both cycles',
+          '**Website & SEO** — Redesign, optimise, and grow organic traffic on eitjumpstarter.eu',
+        ],
+      },
+      {
+        icon: <Trophy size={24} weight="duotone" />,
+        title: 'Key Achievements',
+        items: [
+          '**908 applications in 2025** — +49% YoY vs 609 submissions in 2024',
+          '**500+ qualified applicants** generated via targeted SMM campaigns',
+          '**-28% acquisition cost** QoQ while scaling submission volume across regional cohorts',
+          '**+40% organic search traffic** via technical SEO audits, CRO iterations, and UI/UX improvements',
+        ],
+      },
+      {
+        icon: <CookingPot size={24} weight="duotone" />,
+        title: 'My Receipt',
+        items: [
+          '**Funnel Architecture:** Mapped the full applicant journey from first touchpoint to submission — built a conversion-optimised registration page (with luma.com)',
+          '**ICP Outreach via Apollo:** Identified and sequenced 1,000+ researchers, and innovation professionals with cold email — open rates 2x industry average',
+          '**EU Database Reactivation via Brevo:** Segmented EU institutional database and re-engaged it with a 5-step nurture sequence — converting cold contacts into warm applicants at scale',
+          '**SM Content Engine:** Built a repeatable content system — weekly visual + copy production across LinkedIn — that grew avg engagement rate +6% while keeping the brand voice consistently institutional and sharp',
+          '**Website Overhaul:** Took eitjumpstarter.eu from outdated to conversion-ready — full UI/UX redesign, SEO technical audit, and content refresh that drove +40% organic traffic in one quarter',
+          '**C-Suite Reporting:** Translated raw acquisition data into boardroom-ready monthly reports — giving leadership full visibility on funnel performance, channel ROI, and strategic next steps',
+        ],
+      },
+    ],
+    tools: ['Luma.com (event registration & management)', 'Apollo (email outreach & ICP targeting)', 'Brevo (email marketing & database reactivation)', 'WordPress (website, blog & content management)'],
+    press: {
+      title: 'Media Mentions',
+      description: 'EIT Jumpstarter has been featured in programme announcements and results publications.',
+      items: [
+        {
+          source: 'EIT Jumpstarter',
+          title: 'EIT Jumpstarter Programme 2024 - Results',
+          url: 'https://eitjumpstarter.eu/eit-jumpstarter-launches-innovative-start-ups-tackling-societys-most-urgent-challenges/',
+        },
+        {
+          source: 'EIT Jumpstarter',
+          title: 'EIT Jumpstarter Programme 2025 - New Record',
+          url: 'https://eitjumpstarter.eu/new-record-2025/',
+        },
+      ],
+    },
+    socialHighlights: [
+      {
+        platform: 'LinkedIn',
+        title: 'EIT Jumpstarter Grand Final — Winners Announcement',
+        url: 'https://www.linkedin.com/posts/eitjumpstarter_eit-jumpstarter-grand-final-winners-activity-7270007672106590210-W9es',
+      },
+    ],
+    customGallery: {
+      images: [
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-3.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-7.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-1.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-5.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-4.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-6.jpg',
+      ],
+    },
+  },
   exclusible: {
     clientName: 'Exclusible.com',
     clientUrl: 'https://www.exclusible.com/',
@@ -600,6 +713,54 @@ const CaseStudy = () => {
                       </a>
                     ))}
                   </div>
+                </motion.div>
+              )}
+
+              {/* Social Highlights */}
+              {caseStudy.socialHighlights && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.95 }}
+                  className="glass-card p-6 md:p-8"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-primary"><LinkedinLogo size={24} weight="duotone" /></span>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">SM Highlights</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {caseStudy.socialHighlights.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors group"
+                      >
+                        <span className="text-xs font-medium text-primary uppercase tracking-wider">{item.platform}</span>
+                        <p className="text-foreground mt-1 group-hover:text-primary transition-colors">{item.title}</p>
+                        <span className="text-sm text-muted-foreground mt-2 inline-flex items-center gap-1">
+                          View post <LinkIcon size={12} />
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Custom Gallery (EIT style) */}
+              {caseStudy.customGallery && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="glass-card p-6 md:p-8"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-primary"><Image size={24} weight="duotone" /></span>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Gallery</h2>
+                  </div>
+                  <EITGallery images={caseStudy.customGallery.images} />
                 </motion.div>
               )}
             </div>

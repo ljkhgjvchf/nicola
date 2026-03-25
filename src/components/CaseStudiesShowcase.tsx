@@ -11,25 +11,18 @@ interface CaseStudy {
   imageUrl: string;
   subtitle: string;
   placeholder?: boolean;
+  wide?: boolean;
 }
 
 export const CaseStudiesShowcase = () => {
   const caseStudies: CaseStudy[] = [
     {
       slug: 'eit',
-      clientName: 'European Institute of Innovation & Technology',
-      clientUrl: '#',
-      imageUrl: 'https://eit.europa.eu/sites/default/files/EIT_eu_logo_color.png',
-      subtitle: '[TO BE ADDED]',
-      placeholder: true,
-    },
-    {
-      slug: 'cointelegraph',
-      clientName: 'Cointelegraph',
-      clientUrl: 'https://cointelegraph.com',
-      imageUrl: 'https://images.cointelegraph.com/cdn-cgi/image/format=auto,ofit=scale-down,quality=85/https://s3.cointelegraph.com/storage/uploads/view/48ef0bbc0e4b4aab4c023a95a7ac3315.png',
-      subtitle: '[TO BE ADDED]',
-      placeholder: true,
+      clientName: 'EIT Jumpstarter Programme',
+      clientUrl: 'https://eitjumpstarter.eu',
+      imageUrl: 'https://eitjumpstarter.eu/wp-content/uploads/2025/11/Awards_advance_logo-32.jpg',
+      subtitle: '500+ qualified applicants. -28% acquisition cost',
+      wide: true,
     },
     {
       slug: 'exclusible',
@@ -87,6 +80,7 @@ export const CaseStudiesShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className={study.wide ? 'md:col-span-2' : ''}
             >
               <Card className="glass-card overflow-hidden group h-full">
                 <div className="relative h-56 overflow-hidden">
