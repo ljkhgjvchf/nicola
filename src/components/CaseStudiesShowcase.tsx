@@ -80,6 +80,7 @@ export const CaseStudiesShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className={study.wide ? 'md:col-span-2' : ''}
             >
               <Card className={`glass-card overflow-hidden group h-full ${study.wide ? 'md:col-span-2' : ''}`}>
                 <div className="relative h-56 overflow-hidden">
