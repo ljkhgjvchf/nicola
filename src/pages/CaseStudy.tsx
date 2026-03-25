@@ -38,7 +38,39 @@ interface CaseStudyData {
     description: string;
     items: PressItem[];
   };
+  socialHighlights?: { platform: string; title: string; url: string }[];
+  customGallery?: { images: string[] };
 }
+
+const EITGallery = ({ images }: { images: string[] }) => {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  
+  return (
+    <div className="w-full max-w-4xl mx-auto mt-6" style={{ height: '400px' }}>
+      <div className="flex gap-2 h-full overflow-hidden">
+        {images.map((img, idx) => (
+          <div
+            key={idx}
+            className="h-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              flex: hoveredIdx === idx ? 8 : 1,
+              borderTopLeftRadius: idx === 0 ? '40px' : 0,
+              borderBottomRightRadius: idx === images.length - 1 ? '40px' : 0,
+            }}
+            onMouseEnter={() => setHoveredIdx(idx)}
+            onMouseLeave={() => setHoveredIdx(null)}
+          >
+            <img
+              src={img}
+              alt={`EIT Gallery ${idx + 1}`}
+              className="w-full h-full object-cover block"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const caseStudiesData: Record<string, CaseStudyData> = {
   exclusible: {
