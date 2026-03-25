@@ -10,11 +10,6 @@ export const HeroSection = () => {
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-between px-6 pt-20 relative overflow-hidden">
       
-      {/* Top-left subtle blue glow */}
-      <div
-        className="absolute -top-32 -left-32 w-[640px] h-[640px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle at top left, hsl(var(--primary) / 0.35), transparent 60%)' }}
-        aria-hidden="true" />
       
       {/* Main Content - Centered */}
       <div className="flex-1 flex items-center justify-center pt-16">

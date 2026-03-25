@@ -39,7 +39,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={() => location.pathname !== '/' ? navigate('/') : scrollToSection('hero')}
             className="font-montserrat text-xl text-foreground hover:text-foreground transition-colors cursor-pointer"
           >
             Convertleads
