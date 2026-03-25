@@ -144,12 +144,12 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     ],
     customGallery: {
       images: [
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-3.jpg',
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-7.jpg',
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-1.jpg',
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-5.jpg',
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-4.jpg',
-        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-6.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2025/11/image-2025-11-28T221320.957-1024x576.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2025/11/image-cover-1024x576.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2025/02/image-59-1-e1751362680199-1024x766.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2025/02/54180968733_4be334c2e6_k-e1740649837284-1024x1024.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2025/04/image-2025-05-01T010707.067-1024x576.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2026/03/eit-jumpstarter-2026-cover-news-1024x576.jpg',
       ],
     },
   },
