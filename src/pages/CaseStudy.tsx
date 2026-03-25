@@ -715,6 +715,54 @@ const CaseStudy = () => {
                   </div>
                 </motion.div>
               )}
+
+              {/* Social Highlights */}
+              {caseStudy.socialHighlights && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.95 }}
+                  className="glass-card p-6 md:p-8"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-primary"><LinkedinLogo size={24} weight="duotone" /></span>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">SM Highlights</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {caseStudy.socialHighlights.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors group"
+                      >
+                        <span className="text-xs font-medium text-primary uppercase tracking-wider">{item.platform}</span>
+                        <p className="text-foreground mt-1 group-hover:text-primary transition-colors">{item.title}</p>
+                        <span className="text-sm text-muted-foreground mt-2 inline-flex items-center gap-1">
+                          View post <LinkIcon size={12} />
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Custom Gallery (EIT style) */}
+              {caseStudy.customGallery && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.0 }}
+                  className="glass-card p-6 md:p-8"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-primary"><Image size={24} weight="duotone" /></span>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Gallery</h2>
+                  </div>
+                  <EITGallery images={caseStudy.customGallery.images} />
+                </motion.div>
+              )}
             </div>
           </motion.div>
         </div>
