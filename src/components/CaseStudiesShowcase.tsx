@@ -82,7 +82,7 @@ export const CaseStudiesShowcase = () => {
               viewport={{ once: true }}
               className={study.wide ? 'md:col-span-2' : ''}
             >
-              <Card className={`glass-card overflow-hidden group h-full ${study.wide ? 'md:col-span-2' : ''}`}>
+              <Card className="glass-card overflow-hidden group h-full">
                 <div className="relative h-56 overflow-hidden">
                   <img
                     src={study.imageUrl}
