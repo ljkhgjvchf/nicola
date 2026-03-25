@@ -11,6 +11,7 @@ interface CaseStudy {
   imageUrl: string;
   subtitle: string;
   placeholder?: boolean;
+  wide?: boolean;
 }
 
 export const CaseStudiesShowcase = () => {
