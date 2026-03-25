@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +17,13 @@ export const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -32,7 +39,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={() => location.pathname !== '/' ? navigate('/') : scrollToSection('hero')}
             className="font-montserrat text-xl text-foreground hover:text-foreground transition-colors cursor-pointer"
           >
             Convertleads
