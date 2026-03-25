@@ -223,7 +223,7 @@ const caseStudiesData: Record<string, CaseStudyData> = {
     clientUrl: 'https://www.alpinecars.com/',
     imageUrl: 'https://cdn.group.renault.com/alp/master/alpine-new-cars/product-plans/a110-obvious/hero-zone/alpine-obvious-hero-zone-001.jpg.ximg.largex2.webp/ff4ea1c853.webp',
     subtitle: 'Community of +50k members in 3 weeks',
-    tagline: 'NFT Collection Launch & Community Building',
+    tagline: 'Digital Collection Launch & Community Building',
     externalLinks: [
       { label: 'OpenSea Collection', url: 'https://opensea.io/collection/let-there-be-light-by-alpine-obvious' }
     ],
