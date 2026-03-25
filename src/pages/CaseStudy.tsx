@@ -2,8 +2,9 @@ import { useParams, Link } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Target, Trophy, CookingPot, Wrench, ShoppingCart, Briefcase, CurrencyDollar, Link as LinkIcon, Image, WarningCircle, Newspaper } from 'phosphor-react';
+import { ArrowLeft, Target, Trophy, CookingPot, Wrench, ShoppingCart, Briefcase, CurrencyDollar, Link as LinkIcon, Image, WarningCircle, Newspaper, LinkedinLogo } from 'phosphor-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 interface PressItem {
   source: string;
