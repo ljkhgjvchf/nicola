@@ -73,6 +73,86 @@ const EITGallery = ({ images }: { images: string[] }) => {
 };
 
 const caseStudiesData: Record<string, CaseStudyData> = {
+  eit: {
+    clientName: 'EIT Jumpstarter',
+    clientUrl: 'https://eitjumpstarter.eu',
+    imageUrl: 'https://eitjumpstarter.eu/wp-content/uploads/2025/11/Awards_advance_logo-32.jpg',
+    subtitle: '+49% YoY increase in programme applications',
+    tagline: 'User Acquisition & Digital Communications Strategy',
+    sections: [
+      {
+        icon: <Target size={24} weight="duotone" />,
+        title: 'About the Programme',
+        content: 'EIT Jumpstarter is a European pre-accelerator programme funded by the European Institute of Innovation & Technology (EIT), supporting early-stage EU startups with mentorship, visibility, and access to one of Europe\'s largest innovation networks.',
+      },
+      {
+        icon: <Target size={24} weight="duotone" />,
+        title: 'Requests',
+        items: [
+          '**Programme Acquisition** — Scale qualified applications to EIT Jumpstarter across 2024 & 2025 cycles',
+          '**User Acquisition Funnel** — Build end-to-end funnel from awareness to submission',
+          '**Digital Communications** — Own SM strategy, content creation, and newsletter across both cycles',
+          '**Website & SEO** — Redesign, optimise, and grow organic traffic on eitjumpstarter.eu',
+        ],
+      },
+      {
+        icon: <Trophy size={24} weight="duotone" />,
+        title: 'Key Achievements',
+        items: [
+          '**908 applications in 2025** — +49% YoY vs 609 submissions in 2024',
+          '**500+ qualified applicants** generated via targeted SMM campaigns',
+          '**-28% acquisition cost** QoQ while scaling submission volume across regional cohorts',
+          '**+40% organic search traffic** via technical SEO audits, CRO iterations, and UI/UX improvements',
+        ],
+      },
+      {
+        icon: <CookingPot size={24} weight="duotone" />,
+        title: 'My Receipt',
+        items: [
+          '**Funnel Architecture:** Mapped the full applicant journey from first touchpoint to submission — built a conversion-optimised registration page (with luma.com)',
+          '**ICP Outreach via Apollo:** Identified and sequenced 1,000+ researchers, and innovation professionals with cold email — open rates 2x industry average',
+          '**EU Database Reactivation via Brevo:** Segmented EU institutional database and re-engaged it with a 5-step nurture sequence — converting cold contacts into warm applicants at scale',
+          '**SM Content Engine:** Built a repeatable content system — weekly visual + copy production across LinkedIn — that grew avg engagement rate +6% while keeping the brand voice consistently institutional and sharp',
+          '**Website Overhaul:** Took eitjumpstarter.eu from outdated to conversion-ready — full UI/UX redesign, SEO technical audit, and content refresh that drove +40% organic traffic in one quarter',
+          '**C-Suite Reporting:** Translated raw acquisition data into boardroom-ready monthly reports — giving leadership full visibility on funnel performance, channel ROI, and strategic next steps',
+        ],
+      },
+    ],
+    tools: ['Luma.com (event registration & management)', 'Apollo (email outreach & ICP targeting)', 'Brevo (email marketing & database reactivation)', 'WordPress (website, blog & content management)'],
+    press: {
+      title: 'Media Mentions',
+      description: 'EIT Jumpstarter has been featured in programme announcements and results publications.',
+      items: [
+        {
+          source: 'EIT Jumpstarter',
+          title: 'EIT Jumpstarter Programme 2024 - Results',
+          url: 'https://eitjumpstarter.eu/eit-jumpstarter-launches-innovative-start-ups-tackling-societys-most-urgent-challenges/',
+        },
+        {
+          source: 'EIT Jumpstarter',
+          title: 'EIT Jumpstarter Programme 2025 - New Record',
+          url: 'https://eitjumpstarter.eu/new-record-2025/',
+        },
+      ],
+    },
+    socialHighlights: [
+      {
+        platform: 'LinkedIn',
+        title: 'EIT Jumpstarter Grand Final — Winners Announcement',
+        url: 'https://www.linkedin.com/posts/eitjumpstarter_eit-jumpstarter-grand-final-winners-activity-7270007672106590210-W9es',
+      },
+    ],
+    customGallery: {
+      images: [
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-3.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-7.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-1.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-5.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-4.jpg',
+        'https://eitjumpstarter.eu/wp-content/uploads/2024/11/EIT-Jumpstarter-2024-budapest-grand-final-6.jpg',
+      ],
+    },
+  },
   exclusible: {
     clientName: 'Exclusible.com',
     clientUrl: 'https://www.exclusible.com/',
