@@ -492,6 +492,7 @@ const CaseStudy = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
+        className="pt-20"
       >
         {/* Hero Image */}
         <div className="relative h-[50vh] overflow-hidden">
