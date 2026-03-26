@@ -16,8 +16,8 @@ export const ServicesSection = () => {
     },
     {
       icon: MagnifyingGlass,
-      title: "SEO",
-      description: "Data-driven SEO strategies that increase your organic visibility, attract qualified traffic, and compound results over time."
+      title: "SEO / GEO",
+      description: "Data-driven SEO and Generative Engine Optimization strategies that increase your visibility across search engines and AI-powered platforms, attract qualified traffic, and compound results over time."
     },
     {
       icon: Megaphone,
