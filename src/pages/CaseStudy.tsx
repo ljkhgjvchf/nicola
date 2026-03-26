@@ -462,6 +462,10 @@ const CaseStudy = () => {
   const { slug } = useParams<{ slug: string }>();
   const caseStudy = slug ? caseStudiesData[slug] : null;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   if (!caseStudy) {
     return (
       <div className="min-h-screen bg-background">
