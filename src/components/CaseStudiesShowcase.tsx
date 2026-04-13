@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Clock } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 
 interface CaseStudy {
   slug: string;
   clientName: string;
-  clientUrl: string;
   imageUrl: string;
   subtitle: string;
+  tags: string[];
   placeholder?: boolean;
   wide?: boolean;
 }
@@ -19,38 +20,38 @@ export const CaseStudiesShowcase = () => {
     {
       slug: 'eit',
       clientName: 'EIT Jumpstarter Programme',
-      clientUrl: 'https://eitjumpstarter.eu',
       imageUrl: 'https://eitjumpstarter.eu/wp-content/uploads/2025/11/Awards_advance_logo-32.jpg',
       subtitle: '500+ qualified applicants. -28% acquisition cost',
+      tags: ['Event Management', 'User Acquisition', 'Performance Marketing'],
       wide: true,
     },
     {
       slug: 'exclusible',
       clientName: 'Exclusible.com',
-      clientUrl: 'https://www.exclusible.com/',
       imageUrl: 'https://cdn2.spatial.io/assets/v1/thumbnails/6467b2f8d21fda533a3bcfb3/customThumbnail/r/dfedb2c4c8c5bf16fe9d75e01840e8452563a8383e7e60d410bb7db9ed1d245a/1746112091/w3840q75fwebp',
       subtitle: '+300% in B2B lead generation',
+      tags: ['B2B Lead Gen', 'Web3 Marketing', 'Content Strategy'],
     },
     {
       slug: 'alpine',
       clientName: 'Alpine',
-      clientUrl: 'https://www.alpinecars.com/',
       imageUrl: 'https://cdn.group.renault.com/alp/master/alpine-new-cars/product-plans/a110-obvious/hero-zone/alpine-obvious-hero-zone-001.jpg.ximg.largex2.webp/ff4ea1c853.webp',
       subtitle: 'Community of +50k members in 3 weeks',
+      tags: ['Community Building', 'Social Media', 'Brand Strategy'],
     },
     {
       slug: 'doppl',
       clientName: 'Doppl.ai',
-      clientUrl: 'https://www.dopple.ai/',
       imageUrl: 'https://framerusercontent.com/images/RiFO6DG3N8ND8frQEjw0ROHrtlk.png',
       subtitle: '+90K waiting list subscribers in 3 weeks',
+      tags: ['Waitlist Growth', 'Viral Marketing', 'Product Launch'],
     },
     {
       slug: 'highloop',
       clientName: 'Highloop',
-      clientUrl: 'https://www.producthunt.com/products/highloop',
       imageUrl: 'https://ww1.prweb.com/prfiles/2023/04/12/19277760/ProductHunt-Slide-4.jpg',
       subtitle: 'GTM strategy for Web3 CRM',
+      tags: ['GTM Strategy', 'Web3', 'CRM Marketing'],
     },
   ];
 
@@ -92,15 +93,17 @@ export const CaseStudiesShowcase = () => {
                   
                 </div>
                 <CardContent className="p-6">
-                  <a
-                    href={study.clientUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
-                  >
+                  <h3 className="text-2xl font-medium text-foreground">
                     {study.clientName}
-                  </a>
-                  <p className="text-primary font-medium mt-2 mb-4">{study.subtitle}</p>
+                  </h3>
+                  <p className="text-primary font-medium mt-2 mb-3">{study.subtitle}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs font-normal">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
                   {study.placeholder ? (
                     <Button variant="outline" className="group/btn opacity-60 cursor-default" disabled>
                       <Clock size={16} weight="bold" className="mr-2" />
