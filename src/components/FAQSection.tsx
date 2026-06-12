@@ -4,33 +4,29 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 export const FAQSection = () => {
   const faqs = [
     {
-      question: "What makes your Web3 marketing approach different?",
-      answer: "I combine traditional marketing expertise with deep Web3 knowledge, having generated $10M in NFT revenue and onboarded Fortune 500 clients. My data-driven approach focuses on community building and measurable results."
+      question: "We just raised funding. Do we need to build a marketing team or is there a faster way to scale?",
+      answer: "Hiring a full marketing team takes 3–6 months and €10,000–€25,000/month before you see results. An AI-powered growth system can be deployed in weeks at a fraction of that cost — covering content, SEO/GEO, lead generation, and automated workflows from day one. ConvertLeads builds the system first; you hire headcount only for the functions where human judgment is genuinely irreplaceable."
     },
     {
-      question: "How quickly can you build a community for my project?",
-      answer: "Results vary by project, but I've built communities of 50k+ members in just 3 weeks for NFT collections and 90k+ users for AI projects. Success depends on strategy execution and project uniqueness."
+      question: "We're expanding into Europe. How do we build brand awareness and pipeline in a market where we're unknown?",
+      answer: "EU market entry requires localised positioning, the right channels (LinkedIn dominates B2B here), and credibility signals that European institutional buyers recognise. Having worked with EU-funded programmes, Web3 scale-ups, and government-adjacent organisations, ConvertLeads brings the playbooks and sector credibility to build brand and pipeline in Europe from zero."
     },
     {
-      question: "Do you work with both crypto startups and established brands?",
-      answer: "Yes! I've worked with both emerging crypto projects and Fortune 500 companies entering Web3. My experience spans from startup NFT collections to enterprise blockchain adoption strategies."
+      question: "We have traction but it's not scaling. How do we diagnose what's broken and fix it fast?",
+      answer: "A plateau means one of three things: your top-of-funnel is too narrow, your conversion path leaks qualified leads, or your content doesn't match where buyers actually are in the decision. ConvertLeads starts with a growth audit — mapping your funnel against proven frameworks, identifying the highest-leverage bottleneck, and deploying an AI-assisted system around that specific fix rather than rebuilding everything."
     },
     {
-      question: "What's your approach to NFT collection launches?",
-      answer: "I use a comprehensive strategy covering community building, influencer partnerships, strategic marketing campaigns, and launch coordination. My 17 NFT launches generated over $10M in total revenue."
+      question: "What is the difference between a traditional marketing agency and ConvertLeads?",
+      answer: "Agencies sell retainers built around their team's capacity. ConvertLeads builds systems built around your growth outcomes. The result is an AI-powered marketing engine — automated workflows, content systems, SEO and GEO frameworks — that runs lean and keeps compounding. No account managers, no bloated retainers. Strategy, system, and accountability for the number."
     },
     {
-      question: "How do you measure marketing campaign success?",
-      answer: "I provide detailed data-driven reports tracking key metrics like community growth, engagement rates, conversion rates, and revenue generation. Transparency and measurable results are core to my approach."
-    },
-    {
-      question: "Can you help traditional companies enter Web3?",
-      answer: "Absolutely! I specialize in helping traditional businesses understand and enter the Web3 space safely. I've successfully onboarded 29 Fortune 500 clients and luxury brands into blockchain technology."
+      question: "How quickly can a growth system be deployed and when do we see first results?",
+      answer: "Lead qualification and outreach automations are live within 2–3 weeks. Content and SEO systems start compounding at 60–90 days. The key difference from traditional marketing: every asset and workflow keeps producing output without incremental effort — so the return increases over time rather than resetting when a monthly retainer renews."
     }
   ];
 
   return (
-    <section id="faq" className="py-24 px-6 bg-[#1d1d1c]">
+    <section id="faq" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -39,13 +35,13 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-white mb-6">
+          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
             Frequently Asked
             <br />
-            <span className="text-white/70">Questions</span>
+            <span className="text-muted-foreground">Questions</span>
           </h2>
-          <p className="text-xl text-white/70 font-light max-w-3xl mx-auto">
-            Get answers to common questions about Web3 marketing and my services
+          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
+            Straight answers to the questions founders ask before working with ConvertLeads
           </p>
         </motion.div>
 
@@ -60,12 +56,12 @@ export const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="glass-card px-6 border-none"
+                className="glass-card px-6 border-none bg-card/50"
               >
-                <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-primary transition-colors py-6">
+                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-white/70 leading-relaxed pb-6">
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
