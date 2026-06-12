@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { PhoneCall } from 'lucide-react';
 
 export const FAQSection = () => {
   const faqs = [
@@ -49,13 +47,6 @@ export const FAQSection = () => {
               <p className="text-xl text-muted-foreground font-light max-w-xl">
                 Straight answers to the questions founders ask before working with ConvertLeads.
               </p>
-            </div>
-            <div>
-              <Button size="lg" className="gap-3" asChild>
-                <a href="#contact">
-                  Any questions? Reach out <PhoneCall className="h-4 w-4" />
-                </a>
-              </Button>
             </div>
           </motion.div>
 
