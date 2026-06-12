@@ -49,7 +49,7 @@ export const CaseStudiesShowcase = () => {
     {
       slug: 'highloop',
       clientName: 'Highloop',
-      imageUrl: 'https://ww1.prweb.com/prfiles/2023/04/12/19277760/ProductHunt-Slide-4.jpg',
+      imageUrl: 'https://ph-files.imgix.net/7c9d3819-1a50-40ec-b21e-03d08ebadcb8.jpeg?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=569&h=320&fit=max&frame=1&dpr=2',
       subtitle: 'GTM strategy for Web3 CRM',
       tags: ['GTM Strategy', 'Web3', 'CRM Marketing'],
     },
