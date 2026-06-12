@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { PhoneCall } from 'lucide-react';
 
 export const FAQSection = () => {
   const faqs = [
@@ -27,47 +30,59 @@ export const FAQSection = () => {
 
   return (
     <section id="faq" className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            Frequently Asked
-            <br />
-            <span className="text-muted-foreground">Questions</span>
-          </h2>
-          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Straight answers to the questions founders ask before working with ConvertLeads
-          </p>
-        </motion.div>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <motion.div
+            className="flex flex-col gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <Badge variant="outline" className="border-primary/30 text-primary mb-6">FAQ</Badge>
+              <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
+                Frequently Asked
+                <br />
+                <span className="text-muted-foreground">Questions</span>
+              </h2>
+              <p className="text-xl text-muted-foreground font-light max-w-xl">
+                Straight answers to the questions founders ask before working with ConvertLeads.
+              </p>
+            </div>
+            <div>
+              <Button size="lg" className="gap-3" asChild>
+                <a href="#contact">
+                  Any questions? Reach out <PhoneCall className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="glass-card px-6 border-none bg-card/50"
-              >
-                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-base">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="glass-card px-6 border-none bg-card/50"
+                >
+                  <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-primary transition-colors py-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6 text-base">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
