@@ -6,10 +6,10 @@ import { cn } from '@/lib/utils';
 // Import company logos
 import alpineLogo from '@/assets/company-logos/alpine-new.svg';
 import bugattiLogo from '@/assets/company-logos/bugatti-new.svg';
-import cotyLogo from '@/assets/company-logos/coty-new.svg';
+import cotyLogo from '@/assets/company-logos/cointelegraph.png.asset.json';
 import hublotLogo from '@/assets/company-logos/hublot-new.svg';
 import hugoBossLogo from '@/assets/company-logos/hugo-boss-new.svg';
-import mcdonaldsLogo from '@/assets/company-logos/mcdonalds-new.svg';
+import mcdonaldsLogo from '@/assets/company-logos/european-union.png.asset.json';
 import shiseidoLogo from '@/assets/company-logos/shiseido-new.svg';
 import vogueLogo from '@/assets/company-logos/vogue-new.svg';
 
@@ -139,10 +139,10 @@ export const CompanyLogosSection = () => {
   const companies = [
     { name: 'Alpine', logo: alpineLogo, height: 32 },
     { name: 'Bugatti', logo: bugattiLogo, height: 32 },
-    { name: 'Coty', logo: cotyLogo, height: 32 },
+    { name: 'Cointelegraph', logo: cotyLogo.url, height: 28 },
     { name: 'Hublot', logo: hublotLogo, height: 32 },
     { name: 'Hugo Boss', logo: hugoBossLogo, height: 32 },
-    { name: 'McDonalds', logo: mcdonaldsLogo, height: 32 },
+    { name: 'European Union', logo: mcdonaldsLogo.url, height: 36 },
     { name: 'Shiseido', logo: shiseidoLogo, height: 32 },
     { name: 'Vogue', logo: vogueLogo, height: 32 }
   ];
