@@ -40,11 +40,10 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}>
             
             <Button
-              onClick={handleGetStarted}
+              asChild
               className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full transition-transform duration-300 hover:scale-105"
               size="lg">
-              
-              Book a Free Audit
+              <a href="mailto:dadalto.nicola@gmail.com">Contact Me</a>
             </Button>
           </motion.div>
         </div>
