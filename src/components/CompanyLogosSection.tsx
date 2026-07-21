@@ -156,12 +156,12 @@ export const CompanyLogosSection = () => {
               Trusted by Industry Leaders
             </p>
           </div>
-          <div className="w-full py-6 md:w-auto md:flex-1">
+          <div className="w-full py-6 md:w-auto md:flex-1 mt-4 md:mt-0">
             <BlurredInfiniteSlider
               speedOnHover={20}
               speed={40}
-              gap={67}
-              fadeWidth={80}
+              gap={40}
+              fadeWidth={24}
             >
               {companies.map((company) => (
                 <div key={company.name} className="flex h-12 items-center">
