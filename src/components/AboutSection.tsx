@@ -27,7 +27,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground mb-8 break-words">
               Meet
               <br />
               <span className="text-muted-foreground">Nicola Da Dalto</span>
@@ -73,8 +73,8 @@ export const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="relative">
-              <div className="w-96 h-96 overflow-hidden glass-card p-1 rounded-2xl">
+            <div className="relative w-full max-w-sm mx-auto lg:mx-0">
+              <div className="w-full aspect-square overflow-hidden glass-card p-1 rounded-2xl">
                 <img 
                   src={nicolaProfile} 
                   alt="Nicola Da Dalto" 
