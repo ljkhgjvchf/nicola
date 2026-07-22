@@ -1,31 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from 'next-themes';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Sun, Moon, ArrowUp, Mail, Linkedin, Github, Youtube } from 'lucide-react';
 
 const SubstackIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    fill="currentColor"
     className={className}
     aria-hidden="true"
   >
-    <path d="M3.5 4.5h17" />
-    <path d="M3.5 9.5h17" />
-    <path d="M3.5 14.5v6l8.5 -4 8.5 4v-6z" />
+    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
   </svg>
 );
 
 const socials = [
-  { href: 'mailto:dadalto.nicola@gmail.com', label: 'Email', Icon: Mail },
-  { href: 'https://www.linkedin.com/in/nicoladadalto/', label: 'LinkedIn', Icon: Linkedin },
-  { href: 'https://github.com/ljkhgjvchf/', label: 'GitHub', Icon: Github },
-  { href: 'https://www.youtube.com/@OMaharaja4/', label: 'YouTube', Icon: Youtube },
-  { href: 'https://substack.com/@nicoladadalto', label: 'Substack', Icon: SubstackIcon },
+  { href: 'mailto:dadalto.nicola@gmail.com', label: 'Email', Icon: Mail, color: '#EA4335' },
+  { href: 'https://www.linkedin.com/in/nicoladadalto/', label: 'LinkedIn', Icon: Linkedin, color: '#0A66C2' },
+  { href: 'https://github.com/ljkhgjvchf/', label: 'GitHub', Icon: Github, color: '#ffffff' },
+  { href: 'https://www.youtube.com/@OMaharaja4/', label: 'YouTube', Icon: Youtube, color: '#FF0000' },
+  { href: 'https://substack.com/@nicoladadalto', label: 'Substack', Icon: SubstackIcon, color: '#FF6719' },
 ];
 
 function handleScrollTop() {
@@ -34,6 +29,21 @@ function handleScrollTop() {
 
 export const Footer = () => {
   const { setTheme } = useTheme();
+  const { t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goHome = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/') navigate('/');
+    handleScrollTop();
+  };
+
+  const goTools = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/tools') navigate('/tools');
+    handleScrollTop();
+  };
 
   return (
     <footer className="py-12 px-6 border-t border-border">
@@ -68,23 +78,24 @@ export const Footer = () => {
 
         {/* Nav links */}
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-light text-muted-foreground">
-          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
-          <Link to="/tools" className="hover:text-foreground transition-colors">Free Tools</Link>
-          <a href="mailto:dadalto.nicola@gmail.com" className="hover:text-foreground transition-colors">Contact</a>
+          <Link to="/" onClick={goHome} className="hover:text-foreground transition-colors">{t('footer.home')}</Link>
+          <Link to="/tools" onClick={goTools} className="hover:text-foreground transition-colors">{t('footer.tools')}</Link>
+          <a href="mailto:dadalto.nicola@gmail.com" className="hover:text-foreground transition-colors">{t('footer.contact')}</a>
         </nav>
 
-        {/* Socials — lucide stroke style */}
+        {/* Socials — brand colors */}
         <div className="flex items-center gap-5">
-          {socials.map(({ href, label, Icon }) => (
+          {socials.map(({ href, label, Icon, color }) => (
             <a
               key={label}
               href={href}
               aria-label={label}
               target={href.startsWith('mailto:') ? undefined : '_blank'}
               rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="transition-transform hover:scale-110"
+              style={{ color }}
             >
-              <Icon className="h-5 w-5" strokeWidth={1.5} />
+              <Icon className="h-5 w-5" strokeWidth={1.75} />
             </a>
           ))}
         </div>
