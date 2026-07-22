@@ -166,7 +166,7 @@ export const CompanyLogosSection = () => {
               {companies.map((company) => (
                 <div key={company.name} className="flex h-12 items-center">
                   <img
-                    className="mx-auto w-fit dark:invert block"
+                    className="mx-auto w-fit dark:brightness-0 dark:invert block"
                     src={company.logo}
                     alt={`${company.name} logo`}
                     style={{ height: `${company.height}px` }}
