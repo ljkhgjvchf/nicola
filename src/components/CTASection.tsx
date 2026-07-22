@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 export const CTASection = () => {
+  const { t } = useLanguage();
   const handleBookCall = () => {
     window.open('https://calendly.com/nicola-da-dalto/15min', '_blank');
   };
@@ -18,19 +20,19 @@ export const CTASection = () => {
         once: true
       }}>
           <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-8">
-            Ready to Transform
+            {t('cta.heading1')}
             <br />
-            <span className="text-muted-foreground">Your Business?</span>
+            <span className="text-muted-foreground">{t('cta.heading2')}</span>
           </h2>
           
-          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed">Book a free 15-minute consultation to discover proven strategies to scale your Web3 business and maximize revenue growth.</p>
+          <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto mb-12 leading-relaxed">{t('cta.sub')}</p>
 
           <Button onClick={handleBookCall} className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-xl font-medium rounded-full transition-transform duration-300 hover:scale-105" size="lg">
-            Book Your Free Consultation
+            {t('cta.button')}
           </Button>
 
           <p className="text-sm text-muted-foreground mt-6 font-light">
-            No commitment required • 15-minute call • Instant calendar booking
+            {t('cta.trust')}
           </p>
         </motion.div>
       </div>

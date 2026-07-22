@@ -1,29 +1,15 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Robot, PencilLine, MagnifyingGlass, Megaphone } from 'phosphor-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const ServicesSection = () => {
+  const { t } = useLanguage();
   const services = [
-    {
-      icon: Robot,
-      title: "AI Marketing & Growth",
-      description: "A full AI marketing engine — from campaign automation to lead scoring — so you move faster, convert more, and waste less budget."
-    },
-    {
-      icon: PencilLine,
-      title: "AI Content Creation",
-      description: "From blog posts to social content and video scripts, a system that produces high-quality content that builds authority, drives traffic, and converts readers into leads."
-    },
-    {
-      icon: MagnifyingGlass,
-      title: "SEO / GEO",
-      description: "Data-driven SEO and Generative Engine Optimization strategies that increase your visibility across search engines and AI-powered platforms, attract qualified traffic, and compound results over time."
-    },
-    {
-      icon: Megaphone,
-      title: "KOL, Influencer Marketing & PR",
-      description: "Strategic influencer partnerships and KOL management that amplify your brand reach and drive conversions."
-    }
+    { icon: Robot, title: t('services.aiMarketing.title'), description: t('services.aiMarketing.desc') },
+    { icon: PencilLine, title: t('services.aiContent.title'), description: t('services.aiContent.desc') },
+    { icon: MagnifyingGlass, title: t('services.seo.title'), description: t('services.seo.desc') },
+    { icon: Megaphone, title: t('services.kol.title'), description: t('services.kol.desc') },
   ];
 
   return (
@@ -37,10 +23,10 @@ export const ServicesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            Services
+            {t('services.heading')}
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Expert marketing services powered by AI that drive growth and generate revenue
+            {t('services.subtitle')}
           </p>
         </motion.div>
 

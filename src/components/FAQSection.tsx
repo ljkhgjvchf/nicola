@@ -1,29 +1,16 @@
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const FAQSection = () => {
+  const { t } = useLanguage();
   const faqs = [
-    {
-      question: "We just raised funding. Do we need to build a marketing team or is there a faster way to scale?",
-      answer: "Hiring a full marketing team takes 3–6 months and €10,000–€25,000/month before you see results. An AI-powered growth system can be deployed in weeks at a fraction of that cost — covering content, SEO/GEO, lead generation, and automated workflows from day one. ConvertLeads builds the system first; you hire headcount only for the functions where human judgment is genuinely irreplaceable."
-    },
-    {
-      question: "We're expanding into Europe. How do we build brand awareness and pipeline in a market where we're unknown?",
-      answer: "EU market entry requires localised positioning, the right channels (LinkedIn dominates B2B here), and credibility signals that European institutional buyers recognise. Having worked with EU-funded programmes, Web3 scale-ups, and government-adjacent organisations, ConvertLeads brings the playbooks and sector credibility to build brand and pipeline in Europe from zero."
-    },
-    {
-      question: "We have traction but it's not scaling. How do we diagnose what's broken and fix it fast?",
-      answer: "A plateau means one of three things: your top-of-funnel is too narrow, your conversion path leaks qualified leads, or your content doesn't match where buyers actually are in the decision. ConvertLeads starts with a growth audit — mapping your funnel against proven frameworks, identifying the highest-leverage bottleneck, and deploying an AI-assisted system around that specific fix rather than rebuilding everything."
-    },
-    {
-      question: "What is the difference between a traditional marketing agency and ConvertLeads?",
-      answer: "Agencies sell retainers built around their team's capacity. ConvertLeads builds systems built around your growth outcomes. The result is an AI-powered marketing engine — automated workflows, content systems, SEO and GEO frameworks — that runs lean and keeps compounding. No account managers, no bloated retainers. Strategy, system, and accountability for the number."
-    },
-    {
-      question: "How quickly can a growth system be deployed and when do we see first results?",
-      answer: "Lead qualification and outreach automations are live within 2–3 weeks. Content and SEO systems start compounding at 60–90 days. The key difference from traditional marketing: every asset and workflow keeps producing output without incremental effort — so the return increases over time rather than resetting when a monthly retainer renews."
-    }
+    { question: t('faq.q1'), answer: t('faq.a1') },
+    { question: t('faq.q2'), answer: t('faq.a2') },
+    { question: t('faq.q3'), answer: t('faq.a3') },
+    { question: t('faq.q4'), answer: t('faq.a4') },
+    { question: t('faq.q5'), answer: t('faq.a5') },
   ];
 
   return (
@@ -38,14 +25,14 @@ export const FAQSection = () => {
             viewport={{ once: true }}
           >
             <div>
-              <Badge variant="outline" className="border-primary/30 text-primary mb-6">FAQ</Badge>
+              <Badge variant="outline" className="border-primary/30 text-primary mb-6">{t('faq.badge')}</Badge>
               <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-                Frequently Asked
+                {t('faq.heading1')}
                 <br />
-                <span className="text-muted-foreground">Questions</span>
+                <span className="text-muted-foreground">{t('faq.heading2')}</span>
               </h2>
               <p className="text-xl text-muted-foreground font-light max-w-xl">
-                Straight answers to the questions founders ask before working with ConvertLeads.
+                {t('faq.subtitle')}
               </p>
             </div>
           </motion.div>

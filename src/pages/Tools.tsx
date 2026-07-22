@@ -2,31 +2,30 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-
-const tools = [
-  {
-    title: 'Signals Radar — GitHub · Reddit · YouTube · X',
-    description:
-      'A live pulse of what founders, devs and creators are talking about across GitHub, Reddit, YouTube and X — surfacing signals worth acting on.',
-    href: '/tools/signals-radar-gitHub-reddit-youtube-x/',
-    tag: 'Signals · Research',
-    external: true,
-  },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Tools = () => {
+  const { t } = useLanguage();
+  const tools = [
+    {
+      title: t('tools.signalsTitle'),
+      description: t('tools.signalsDesc'),
+      href: '/tools/signals-radar-gitHub-reddit-youtube-x/',
+      tag: t('tools.signalsTag'),
+      external: true,
+    },
+  ];
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
         <div className="mb-16">
-          <p className="text-sm text-primary font-light tracking-wide uppercase mb-4">Free Tools</p>
+          <p className="text-sm text-primary font-light tracking-wide uppercase mb-4">{t('tools.tag')}</p>
           <h1 className="text-4xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            AI tools I built to move faster.
+            {t('tools.heading')}
           </h1>
           <p className="text-lg text-muted-foreground font-light max-w-2xl">
-            Small, focused utilities I built while helping founders scale — released free
-            so you can steal the workflows I use every day. No signup, no paywall.
+            {t('tools.subtitle')}
           </p>
         </div>
 
@@ -66,9 +65,9 @@ const Tools = () => {
         </div>
 
         <p className="mt-16 text-sm text-muted-foreground font-light">
-          More tools shipping soon. Have an idea?{' '}
+          {t('tools.outro1')}{' '}
           <a href="mailto:dadalto.nicola@gmail.com" className="text-primary hover:underline">
-            Send it my way
+            {t('tools.outro2')}
           </a>
           .
         </p>

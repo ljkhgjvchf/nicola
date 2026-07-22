@@ -1,12 +1,17 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import nicolaProfile from '@/assets/nicola-profile.jpg';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const AboutSection = () => {
+  const { t } = useLanguage();
   const [currentTool, setCurrentTool] = useState(0);
 
   const sectors = [
-    'Public Sector & Government', 'Crypto & Web3', 'Startups', 'Fintech (B2B & B2C)'
+    t('about.sector.gov'),
+    t('about.sector.crypto'),
+    t('about.sector.startups'),
+    t('about.sector.fintech'),
   ];
 
   useEffect(() => {
@@ -28,21 +33,21 @@ export const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground mb-8 break-words">
-              Meet
+              {t('about.heading1')}
               <br />
-              <span className="text-muted-foreground">Nicola Da Dalto</span>
+              <span className="text-muted-foreground">{t('about.heading2')}</span>
             </h2>
             
             <p className="text-xl text-muted-foreground font-light leading-relaxed mb-8">
-              Hey 👋 I'm Nicola — a digital marketing strategist with 6+ years of experience across B2B, B2C, and AI-powered marketing. I specialise in building growth systems, running multi-channel campaigns, and turning data into strategies that deliver measurable results.
+              {t('about.p1')}
             </p>
 
             <p className="text-lg text-muted-foreground font-light leading-relaxed mb-12">
-              From Fortune 500 brands to EU institutions and fast-growing startups, I've helped organisations scale their marketing, generate qualified leads, and build audiences that convert — combining proven frameworks with the latest AI tools to move faster and smarter.
+              {t('about.p2')}
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-foreground">Sectors I worked in</h3>
+              <h3 className="text-lg font-medium text-foreground">{t('about.sectors')}</h3>
               <div className="flex flex-wrap gap-3">
                 {sectors.map((sector, index) => (
                   <motion.div
