@@ -2,6 +2,7 @@ import { animate, motion, useMotionValue } from 'framer-motion';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Import company logos
 import alpineLogo from '@/assets/company-logos/alpine-new.svg';
@@ -136,6 +137,7 @@ export function BlurredInfiniteSlider({
 }
 
 export const CompanyLogosSection = () => {
+  const { t } = useLanguage();
   const companies = [
     { name: 'Alpine', logo: alpineLogo, height: 32 },
     { name: 'Bugatti', logo: bugattiLogo, height: 32 },
@@ -153,7 +155,7 @@ export const CompanyLogosSection = () => {
         <div className="flex flex-col items-center md:flex-row">
           <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-border md:pr-6">
             <p className="text-sm text-muted-foreground">
-              Trusted by Industry Leaders
+              {t('logos.trusted')}
             </p>
           </div>
           <div className="w-full py-6 md:w-auto md:flex-1 mt-4 md:mt-0">

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Clock } from 'phosphor-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface CaseStudy {
   slug: string;
@@ -16,12 +17,13 @@ interface CaseStudy {
 }
 
 export const CaseStudiesShowcase = () => {
+  const { t } = useLanguage();
   const caseStudies: CaseStudy[] = [
     {
       slug: 'eit',
       clientName: 'EIT Jumpstarter Programme',
       imageUrl: 'https://eitjumpstarter.eu/wp-content/uploads/2025/11/Awards_advance_logo-32.jpg',
-      subtitle: '500+ qualified applicants. -28% acquisition cost',
+      subtitle: t('cases.eit.subtitle'),
       tags: ['Event Management', 'User Acquisition', 'Performance Marketing'],
       wide: true,
     },
@@ -29,28 +31,28 @@ export const CaseStudiesShowcase = () => {
       slug: 'exclusible',
       clientName: 'Exclusible.com',
       imageUrl: 'https://cdn2.spatial.io/assets/v1/thumbnails/6467b2f8d21fda533a3bcfb3/customThumbnail/r/dfedb2c4c8c5bf16fe9d75e01840e8452563a8383e7e60d410bb7db9ed1d245a/1746112091/w3840q75fwebp',
-      subtitle: '+300% in B2B lead generation',
+      subtitle: t('cases.exclusible.subtitle'),
       tags: ['B2B Lead Gen', 'Web3 Marketing', 'Content Strategy'],
     },
     {
       slug: 'alpine',
       clientName: 'Alpine',
       imageUrl: 'https://cdn.group.renault.com/alp/master/alpine-new-cars/product-plans/a110-obvious/hero-zone/alpine-obvious-hero-zone-001.jpg.ximg.largex2.webp/ff4ea1c853.webp',
-      subtitle: 'Community of +50k members in 3 weeks',
+      subtitle: t('cases.alpine.subtitle'),
       tags: ['Community Building', 'Social Media', 'Brand Strategy'],
     },
     {
       slug: 'doppl',
       clientName: 'Doppl.ai',
       imageUrl: 'https://framerusercontent.com/images/RiFO6DG3N8ND8frQEjw0ROHrtlk.png',
-      subtitle: '+90K waiting list subscribers in 3 weeks',
+      subtitle: t('cases.doppl.subtitle'),
       tags: ['Waitlist Growth', 'Viral Marketing', 'Product Launch'],
     },
     {
       slug: 'highloop',
       clientName: 'Highloop',
       imageUrl: 'https://ph-files.imgix.net/7c9d3819-1a50-40ec-b21e-03d08ebadcb8.jpeg?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=569&h=320&fit=max&frame=1&dpr=2',
-      subtitle: 'GTM strategy for Web3 CRM',
+      subtitle: t('cases.highloop.subtitle'),
       tags: ['GTM Strategy', 'Web3', 'CRM Marketing'],
     },
   ];
@@ -66,10 +68,10 @@ export const CaseStudiesShowcase = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl md:text-6xl font-light tracking-tight text-foreground mb-6">
-            Success Stories
+            {t('cases.heading')}
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Real results and achievements from clients I've worked with
+            {t('cases.subtitle')}
           </p>
         </motion.div>
 
@@ -107,12 +109,12 @@ export const CaseStudiesShowcase = () => {
                   {study.placeholder ? (
                     <Button variant="outline" className="group/btn opacity-60 cursor-default" disabled>
                       <Clock size={16} weight="bold" className="mr-2" />
-                      Coming Soon
+                      {t('cases.comingSoon')}
                     </Button>
                   ) : (
                     <Link to={`/case-study/${study.slug}`}>
                       <Button variant="outline" className="group/btn">
-                        Read More
+                        {t('cases.readMore')}
                         <ArrowRight size={16} weight="bold" className="ml-2 transition-transform group-hover/btn:translate-x-1" />
                       </Button>
                     </Link>

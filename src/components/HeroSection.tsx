@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { CompanyLogosSection } from '@/components/CompanyLogosSection';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const HeroSection = () => {
-  const handleGetStarted = () => {
-    window.open('https://calendly.com/nicola-da-dalto/15min', '_blank');
-  };
+  const { t } = useLanguage();
 
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-between px-6 pt-20 relative overflow-hidden">
@@ -31,7 +30,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>
             
-            Hey 👋 I'm Nicola — a marketing strategist who's driven $10M+ in revenue, 1.2M+ PR views, and growth for Fortune 500 clients. 
+            {t('hero.subtitle')}
           </motion.p>
 
           <motion.div
@@ -43,7 +42,7 @@ export const HeroSection = () => {
               onClick={() => { window.location.href = 'mailto:dadalto.nicola@gmail.com'; }}
               className="glow-button-pulse bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-full transition-transform duration-300 hover:scale-105"
               size="lg">
-              Contact Me
+              {t('hero.cta')}
             </Button>
           </motion.div>
         </div>

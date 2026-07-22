@@ -15,10 +15,11 @@ const SubstackIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const socials = [
+type Social = { href: string; label: string; Icon: React.ComponentType<any>; color?: string; useTheme?: boolean };
+const socials: Social[] = [
   { href: 'mailto:dadalto.nicola@gmail.com', label: 'Email', Icon: Mail, color: '#EA4335' },
   { href: 'https://www.linkedin.com/in/nicoladadalto/', label: 'LinkedIn', Icon: Linkedin, color: '#0A66C2' },
-  { href: 'https://github.com/ljkhgjvchf/', label: 'GitHub', Icon: Github, color: '#ffffff' },
+  { href: 'https://github.com/ljkhgjvchf/', label: 'GitHub', Icon: Github, useTheme: true },
   { href: 'https://www.youtube.com/@OMaharaja4/', label: 'YouTube', Icon: Youtube, color: '#FF0000' },
   { href: 'https://substack.com/@nicoladadalto', label: 'Substack', Icon: SubstackIcon, color: '#FF6719' },
 ];
@@ -85,15 +86,15 @@ export const Footer = () => {
 
         {/* Socials — brand colors */}
         <div className="flex items-center gap-5">
-          {socials.map(({ href, label, Icon, color }) => (
+          {socials.map(({ href, label, Icon, color, useTheme: usesTheme }) => (
             <a
               key={label}
               href={href}
               aria-label={label}
               target={href.startsWith('mailto:') ? undefined : '_blank'}
               rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-              className="transition-transform hover:scale-110"
-              style={{ color }}
+              className={`transition-transform hover:scale-110 ${usesTheme ? 'text-foreground' : ''}`}
+              style={usesTheme ? undefined : { color }}
             >
               <Icon className="h-5 w-5" strokeWidth={1.75} />
             </a>
@@ -102,7 +103,7 @@ export const Footer = () => {
 
         {/* Copy */}
         <p className="text-muted-foreground text-sm font-light text-center">
-          © 2026 ConvertLeads — AI-powered growth systems for founders scaling in Europe.
+          {t('footer.copyright')}
         </p>
       </div>
     </footer>
