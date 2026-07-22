@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Target, Trophy, CookingPot, Wrench, ShoppingCart, Briefcase, CurrencyDollar, Link as LinkIcon, Image, WarningCircle, Newspaper, LinkedinLogo } from 'phosphor-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface PressItem {
   source: string;
@@ -461,6 +462,7 @@ const renderTextWithBold = (text: string) => {
 const CaseStudy = () => {
   const { slug } = useParams<{ slug: string }>();
   const caseStudy = slug ? caseStudiesData[slug] : null;
+  const { t } = useLanguage();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -471,11 +473,11 @@ const CaseStudy = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         <div className="pt-32 px-6 text-center">
-          <h1 className="text-4xl font-light text-foreground mb-4">Case Study Not Found</h1>
+          <h1 className="text-4xl font-light text-foreground mb-4">{t('cs.notFound')}</h1>
           <Link to="/">
             <Button variant="outline">
               <ArrowLeft size={16} className="mr-2" />
-              Back to Home
+              {t('cs.backHome')}
             </Button>
           </Link>
         </div>
@@ -514,7 +516,7 @@ const CaseStudy = () => {
             <Link to="/#case-studies-showcase">
               <Button variant="ghost" className="mb-8">
                 <ArrowLeft size={16} className="mr-2" />
-                Back to Success Stories
+                {t('cs.backToCases')}
               </Button>
             </Link>
 
@@ -537,7 +539,7 @@ const CaseStudy = () => {
                   className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <LinkIcon size={16} />
-                  Visit {caseStudy.clientName}
+                  {t('cs.visit')} {caseStudy.clientName}
                 </a>
               )}
               {caseStudy.externalLinks?.map((link, idx) => (
@@ -606,7 +608,7 @@ const CaseStudy = () => {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-primary"><Wrench size={24} weight="duotone" /></span>
-                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Tools Used</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">{t('cs.toolsUsed')}</h2>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {caseStudy.tools.map((tool, idx) => (
@@ -628,7 +630,7 @@ const CaseStudy = () => {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-primary"><Briefcase size={24} weight="duotone" /></span>
-                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Skills Highlighted</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">{t('cs.skillsHighlighted')}</h2>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {caseStudy.skills.map((skill, idx) => (
@@ -650,7 +652,7 @@ const CaseStudy = () => {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-primary"><CurrencyDollar size={24} weight="duotone" /></span>
-                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Budget</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">{t('cs.budget')}</h2>
                   </div>
                   <p className="text-2xl font-medium text-primary">{caseStudy.budget}</p>
                 </motion.div>
@@ -666,7 +668,7 @@ const CaseStudy = () => {
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <span className="text-primary"><Image size={24} weight="duotone" /></span>
-                    <h2 className="text-xl md:text-2xl font-medium text-foreground">Gallery</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">{t('cs.gallery')}</h2>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     {caseStudy.gallery.map((img, idx) => (
@@ -713,7 +715,7 @@ const CaseStudy = () => {
                         <span className="text-xs font-medium text-primary uppercase tracking-wider">{item.source}</span>
                         <p className="text-foreground mt-1 group-hover:text-primary transition-colors">{item.title}</p>
                         <span className="text-sm text-muted-foreground mt-2 inline-flex items-center gap-1">
-                          Read more <LinkIcon size={12} />
+                          {t('cs.readMore')} <LinkIcon size={12} />
                         </span>
                       </a>
                     ))}
@@ -731,7 +733,7 @@ const CaseStudy = () => {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-primary"><LinkedinLogo size={24} weight="duotone" /></span>
-                    <h2 className="text-xl md:text-2xl font-medium text-foreground">SM Highlights</h2>
+                    <h2 className="text-xl md:text-2xl font-medium text-foreground">{t('cs.smHighlights')}</h2>
                   </div>
                   <div className="space-y-4">
                     {caseStudy.socialHighlights.map((item, idx) => (
@@ -745,7 +747,7 @@ const CaseStudy = () => {
                         <span className="text-xs font-medium text-primary uppercase tracking-wider">{item.platform}</span>
                         <p className="text-foreground mt-1 group-hover:text-primary transition-colors">{item.title}</p>
                         <span className="text-sm text-muted-foreground mt-2 inline-flex items-center gap-1">
-                          View post <LinkIcon size={12} />
+                          {t('cs.viewPost')} <LinkIcon size={12} />
                         </span>
                       </a>
                     ))}
