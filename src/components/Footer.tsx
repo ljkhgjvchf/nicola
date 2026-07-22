@@ -15,7 +15,7 @@ const SubstackIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-type Social = { href: string; label: string; Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>; color?: string; useTheme?: boolean };
+type Social = { href: string; label: string; Icon: React.ComponentType<any>; color?: string; useTheme?: boolean };
 const socials: Social[] = [
   { href: 'mailto:dadalto.nicola@gmail.com', label: 'Email', Icon: Mail, color: '#EA4335' },
   { href: 'https://www.linkedin.com/in/nicoladadalto/', label: 'LinkedIn', Icon: Linkedin, color: '#0A66C2' },
