@@ -155,7 +155,7 @@ All colors MUST be HSL.
   }
 
   .nav-blur {
-    @apply backdrop-blur-md bg-background/80 border-b border-border/50;
+    @apply bg-background/95 border-b border-border/50;
   }
 
   .fade-in-up {
