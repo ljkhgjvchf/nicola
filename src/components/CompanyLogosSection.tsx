@@ -1,5 +1,5 @@
-import { animate, motion, useMotionValue } from 'framer-motion';
-import React, { CSSProperties, useEffect, useState } from 'react';
+import { animate, motion, useInView, useMotionValue } from 'framer-motion';
+import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 import useMeasure from 'react-use-measure';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -7,10 +7,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 // Import company logos
 import alpineLogo from '@/assets/company-logos/alpine-new.svg';
 import bugattiLogo from '@/assets/company-logos/bugatti-new.svg';
-import cotyLogo from '@/assets/company-logos/cointelegraph.png.asset.json';
+import cointelegraphLogo from '@/assets/company-logos/cointelegraph.png';
 import hublotLogo from '@/assets/company-logos/hublot-new.svg';
 import hugoBossLogo from '@/assets/company-logos/hugo-boss-new.svg';
-import mcdonaldsLogo from '@/assets/company-logos/european-union.png.asset.json';
+import europeanUnionLogo from '@/assets/company-logos/european-union.png';
 import shiseidoLogo from '@/assets/company-logos/shiseido-new.svg';
 import vogueLogo from '@/assets/company-logos/vogue-new.svg';
 
@@ -22,6 +22,7 @@ type InfiniteSliderProps = {
     direction?: 'horizontal' | 'vertical';
     reverse?: boolean;
     className?: string;
+    isActive?: boolean;
 };
 
 function InfiniteSlider({
@@ -32,6 +33,7 @@ function InfiniteSlider({
     direction = 'horizontal',
     reverse = false,
     className,
+    isActive = true,
 }: InfiniteSliderProps) {
     const [currentSpeed, setCurrentSpeed] = useState(speed);
     const [ref, { width, height }] = useMeasure();
@@ -43,6 +45,7 @@ function InfiniteSlider({
         let controls;
         const size = direction === 'horizontal' ? width : height;
         if (size === 0) return;
+        if (!isActive) return;
 
         const contentSize = size + gap;
         const from = reverse ? -contentSize / 2 : 0;
@@ -76,7 +79,7 @@ function InfiniteSlider({
         }
 
         return () => controls?.stop();
-    }, [key, translation, currentSpeed, width, height, gap, isTransitioning, direction, reverse]);
+    }, [key, translation, currentSpeed, width, height, gap, isTransitioning, direction, reverse, isActive]);
 
     const hoverProps = speedOnHover
         ? {
@@ -138,19 +141,21 @@ export function BlurredInfiniteSlider({
 
 export const CompanyLogosSection = () => {
   const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { margin: '200px 0px' });
   const companies = [
     { name: 'Alpine', logo: alpineLogo, height: 32 },
     { name: 'Bugatti', logo: bugattiLogo, height: 32 },
-    { name: 'Cointelegraph', logo: cotyLogo.url, height: 28 },
+    { name: 'Cointelegraph', logo: cointelegraphLogo, height: 32 },
     { name: 'Hublot', logo: hublotLogo, height: 32 },
     { name: 'Hugo Boss', logo: hugoBossLogo, height: 32 },
-    { name: 'European Union', logo: mcdonaldsLogo.url, height: 36 },
+    { name: 'European Union', logo: europeanUnionLogo, height: 36 },
     { name: 'Shiseido', logo: shiseidoLogo, height: 32 },
     { name: 'Vogue', logo: vogueLogo, height: 32 }
   ];
 
   return (
-    <section className="bg-background overflow-hidden py-16 w-full border-b border-border">
+    <section ref={sectionRef} className="bg-background overflow-hidden py-16 w-full border-b border-border">
       <div className="m-auto max-w-7xl px-6">
         <div className="flex flex-col items-center md:flex-row">
           <div className="flex-shrink-0 text-center md:text-right md:max-w-44 md:border-r md:border-border md:pr-6">
@@ -164,6 +169,7 @@ export const CompanyLogosSection = () => {
               speed={40}
               gap={40}
               fadeWidth={24}
+              isActive={isInView}
             >
               {companies.map((company) => (
                 <div key={company.name} className="flex h-12 items-center">
