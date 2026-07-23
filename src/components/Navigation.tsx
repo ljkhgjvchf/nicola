@@ -53,11 +53,12 @@ export const Navigation = () => {
               { label: t('nav.successStories'), id: 'case-studies-showcase' },
               { label: t('nav.services'), id: 'services' },
               { label: t('nav.about'), id: 'about' },
+              { label: t('nav.blog'), id: 'blog', route: '/blog' },
               { label: t('nav.contact'), id: 'contact', highlight: true }
             ] as const).map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => 'route' in item ? navigate(item.route) : scrollToSection(item.id)}
                 className={`transition-colors duration-200 text-sm font-light ${
                   'highlight' in item && item.highlight
                     ? 'text-primary hover:text-primary/80' 

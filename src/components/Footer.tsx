@@ -46,6 +46,12 @@ export const Footer = () => {
     handleScrollTop();
   };
 
+  const goBlog = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/blog') navigate('/blog');
+    handleScrollTop();
+  };
+
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-8">
@@ -81,6 +87,7 @@ export const Footer = () => {
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-light text-muted-foreground">
           <Link to="/" onClick={goHome} className="hover:text-foreground transition-colors">{t('footer.home')}</Link>
           <Link to="/tools" onClick={goTools} className="hover:text-foreground transition-colors">{t('footer.tools')}</Link>
+          <Link to="/blog" onClick={goBlog} className="hover:text-foreground transition-colors">{t('footer.blog')}</Link>
           <a href="mailto:dadalto.nicola@gmail.com" className="hover:text-foreground transition-colors">{t('footer.contact')}</a>
         </nav>
 
