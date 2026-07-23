@@ -10,10 +10,12 @@ export const translations: Dict = {
   'nav.services': { en: 'Services', it: 'Servizi' },
   'nav.about': { en: 'About', it: 'Chi Sono' },
   'nav.contact': { en: 'Contact', it: 'Contatti' },
+  'nav.blog': { en: 'Blog', it: 'Blog' },
 
   // Footer
   'footer.home': { en: 'Home', it: 'Home' },
   'footer.tools': { en: 'Free Tools', it: 'Free Tools' },
+  'footer.blog': { en: 'Blog', it: 'Blog' },
   'footer.contact': { en: 'Contact', it: 'Contatti' },
   'footer.copyright': {
     en: '© 2026 ConvertLeads — AI-powered growth systems for founders scaling in Europe.',
@@ -195,6 +197,28 @@ export const translations: Dict = {
   'cs.readMore': { en: 'Read more', it: 'Scopri di più' },
   'cs.viewPost': { en: 'View post', it: 'Vedi il post' },
   'cs.smHighlights': { en: 'SM Highlights', it: 'Highlight Social' },
+
+  // Blog
+  'blog.tag': { en: 'Blog', it: 'Blog' },
+  'blog.heading': {
+    en: 'Notes on shipping with AI.',
+    it: 'Note su come si spedisce con l\u2019AI.',
+  },
+  'blog.subtitle': {
+    en: 'Case studies, prompts, and playbooks from building growth systems and websites with AI \u2014 written from real projects, not theory.',
+    it: 'Case study, prompt e playbook dal costruire growth system e siti con l\u2019AI \u2014 scritti da progetti reali, non dalla teoria.',
+  },
+  'blog.backToBlog': { en: 'Back to Blog', it: 'Torna al Blog' },
+  'blog.seeTheCode': { en: 'See the code', it: 'Vedi il codice' },
+  'blog.post1.tag': { en: 'Case Study \u00b7 Playbook', it: 'Case Study \u00b7 Playbook' },
+  'blog.post1.title': {
+    en: 'How I Built This Site: Lovable + Claude + Vercel',
+    it: 'Come ho costruito questo sito: Lovable + Claude + Vercel',
+  },
+  'blog.post1.excerpt': {
+    en: 'What it actually takes to build a "$10K website" with AI \u2014 139 commits, 24 of them about logos, 7 full rollbacks, one brand pivot in the middle.',
+    it: 'Cosa serve davvero per costruire un "$10K website" con l\u2019AI \u2014 139 commit, 24 sui logo, 7 rollback completi, un brand pivot a met\u00e0 strada.',
+  },
 };
 
 type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: (k: keyof typeof translations) => string };
