@@ -71,12 +71,12 @@
     .header-right { gap: 8px; }
     .header-cta { padding: 9px 14px; font-size: 12px; }
     .lang-toggle { padding: 2px; }
-    .lang-btn { padding: 5px 8px; font-size: 11px; }
+    .lang-btn { padding: 7px 9px; font-size: 11px; }
   }
 
   /* Hero */
   .hero { padding-top: 64px; padding-bottom: 64px; display: flex; gap: 56px; align-items: stretch; }
-  .hero-video-col { flex: 0 0 66%; min-width: 0; }
+  .hero-video-col { flex: 0 0 50%; min-width: 0; }
   .hero-cta-col { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
   .video-frame {
     position: relative; border-radius: 16px; overflow: hidden; background: #111;
@@ -89,7 +89,7 @@
   }
   .play-circle { width: 68px; height: 68px; border-radius: 50%; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; }
   .video-placeholder p { margin: 0; font-size: 14px; font-weight: 500; }
-  .hero-headline { font-size: 37px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 16px; }
+  .hero-headline { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.22; margin: 0 0 16px; }
   @media (max-width: 760px) { .hero-headline { font-size: 28px; } }
   .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.6; margin: 0 0 28px; }
   .hero-ctas { display: flex; flex-direction: column; gap: 12px; }
@@ -131,7 +131,7 @@
   .outcomes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .outcomes li { display: flex; gap: 10px; font-size: 14px; line-height: 1.5; }
   .outcomes li svg { flex-shrink: 0; margin-top: 2px; color: var(--accent); }
-  @media (max-width: 760px) { .services-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
 
   /* How it works */
   .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -139,7 +139,7 @@
   .how-step-num { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 12px; }
   .how-title { font-size: 18px; font-weight: 600; margin: 0 0 10px; }
   .how-body { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
-  @media (max-width: 760px) { .how-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .how-grid { grid-template-columns: 1fr; } }
 
   /* How-it-works infographic widgets */
   .how-widget { margin-top: 24px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
@@ -204,7 +204,7 @@
     flex: 0 0 auto; width: 176px; height: 176px; border-radius: 50%;
     overflow: hidden; border: 1px solid var(--border);
   }
-  .avatar-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+  .avatar-photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.75); transform-origin: 47% 33%; }
   .about-copy { flex: 1; min-width: 260px; }
   .about-copy h3 { font-size: 26px; font-weight: 500; margin: 0 0 16px; }
   .about-copy p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
