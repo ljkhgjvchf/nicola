@@ -97,6 +97,30 @@
   .hero-trust { margin-top: 24px; font-size: 13px; color: var(--muted); line-height: 1.5; }
   @media (max-width: 900px) { .hero { flex-direction: column; } .hero-video-col { flex-basis: auto; } }
 
+  /* Included grid */
+  .included-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .included-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; }
+  .included-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(250,93,41,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .included-card h4 { font-size: 16px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .included-card p { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin: 0; }
+  @media (max-width: 900px) { .included-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .included-grid { grid-template-columns: 1fr; } }
+
+  /* Guarantee */
+  .guarantee-section { padding-top: 0; }
+  .guarantee-card {
+    display: flex; align-items: center; gap: 28px; background: #fff;
+    border: 2px solid var(--accent); border-radius: 20px; padding: 40px 44px;
+  }
+  .guarantee-badge {
+    flex: 0 0 auto; width: 72px; height: 72px; border-radius: 50%; background: var(--accent);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+  }
+  .guarantee-copy .eyebrow { margin-bottom: 10px; }
+  .guarantee-copy h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; line-height: 1.3; }
+  .guarantee-copy p { font-size: 14.5px; color: var(--muted); line-height: 1.6; margin: 0; }
+  @media (max-width: 700px) { .guarantee-card { flex-direction: column; text-align: center; padding: 32px 28px; } }
+
   /* Services */
   .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
@@ -244,7 +268,7 @@
       <button class="lang-btn" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="it">IT</button>
     </div>
-    <a class="btn btn-primary header-cta" id="header-cta-link" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="nav.cta">Book a Free Call</a>
+    <a class="btn btn-primary header-cta" id="header-cta-link" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="nav.cta">Book the Audit</a>
   </div>
 </header>
 
@@ -260,47 +284,85 @@
     </div>
   </div>
   <div class="hero-cta-col">
-    <p class="eyebrow" data-i18n="hero.eyebrow">AI INTEGRATION FOR BUSINESSES</p>
-    <h1 class="hero-headline" data-i18n="hero.headline">I build AI systems that run your business for you.</h1>
-    <p class="hero-sub" data-i18n="hero.sub">Less manual work. Faster replies. Nothing missed. I set it up, you get your time back.</p>
+    <p class="eyebrow" data-i18n="hero.eyebrow">FIXED PRICE. GUARANTEED.</p>
+    <h1 class="hero-headline" data-i18n="hero.headline">I'll show you exactly where AI saves or makes you money — and build you one, live. Or you don't pay.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">A fixed-price audit: one session, a full report, and a live demo of one automation — built in front of you. €499. Guaranteed.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="hero.cta1">Book a Free Strategy Call</a>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="hero.cta1">Book the AI Revenue Audit — €499</a>
       <a class="btn btn-outline" id="whatsapp-link" href="#" target="_blank" rel="noopener" data-i18n="hero.cta2">Message Me on WhatsApp</a>
     </div>
-    <p class="hero-trust" data-i18n="hero.trust">Built systems for teams that have worked with Alpine, Vogue, Hublot and the EU.</p>
+    <p class="hero-trust" data-i18n="hero.trust">At least 3 concrete opportunities with estimated impact — or it's free.</p>
+  </div>
+</section>
+
+<section id="included">
+  <p class="eyebrow" data-i18n="included.eyebrow">WHAT'S INCLUDED</p>
+  <h2 class="section-heading" data-i18n="included.heading">One session. Everything you need to see the path.</h2>
+  <div class="included-grid">
+    <div class="included-card">
+      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h4 data-i18n="included.i1.title">90-Minute Deep Dive</h4>
+      <p data-i18n="included.i1.body">In person if you're nearby, video call if you're not. I look at how your business actually runs today.</p>
+    </div>
+    <div class="included-card">
+      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
+      <h4 data-i18n="included.i2.title">Full Written Report</h4>
+      <p data-i18n="included.i2.body">At least 3 AI opportunities I find, ranked by impact and how hard it is to do.</p>
+    </div>
+    <div class="included-card">
+      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m8 21 4-3 4 3"/><path d="m8 11 3 3 5-5"/></svg></div>
+      <h4 data-i18n="included.i3.title">One Real Automation, Yours to Keep</h4>
+      <p data-i18n="included.i3.body">Not a slide — I build it live during the session, and you walk away with it. Ready to use, whether or not we ever work together again.</p>
+    </div>
+    <div class="included-card">
+      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <h4 data-i18n="included.i4.title">A Clear Next Step</h4>
+      <p data-i18n="included.i4.body">With me or without me. You'll know exactly what to do next either way.</p>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee-section">
+  <div class="guarantee-card">
+    <div class="guarantee-badge"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+    <div class="guarantee-copy">
+      <p class="eyebrow" data-i18n="guarantee.eyebrow">THE GUARANTEE</p>
+      <h3 data-i18n="guarantee.heading">At least 3 real opportunities, each with an estimated impact — or it's free.</h3>
+      <p data-i18n="guarantee.body">No fine print. If I don't identify at least 3 concrete opportunities with an estimated impact, it's free.</p>
+    </div>
   </div>
 </section>
 
 <section id="services">
-  <p class="eyebrow" data-i18n="services.eyebrow">WHAT I OFFER</p>
-  <h2 class="section-heading" data-i18n="services.heading">Two ways I can help your business today</h2>
+  <p class="eyebrow" data-i18n="services.eyebrow">AFTER THE AUDIT</p>
+  <h2 class="section-heading" data-i18n="services.heading">Most audits point to the same place.</h2>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
       </div>
-      <span class="service-tag" data-i18n="services.s1.tag">AI Integration</span>
-      <h3 class="service-headline" data-i18n="services.s1.headline">AI that runs your business, not just answers questions.</h3>
-      <p class="service-body" data-i18n="services.s1.body">I take the repetitive stuff in your business — replying, sorting, updating, reporting — and I make AI do it for you. You get your time back, and nothing gets missed.</p>
+      <span class="service-tag" data-i18n="services.s1.tag">Sales &amp; Follow-Up Automation</span>
+      <h3 class="service-headline" data-i18n="services.s1.headline">I've built this exact system before — running HubSpot's automation end to end.</h3>
+      <p class="service-body" data-i18n="services.s1.body">I ran the CRM, the pipeline, and the follow-ups for a real company. I can build you the same thing as a simple, custom system — once, not a monthly subscription.</p>
       <ul class="outcomes">
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o1">Less manual work for you and your team</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o2">Faster replies to customers, any time of day</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o3">Fewer mistakes from tired humans doing repetitive tasks</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o4">One person (me) who builds it and makes sure it works</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o1">More leads without more of your time</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o2">Replies in under 60 seconds, any time</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o3">Every lead tracked automatically, nothing lost</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o4">Built once — no monthly per-seat cost</span></li>
       </ul>
     </div>
     <div class="service-card">
       <div class="service-icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
       </div>
-      <span class="service-tag" data-i18n="services.s2.tag">Lead Generation &amp; Outreach Automation</span>
-      <h3 class="service-headline" data-i18n="services.s2.headline">New customers find you and get answered — automatically.</h3>
-      <p class="service-body" data-i18n="services.s2.body">I build a system that finds the right people, reaches out, and replies fast — so you get more customers without spending your day chasing them.</p>
+      <span class="service-tag" data-i18n="services.s2.tag">Or Something Else Entirely</span>
+      <h3 class="service-headline" data-i18n="services.s2.headline">I specialize in sales and operations automation.</h3>
+      <p class="service-body" data-i18n="services.s2.body">If your biggest opportunity is somewhere else, I'll tell you — and point you the right way. The audit is honest either way.</p>
       <ul class="outcomes">
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o1">More leads without more of your time</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o2">Replies in under 60 seconds, any time</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o3">Every lead tracked automatically, nothing lost</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o4">Results in a simple report, not a messy inbox</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o1">No pressure to buy what you don't need</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o2">A real answer, not a sales pitch dressed as advice</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o3">You keep the report either way</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o4">I only build what I know I can do well</span></li>
       </ul>
     </div>
   </div>
@@ -308,12 +370,12 @@
 
 <section id="how">
   <p class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</p>
-  <h2 class="section-heading" data-i18n="how.heading">From call to running system, fast.</h2>
+  <h2 class="section-heading" data-i18n="how.heading">From audit to answer, fast.</h2>
   <div class="how-grid">
     <div class="how-card">
       <div class="how-step-num" data-i18n="how.step1.num">STEP 01</div>
-      <h4 class="how-title" data-i18n="how.step1.title">Book a Free Call</h4>
-      <p class="how-body" data-i18n="how.step1.body">Tell me what's eating your time. I'll map out exactly what AI can take off your plate — free, no pressure.</p>
+      <h4 class="how-title" data-i18n="how.step1.title">Book the Audit</h4>
+      <p class="how-body" data-i18n="how.step1.body">One session — I come to you if you're nearby, or we do it by video call.</p>
       <div class="how-widget">
         <div class="progress-row">
           <div class="progress-label-row"><span data-i18n="how.w1.l1">Email &amp; inbox management</span><span class="val">6h/wk</span></div>
@@ -336,8 +398,8 @@
     </div>
     <div class="how-card">
       <div class="how-step-num" data-i18n="how.step2.num">STEP 02</div>
-      <h4 class="how-title" data-i18n="how.step2.title">I Build It For You</h4>
-      <p class="how-body" data-i18n="how.step2.body">I build the AI system around your actual tools and workflow. You don't touch code, you don't manage anything.</p>
+      <h4 class="how-title" data-i18n="how.step2.title">Report + Live Demo</h4>
+      <p class="how-body" data-i18n="how.step2.body">Ranked opportunities, plus one working automation — built live, yours to implement right away.</p>
       <div class="how-widget">
         <div class="flow-widget">
           <div class="flow-node" data-i18n="how.w2.business">Your Business</div>
@@ -354,8 +416,8 @@
     </div>
     <div class="how-card">
       <div class="how-step-num" data-i18n="how.step3.num">STEP 03</div>
-      <h4 class="how-title" data-i18n="how.step3.title">Launch &amp; Handover</h4>
-      <p class="how-body" data-i18n="how.step3.body">Everything tested and live. I walk you through it so you know exactly how it works.</p>
+      <h4 class="how-title" data-i18n="how.step3.title">I Build It, If You Want To Proceed</h4>
+      <p class="how-body" data-i18n="how.step3.body">Usually sales &amp; follow-up automation. Fast — live in about a week, not months.</p>
       <div class="how-widget">
         <div class="timeline-widget">
           <div class="tl-node"><div class="tl-circle done">&#10003;</div><div class="tl-label" data-i18n="how.w3.n1">Call</div><div class="tl-sub" data-i18n="how.w3.d1">Day 1</div></div>
@@ -436,10 +498,10 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
     </div>
     <div class="final-cta-inner">
-      <h2 data-i18n="final.heading">Let's get AI working for your business.</h2>
-      <p data-i18n="final.sub">Tell me what's slowing you down. I'll show you exactly where AI can save you time — free strategy call, no pitch deck, no pressure.</p>
+      <h2 data-i18n="final.heading">Ready to see where AI can grow your revenue?</h2>
+      <p data-i18n="final.sub">One session, a full report, a live demo — €499. At least 3 real opportunities, or it's free.</p>
       <div class="final-cta-buttons">
-        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="final.cta1">Book a Free Strategy Call</a>
+        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="final.cta1">Book the AI Revenue Audit — €499</a>
         <a class="btn btn-outline light" id="whatsapp-link-2" href="#" target="_blank" rel="noopener" data-i18n="final.cta2">Message Me on WhatsApp</a>
       </div>
     </div>
@@ -479,49 +541,62 @@ const VIDEO = { en: '', it: '' }; // Vimeo numeric ID per language, e.g. '824804
 const COMPANIES = ['Alpine', 'Bugatti', 'Cointelegraph', 'Hublot', 'Hugo Boss', 'European Union', 'Shiseido', 'Vogue'];
 
 const TICKER_PHRASES = {
-  en: ['AI systems built around how you actually work', 'You keep control, I handle the build', 'From first call to a fully running system', 'No fragile demos — real systems that run', 'Direct access to me, not a support queue'],
-  it: ['Sistemi AI costruiti sul tuo modo di lavorare', 'Tu mantieni il controllo, io mi occupo della costruzione', 'Dalla prima chiamata a un sistema completamente attivo', 'Niente demo fragili — sistemi veri che funzionano', 'Accesso diretto a me, non a una coda di supporto']
+  en: ['Fixed price, real guarantee', 'One session, a real answer', 'Built once, not rented monthly', "Honest audit — I'll redirect you if I'm not the fit", 'Direct access to me, not a support queue'],
+  it: ['Prezzo fisso, garanzia vera', 'Una sessione, una risposta vera', 'Costruito una volta, non in affitto ogni mese', 'Audit onesto — ti indirizzo altrove se non sono io la soluzione giusta', 'Accesso diretto a me, non a una coda di supporto']
 };
 
 const T = {
   'nav.services': { en: 'Services', it: 'Servizi' },
   'nav.how': { en: 'How It Works', it: 'Come Funziona' },
   'nav.about': { en: 'About', it: 'Chi Sono' },
-  'nav.cta': { en: 'Book a Free Call', it: 'Prenota una Chiamata' },
+  'nav.cta': { en: 'Book the Audit', it: "Prenota l'Audit" },
   'hero.videoSoon': { en: 'Video coming soon', it: 'Video in arrivo' },
-  'hero.eyebrow': { en: 'AI INTEGRATION FOR BUSINESSES', it: 'INTEGRAZIONE AI PER AZIENDE' },
-  'hero.headline': { en: 'I build AI systems that run your business for you.', it: 'Costruisco sistemi AI che mandano avanti la tua azienda al posto tuo.' },
-  'hero.sub': { en: 'Less manual work. Faster replies. Nothing missed. I set it up, you get your time back.', it: 'Meno lavoro manuale. Risposte più veloci. Niente che sfugge. Lo imposto io, tu recuperi il tuo tempo.' },
-  'hero.cta1': { en: 'Book a Free Strategy Call', it: 'Prenota una Chiamata Gratuita' },
+  'hero.eyebrow': { en: 'FIXED PRICE. GUARANTEED.', it: 'PREZZO FISSO. GARANTITO.' },
+  'hero.headline': { en: "I'll show you exactly where AI saves or makes you money — and build you one, live. Or you don't pay.", it: "Ti mostro esattamente dove l'AI ti fa risparmiare o guadagnare — e te ne costruisco una, dal vivo. O non paghi." },
+  'hero.sub': { en: 'A fixed-price audit: one session, a full report, and a live demo of one automation — built in front of you. €499. Guaranteed.', it: "Un audit a prezzo fisso: una sessione, un report completo, e la demo live di un'automazione — costruita davanti a te. €499. Garantito." },
+  'hero.cta1': { en: 'Book the AI Revenue Audit — €499', it: "Prenota l'AI Revenue Audit — €499" },
   'hero.cta2': { en: 'Message Me on WhatsApp', it: 'Scrivimi su WhatsApp' },
-  'hero.trust': { en: "Built systems for teams that have worked for European Union and Start-ups.", it: "Ho costruito sistemi per team che hanno lavorato per l'Unione Europea e startup." },
-  'services.eyebrow': { en: 'WHAT I OFFER', it: 'COSA OFFRO' },
-  'services.heading': { en: 'Two ways I can help your business today', it: 'Due modi in cui posso aiutare la tua azienda oggi' },
-  'services.s1.tag': { en: 'AI Integration', it: 'Integrazione AI' },
-  'services.s1.headline': { en: 'Integrate AI that runs your business, not just answers questions.', it: "Integra l'AI che manda avanti la tua azienda, non solo risponde alle domande." },
-  'services.s1.body': { en: 'I take the repetitive stuff in your business — replying, sorting, updating, reporting — and I make AI do it for you. You get your time back, and nothing gets missed.', it: 'Prendo le attività ripetitive della tua azienda — rispondere, ordinare, aggiornare, fare report — e le faccio fare all’AI al posto tuo. Tu recuperi il tuo tempo, e non ti sfugge nulla.' },
-  'services.s1.o1': { en: 'Less manual work for you and your team', it: 'Meno lavoro manuale per te e il tuo team' },
-  'services.s1.o2': { en: 'Faster replies to customers, any time of day', it: 'Risposte più veloci ai clienti, a qualsiasi ora' },
-  'services.s1.o3': { en: 'Fewer mistakes from tired humans doing repetitive tasks', it: 'Meno errori causati da persone stanche che fanno attività ripetitive' },
-  'services.s1.o4': { en: 'One person (me) who builds it and makes sure it works', it: 'Una sola persona (io) che lo costruisce e si assicura che funzioni' },
-  'services.s2.tag': { en: 'Lead Generation & Outreach Automation', it: 'Automazione di Lead Generation e Outreach' },
-  'services.s2.headline': { en: 'New customers find you and get answered — automatically.', it: 'Nuovi clienti ti trovano e ricevono risposta — automaticamente.' },
-  'services.s2.body': { en: 'I build a system that finds the right people, reaches out, and replies fast — so you get more customers without spending your day chasing them.', it: 'Costruisco un sistema che trova le persone giuste, le contatta e risponde velocemente — così ottieni più clienti senza passare la giornata a rincorrerli.' },
-  'services.s2.o1': { en: 'More leads without more of your time', it: 'Più contatti senza impiegare più tempo' },
-  'services.s2.o2': { en: 'Replies in under 60 seconds, any time', it: 'Risposte in meno di 60 secondi, a qualsiasi ora' },
-  'services.s2.o3': { en: 'Every lead tracked automatically, nothing lost', it: 'Ogni contatto tracciato automaticamente, niente si perde' },
-  'services.s2.o4': { en: 'Results in a simple report, not a messy inbox', it: 'Risultati in un report semplice, non in una casella email caotica' },
+  'hero.trust': { en: "At least 3 concrete opportunities with estimated impact — or it's free.", it: 'Almeno 3 opportunità concrete con impatto stimato — o è gratis.' },
+  'included.eyebrow': { en: "WHAT'S INCLUDED", it: 'COSA È INCLUSO' },
+  'included.heading': { en: 'One session. Everything you need to see the path.', it: 'Una sessione. Tutto quello che serve per vedere la strada.' },
+  'included.i1.title': { en: '90-Minute Deep Dive', it: '90 Minuti di Analisi' },
+  'included.i1.body': { en: "In person if you're nearby, video call if you're not. I look at how your business actually runs today.", it: 'Di persona se sei nella mia zona, in videochiamata se non lo sei. Guardo come funziona davvero la tua azienda oggi.' },
+  'included.i2.title': { en: 'Full Written Report', it: 'Report Scritto Completo' },
+  'included.i2.body': { en: 'At least 3 AI opportunities I find, ranked by impact and how hard it is to do.', it: 'Almeno 3 opportunità AI che trovo, classificate per impatto e difficoltà di realizzazione.' },
+  'included.i3.title': { en: 'One Real Automation, Yours to Keep', it: 'Una Vera Automazione, Che Resta Tua' },
+  'included.i3.body': { en: "Not a slide — I build it live during the session, and you walk away with it. Ready to use, whether or not we ever work together again.", it: 'Non una slide — la costruisco dal vivo durante la sessione, e te la porti a casa. Pronta da usare, anche se poi non lavoriamo più insieme.' },
+  'included.i4.title': { en: 'A Clear Next Step', it: 'Un Prossimo Passo Chiaro' },
+  'included.i4.body': { en: "With me or without me. You'll know exactly what to do next either way.", it: 'Con me o senza di me. Saprai esattamente cosa fare dopo, in entrambi i casi.' },
+  'guarantee.eyebrow': { en: 'THE GUARANTEE', it: 'LA GARANZIA' },
+  'guarantee.heading': { en: "At least 3 real opportunities, each with an estimated impact — or it's free.", it: "Almeno 3 opportunità concrete, ciascuna con un impatto stimato — o è gratis." },
+  'guarantee.body': { en: "No fine print. If I don't identify at least 3 concrete opportunities with an estimated impact, it's free.", it: 'Nessuna lettera piccola. Se non individuo almeno 3 opportunità concrete con un impatto stimato, è gratis.' },
+  'services.eyebrow': { en: 'AFTER THE AUDIT', it: "DOPO L'AUDIT" },
+  'services.heading': { en: 'Most audits point to the same place.', it: 'La maggior parte degli audit porta allo stesso punto.' },
+  'services.s1.tag': { en: 'Sales & Follow-Up Automation', it: 'Automazione di Vendite e Follow-up' },
+  'services.s1.headline': { en: "I've built this exact system before — running HubSpot's automation end to end.", it: "Ho già costruito esattamente questo sistema — gestendo l'automazione di HubSpot dall'inizio alla fine." },
+  'services.s1.body': { en: 'I ran the CRM, the pipeline, and the follow-ups for a real company. I can build you the same thing as a simple, custom system — once, not a monthly subscription.', it: 'Ho gestito il CRM, la pipeline e i follow-up per un’azienda vera. Posso costruirti lo stesso sistema, semplice e su misura — una volta sola, non un abbonamento mensile.' },
+  'services.s1.o1': { en: 'More leads without more of your time', it: 'Più contatti senza impiegare più tempo' },
+  'services.s1.o2': { en: 'Replies in under 60 seconds, any time', it: 'Risposte in meno di 60 secondi, a qualsiasi ora' },
+  'services.s1.o3': { en: 'Every lead tracked automatically, nothing lost', it: 'Ogni contatto tracciato automaticamente, niente si perde' },
+  'services.s1.o4': { en: 'Built once — no monthly per-seat cost', it: 'Costruito una volta — nessun costo mensile per utente' },
+  'services.s2.tag': { en: 'Or Something Else Entirely', it: "O Qualcos'Altro" },
+  'services.s2.headline': { en: 'I specialize in sales and operations automation.', it: 'Sono specializzato in automazione di vendite e operazioni.' },
+  'services.s2.body': { en: "If your biggest opportunity is somewhere else, I'll tell you — and point you the right way. The audit is honest either way.", it: "Se la tua opportunità più grande è altrove, te lo dirò — e ti indicherò la strada giusta. L'audit è onesto in entrambi i casi." },
+  'services.s2.o1': { en: "No pressure to buy what you don't need", it: 'Nessuna pressione per comprare quello che non ti serve' },
+  'services.s2.o2': { en: 'A real answer, not a sales pitch dressed as advice', it: 'Una risposta vera, non una vendita travestita da consiglio' },
+  'services.s2.o3': { en: 'You keep the report either way', it: 'Il report resta tuo in ogni caso' },
+  'services.s2.o4': { en: 'I only build what I know I can do well', it: 'Costruisco solo quello che so fare bene' },
   'how.eyebrow': { en: 'HOW IT WORKS', it: 'COME FUNZIONA' },
-  'how.heading': { en: 'From call to running system, fast.', it: 'Dalla chiamata al sistema attivo, velocemente.' },
+  'how.heading': { en: 'From audit to answer, fast.', it: "Dall'audit alla risposta, velocemente." },
   'how.step1.num': { en: 'STEP 01', it: 'FASE 01' },
-  'how.step1.title': { en: 'Book a Free Call', it: 'Prenota una Chiamata Gratuita' },
-  'how.step1.body': { en: "Tell me what's eating your time. I'll map out exactly what AI can take off your plate — free, no pressure.", it: 'Dimmi cosa ti porta via tempo. Ti mostro esattamente cosa può fare l’AI al posto tuo — gratis, senza impegno.' },
+  'how.step1.title': { en: 'Book the Audit', it: "Prenota l'Audit" },
+  'how.step1.body': { en: "One session — I come to you if you're nearby, or we do it by video call.", it: 'Una sessione — vengo da te se sei nella mia zona, o la facciamo in videochiamata.' },
   'how.step2.num': { en: 'STEP 02', it: 'FASE 02' },
-  'how.step2.title': { en: 'I Build It For You', it: 'Lo Costruisco Io per Te' },
-  'how.step2.body': { en: "I build the AI system around your actual tools and workflow. You don't touch code, you don't manage anything.", it: 'Costruisco il sistema AI intorno ai tuoi strumenti e al tuo modo di lavorare. Tu non tocchi codice, non gestisci nulla.' },
+  'how.step2.title': { en: 'Report + Live Demo', it: 'Report + Demo Live' },
+  'how.step2.body': { en: 'Ranked opportunities, plus one working automation — built live, yours to implement right away.', it: 'Opportunità classificate, più un’automazione funzionante — costruita dal vivo, tua da implementare subito.' },
   'how.step3.num': { en: 'STEP 03', it: 'FASE 03' },
-  'how.step3.title': { en: 'Launch & Handover', it: 'Lancio e Consegna' },
-  'how.step3.body': { en: "Everything tested and live. I walk you through it so you know exactly how it works.", it: 'Tutto testato e attivo. Ti guido passo passo così sai esattamente come funziona.' },
+  'how.step3.title': { en: 'I Build It, If You Want To Proceed', it: 'Lo Costruisco, Se Vuoi Procedere' },
+  'how.step3.body': { en: 'Usually sales & follow-up automation. Fast — live in about a week, not months.', it: 'Di solito automazione di vendite e follow-up. Veloce — attivo in circa una settimana, non mesi.' },
   'how.step4.num': { en: 'STEP 04', it: 'FASE 04' },
   'how.step4.title': { en: 'Real Support', it: 'Supporto Vero' },
   'how.step4.body': { en: 'Questions after launch? You message me directly — not a support ticket, me.', it: 'Domande dopo il lancio? Scrivi direttamente a me — non a un ticket di supporto, a me.' },
@@ -562,17 +637,17 @@ const T = {
   'about.eyebrow': { en: 'ABOUT ME', it: 'CHI SONO' },
   'about.heading': { en: "Hi, I'm Nicola.", it: 'Ciao, sono Nicola.' },
   'about.body': { en: "I don't just use AI tools — I build the systems that make them work for you. I've spent years finding what works before anyone else, and turning it into results. Now I build AI systems that run, learn, and improve themselves, so you spend less time on repetitive work and more time on what only you can do.", it: 'Non uso solo strumenti AI — costruisco i sistemi che li fanno funzionare per te. Ho passato anni a trovare ciò che funziona prima degli altri, trasformandolo in risultati concreti. Ora costruisco sistemi AI che funzionano, imparano e si migliorano da soli, così tu passi meno tempo su lavoro ripetitivo e più tempo su ciò che solo tu sai fare.' },
-  'final.heading': { en: "Let's get AI working for your business.", it: "Facciamo lavorare l'AI per la tua azienda." },
-  'final.sub': { en: "Tell me what's slowing you down. I'll show you exactly where AI can save you time — free strategy call, no pitch deck, no pressure.", it: 'Dimmi cosa ti rallenta. Ti mostro esattamente dove l’AI può farti risparmiare tempo — chiamata gratuita, niente presentazioni, senza impegno.' },
-  'final.cta1': { en: 'Book a Free Strategy Call', it: 'Prenota una Chiamata Gratuita' },
+  'final.heading': { en: 'Ready to see where AI can grow your revenue?', it: "Pronto a scoprire dove l'AI può far crescere i tuoi ricavi?" },
+  'final.sub': { en: "One session, a full report, a live demo — €499. At least 3 real opportunities, or it's free.", it: "Una sessione, un report completo, una demo live — €499. Almeno 3 opportunità concrete, o è gratis." },
+  'final.cta1': { en: 'Book the AI Revenue Audit — €499', it: "Prenota l'AI Revenue Audit — €499" },
   'final.cta2': { en: 'Message Me on WhatsApp', it: 'Scrivimi su WhatsApp' },
   'footer.text': { en: '© 2026 Convertleads', it: '© 2026 Convertleads' },
   'footer.link': { en: 'Marketing services →', it: 'Servizi di marketing →' }
 };
 
 const WHATSAPP_MSG = {
-  en: "Hi Nicola, I'd like to talk about AI for my business.",
-  it: 'Ciao Nicola, vorrei parlare di AI per la mia azienda.'
+  en: "Hi Nicola, I'd like to book the AI Revenue Audit.",
+  it: "Ciao Nicola, vorrei prenotare l'AI Revenue Audit."
 };
 
 const MAIL_SUBJECT = { en: 'Demo Access Request', it: 'Richiesta Accesso Demo' };
