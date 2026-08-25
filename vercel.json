@@ -6,17 +6,5 @@
       "destination": "https://convertleads.pro/$1",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [{"type": "host", "value": "convertleads.xyz"}],
-      "destination": "/ai-landing/index.html"
-    },
-    {
-      "source": "/",
-      "has": [{"type": "host", "value": "www.convertleads.xyz"}],
-      "destination": "/ai-landing/index.html"
-    }
   ]
 }
