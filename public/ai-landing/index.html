@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Convertleads — AI Integration for Your Business</title>
 <meta name="description" content="I build AI systems that run your business for you — less manual work, faster replies, nothing missed.">
+<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="/ai-landing/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -55,7 +58,8 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
   }
-  .brand { font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; flex-shrink: 0; }
+  .brand { display: flex; align-items: center; gap: 9px; font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; flex-shrink: 0; }
+  .brand img { width: 26px; height: 26px; display: block; }
   nav.main-nav { display: flex; align-items: center; gap: 28px; }
   nav.main-nav a { font-size: 14px; font-weight: 500; color: var(--muted); }
   nav.main-nav a:hover { color: var(--text); }
@@ -76,7 +80,7 @@
 
   /* Hero */
   .hero { padding-top: 64px; padding-bottom: 64px; display: flex; gap: 56px; align-items: stretch; }
-  .hero-video-col { flex: 0 0 50%; min-width: 0; }
+  .hero-video-col { flex: 0 0 58%; min-width: 0; }
   .hero-cta-col { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
   .video-frame {
     position: relative; border-radius: 16px; overflow: hidden; background: #111;
@@ -94,16 +98,29 @@
   .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.6; margin: 0 0 28px; }
   .hero-ctas { display: flex; flex-direction: column; gap: 12px; }
   .hero-ctas .btn { width: 100%; }
-  .hero-trust { margin-top: 24px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .hero-note { margin-top: 20px; font-size: 13px; color: var(--muted); line-height: 1.5; }
   @media (max-width: 900px) { .hero { flex-direction: column; } .hero-video-col { flex-basis: auto; } }
 
   /* Included grid */
-  .included-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .included-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; }
+  #included { padding-bottom: 20px; }
+  .included-track { position: relative; }
+  .included-track::before {
+    content: ''; position: absolute; top: 48px; left: 0; right: 0; height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .track-pulse {
+    position: absolute; top: 48px; left: -20%; width: 20%; height: 2px; z-index: 0;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    animation: track-flow 4.5s linear infinite;
+  }
+  @keyframes track-flow { from { left: -20%; } to { left: 100%; } }
+  .included-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .included-card { position: relative; z-index: 1; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; }
   .included-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(250,93,41,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
   .included-card h4 { font-size: 16px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
   .included-card p { font-size: 13.5px; color: var(--muted); line-height: 1.55; margin: 0; }
-  @media (max-width: 900px) { .included-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) { .included-grid { grid-template-columns: 1fr 1fr; } .included-track::before, .track-pulse { display: none; } }
   @media (max-width: 560px) { .included-grid { grid-template-columns: 1fr; } }
 
   /* Guarantee */
@@ -124,14 +141,30 @@
   /* Services */
   .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
-  .service-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(250,93,41,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-  .service-tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); background: rgba(250,93,41,0.08); padding: 5px 12px; border-radius: 9999px; margin-bottom: 20px; }
+  .service-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .service-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: rgba(250,93,41,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; }
+  .service-tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); background: rgba(250,93,41,0.08); padding: 5px 12px; border-radius: 9999px; }
   .service-headline { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; margin: 0 0 12px; }
   .service-body { font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px; }
   .outcomes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .outcomes li { display: flex; gap: 10px; font-size: 14px; line-height: 1.5; }
   .outcomes li svg { flex-shrink: 0; margin-top: 2px; color: var(--accent); }
   @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+  /* Authority strip */
+  .authority-strip { margin-top: 28px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; }
+  .authority-lead { display: flex; align-items: center; gap: 14px; padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid var(--border); }
+  .authority-logo { flex-shrink: 0; width: 48px; height: 48px; border-radius: 10px; border: 1px solid var(--border); background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .authority-logo img { width: 100%; height: 100%; object-fit: cover; }
+  .authority-lead-text p { margin: 0; font-size: 14px; line-height: 1.5; }
+  .authority-lead-text .authority-name { font-weight: 600; font-size: 15px; }
+  .authority-lead-text .authority-role { color: var(--muted); }
+  .authority-caption { font-size: 12.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 16px; }
+  .authority-clients { display: flex; flex-wrap: wrap; gap: 20px; }
+  .authority-client { display: flex; align-items: center; gap: 10px; }
+  .authority-client .authority-logo { width: 38px; height: 38px; border-radius: 8px; }
+  .authority-client span { font-size: 14px; font-weight: 300; color: var(--text); }
+  @media (max-width: 560px) { .authority-strip { padding: 24px 20px; } .authority-clients { gap: 14px 18px; } }
 
   /* How it works */
   .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -182,11 +215,13 @@
   .trusted-section { padding-top: 64px; padding-bottom: 64px; }
   .trusted-heading { text-align: center; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 40px; }
   .marquee-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); mask-image: linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent); }
-  .marquee-track { display: flex; gap: 64px; width: max-content; animation: marquee 28s linear infinite; }
-  .marquee-track span { font-size: 20px; font-weight: 600; color: var(--muted); opacity: .55; white-space: nowrap; letter-spacing: -0.01em; }
+  .marquee-track { display: flex; align-items: center; gap: 56px; width: max-content; animation: marquee 28s linear infinite; }
+  .marquee-track img { display: block; width: auto; flex-shrink: 0; }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* Demo block */
+  #demo { position: relative; }
+  #demo::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; background: #FDF1EA; z-index: -1; }
   .demo-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 40px; display: flex; gap: 44px; align-items: center; }
   .demo-visual { flex: 0 0 42%; min-width: 260px; }
   .demo-visual img { width: 100%; border-radius: 14px; border: 1px solid var(--border); }
@@ -201,10 +236,10 @@
   /* About */
   .about-row { display: flex; gap: 48px; align-items: center; }
   .avatar-photo {
-    flex: 0 0 auto; width: 176px; height: 176px; border-radius: 50%;
+    flex: 0 0 auto; width: 220px; height: 220px; border-radius: 18px;
     overflow: hidden; border: 1px solid var(--border);
   }
-  .avatar-photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.75); transform-origin: 47% 33%; }
+  .avatar-photo img { width: 100%; height: 100%; object-fit: cover; }
   .about-copy { flex: 1; min-width: 260px; }
   .about-copy h3 { font-size: 26px; font-weight: 500; margin: 0 0 16px; }
   .about-copy p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
@@ -246,18 +281,32 @@
   @media (max-width: 640px) { .final-cta-card { padding: 56px 24px; } .final-cta-inner h2 { font-size: 26px; } .badge-float { display: none; } }
 
   /* Footer */
-  footer { padding: 48px 32px 40px; text-align: center; border-top: 1px solid var(--border); }
-  footer p { margin: 0; font-size: 13px; color: var(--muted); }
-  footer p a { color: var(--muted); text-decoration: underline; }
-  .footer-socials { display: flex; align-items: center; justify-content: center; gap: 22px; margin-bottom: 24px; }
-  .footer-socials a { color: var(--muted); transition: transform .15s ease; line-height: 0; }
-  .footer-socials a:hover { transform: scale(1.12); }
+  footer { padding: 56px 32px 32px; border-top: 1px solid var(--border); }
+  .footer-inner { max-width: 1136px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .footer-brand { display: flex; flex-direction: column; gap: 12px; max-width: 320px; }
+  .footer-brand-name { display: flex; align-items: center; gap: 9px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+  .footer-brand-name img { width: 24px; height: 24px; }
+  .footer-brand p { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+  .footer-middle h4, .footer-social h4 { margin: 0 0 18px; font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text); }
+  .footer-service-row { display: flex; align-items: flex-start; gap: 12px; }
+  .footer-service-text { display: flex; flex-direction: column; gap: 3px; }
+  .footer-service-link { font-size: 14px; font-weight: 600; color: var(--text); }
+  .footer-service-row:hover .footer-service-link { text-decoration: underline; }
+  .footer-service-sub { font-size: 12.5px; color: var(--muted); }
+  .footer-social-list { display: flex; flex-direction: column; gap: 14px; }
+  .footer-social-row { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: var(--text); transition: opacity .15s ease; }
+  .footer-social-row:hover { opacity: .7; }
+  .footer-social-row .icon-chip { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer-bottom { max-width: 1136px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
+  .footer-bottom p { margin: 0; font-size: 13px; color: var(--muted); }
+  .footer-bottom p a { color: var(--muted); text-decoration: underline; }
+  @media (max-width: 560px) { .footer-inner { text-align: left; } }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="brand">Convertleads</div>
+  <div class="brand"><img src="/ai-landing/assets/logo-mark.png" alt="" width="26" height="26">Convertleads</div>
   <nav class="main-nav">
     <a href="#services" data-i18n="nav.services">Services</a>
     <a href="#how" data-i18n="nav.how">How It Works</a>
@@ -268,7 +317,7 @@
       <button class="lang-btn" data-lang="en">EN</button>
       <button class="lang-btn" data-lang="it">IT</button>
     </div>
-    <a class="btn btn-primary header-cta" id="header-cta-link" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="nav.cta">Book the Audit</a>
+    <a class="btn btn-primary header-cta" id="header-cta-link" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="nav.cta">Book a Discovery Call</a>
   </div>
 </header>
 
@@ -285,39 +334,49 @@
   </div>
   <div class="hero-cta-col">
     <p class="eyebrow" data-i18n="hero.eyebrow">FIXED PRICE. GUARANTEED.</p>
-    <h1 class="hero-headline" data-i18n="hero.headline">I'll show you exactly where AI saves or makes you money — and build you one, live. Or you don't pay.</h1>
-    <p class="hero-sub" data-i18n="hero.sub">A fixed-price audit: one session, a full report, and a live demo of one automation — built in front of you. €499. Guaranteed.</p>
+    <h1 class="hero-headline" data-i18n="hero.headline">You'll know exactly where AI saves or makes you money, and walk out with one already built and running.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">A full report of ready-to-install AI integrations, plus one automation you can start using from day 1.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="hero.cta1">Book the AI Revenue Audit — €499</a>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="hero.cta1">Book a Free Discovery Call</a>
       <a class="btn btn-outline" id="whatsapp-link" href="#" target="_blank" rel="noopener" data-i18n="hero.cta2">Message Me on WhatsApp</a>
     </div>
-    <p class="hero-trust" data-i18n="hero.trust">At least 3 concrete opportunities with estimated impact — or it's free.</p>
+    <p class="hero-note" data-i18n="hero.priceNote">The call is free. The AI Revenue Audit itself is a fixed €499.</p>
+  </div>
+</section>
+
+<section class="trusted-section">
+  <p class="trusted-heading" data-i18n="trusted.heading">Trusted by teams I've worked with</p>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track"></div>
   </div>
 </section>
 
 <section id="included">
   <p class="eyebrow" data-i18n="included.eyebrow">WHAT'S INCLUDED</p>
   <h2 class="section-heading" data-i18n="included.heading">One session. Everything you need to see the path.</h2>
-  <div class="included-grid">
+  <div class="included-track">
+    <div class="track-pulse"></div>
+    <div class="included-grid">
     <div class="included-card">
-      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-      <h4 data-i18n="included.i1.title">90-Minute Deep Dive</h4>
-      <p data-i18n="included.i1.body">In person if you're nearby, video call if you're not. I look at how your business actually runs today.</p>
+      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+      <h4 data-i18n="included.i1.title">90-Minute Interview Analysis</h4>
+      <p data-i18n="included.i1.body">I look at how your business runs today, and find what's worth automating to save you time or make you money.</p>
     </div>
     <div class="included-card">
       <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
-      <h4 data-i18n="included.i2.title">Full Written Report</h4>
-      <p data-i18n="included.i2.body">At least 3 AI opportunities I find, ranked by impact and how hard it is to do.</p>
+      <h4 data-i18n="included.i2.title">Report with Integrations</h4>
+      <p data-i18n="included.i2.body">Every opportunity comes with the integration needed, its estimated cost, expected ROI, and how many hours it saves you each week.</p>
     </div>
     <div class="included-card">
       <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m8 21 4-3 4 3"/><path d="m8 11 3 3 5-5"/></svg></div>
-      <h4 data-i18n="included.i3.title">One Real Automation, Yours to Keep</h4>
-      <p data-i18n="included.i3.body">Not a slide — I build it live during the session, and you walk away with it. Ready to use, whether or not we ever work together again.</p>
+      <h4 data-i18n="included.i3.title">+1 Automation, Ready on Day 1</h4>
+      <p data-i18n="included.i3.body">Built live, for the one problem that matters most. Installed and running in your business from day 1, yours to keep either way.</p>
     </div>
     <div class="included-card">
       <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <h4 data-i18n="included.i4.title">A Clear Next Step</h4>
-      <p data-i18n="included.i4.body">With me or without me. You'll know exactly what to do next either way.</p>
+      <h4 data-i18n="included.i4.title">A Written Action Plan</h4>
+      <p data-i18n="included.i4.body">A prioritized roadmap: what to build first, what to skip, and a realistic timeline, whether you hire me or do it yourself.</p>
+    </div>
     </div>
   </div>
 </section>
@@ -327,8 +386,7 @@
     <div class="guarantee-badge"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
     <div class="guarantee-copy">
       <p class="eyebrow" data-i18n="guarantee.eyebrow">THE GUARANTEE</p>
-      <h3 data-i18n="guarantee.heading">At least 3 real opportunities, each with an estimated impact — or it's free.</h3>
-      <p data-i18n="guarantee.body">No fine print. If I don't identify at least 3 concrete opportunities with an estimated impact, it's free.</p>
+      <h3 data-i18n="guarantee.heading">Guarantee: at least 3 real opportunities, each with an estimated impact — or it's FREE.</h3>
     </div>
   </div>
 </section>
@@ -338,12 +396,14 @@
   <h2 class="section-heading" data-i18n="services.heading">Most audits point to the same place.</h2>
   <div class="services-grid">
     <div class="service-card">
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+      <div class="service-head">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+        </div>
+        <span class="service-tag" data-i18n="services.s1.tag">Sales &amp; Follow-Up Automation</span>
       </div>
-      <span class="service-tag" data-i18n="services.s1.tag">Sales &amp; Follow-Up Automation</span>
       <h3 class="service-headline" data-i18n="services.s1.headline">I've built this exact system before — running HubSpot's automation end to end.</h3>
-      <p class="service-body" data-i18n="services.s1.body">I ran the CRM, the pipeline, and the follow-ups for a real company. I can build you the same thing as a simple, custom system — once, not a monthly subscription.</p>
+      <p class="service-body" data-i18n="services.s1.body">I ran the CRM, the pipeline, and the follow-ups at Exclusible. I can build you the same thing as a simple, custom system — once, not a monthly subscription.</p>
       <ul class="outcomes">
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o1">More leads without more of your time</span></li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s1.o2">Replies in under 60 seconds, any time</span></li>
@@ -352,10 +412,12 @@
       </ul>
     </div>
     <div class="service-card">
-      <div class="service-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+      <div class="service-head">
+        <div class="service-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        </div>
+        <span class="service-tag" data-i18n="services.s2.tag">Or Something Else Entirely</span>
       </div>
-      <span class="service-tag" data-i18n="services.s2.tag">Or Something Else Entirely</span>
       <h3 class="service-headline" data-i18n="services.s2.headline">I specialize in sales and operations automation.</h3>
       <p class="service-body" data-i18n="services.s2.body">If your biggest opportunity is somewhere else, I'll tell you — and point you the right way. The audit is honest either way.</p>
       <ul class="outcomes">
@@ -364,6 +426,24 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o3">You keep the report either way</span></li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.s2.o4">I only build what I know I can do well</span></li>
       </ul>
+    </div>
+  </div>
+  <div class="authority-strip">
+    <div class="authority-lead">
+      <div class="authority-logo"><img src="/ai-landing/assets/clients-square/exclusible.png" alt="Exclusible logo"></div>
+      <div class="authority-lead-text">
+        <p class="authority-name" data-i18n="authority.name">Exclusible</p>
+        <p class="authority-role" data-i18n="authority.role">Where I ran CRM, pipeline &amp; follow-up automation end to end.</p>
+      </div>
+    </div>
+    <p class="authority-caption" data-i18n="authority.caption">Luxury &amp; premium brands I helped convert into clients there</p>
+    <div class="authority-clients">
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/bugatti.png" alt="Bugatti logo"></div><span>Bugatti</span></div>
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/hugo-boss.jpeg" alt="Hugo Boss logo"></div><span>Hugo Boss</span></div>
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/hublot.png" alt="Hublot logo"></div><span>Hublot</span></div>
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/shiseido.jpg" alt="Shiseido logo"></div><span>Shiseido</span></div>
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/alpine.png" alt="Alpine logo"></div><span>Alpine</span></div>
+      <div class="authority-client"><div class="authority-logo"><img src="/ai-landing/assets/clients-square/christofle.png" alt="Christofle logo"></div><span>Christofle</span></div>
     </div>
   </div>
 </section>
@@ -443,18 +523,11 @@
   </div>
 </section>
 
-<section class="trusted-section">
-  <p class="trusted-heading" data-i18n="trusted.heading">Trusted by teams I've worked with</p>
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="marquee-track"></div>
-  </div>
-</section>
-
 <section id="demo">
   <p class="eyebrow" data-i18n="demo.eyebrow">SEE IT IN ACTION</p>
   <div class="demo-card">
     <div class="demo-visual">
-      <img src="assets/workflow-demo.png" alt="Lead Gen &amp; Outreach automation workflow">
+      <img src="/ai-landing/assets/workflow-demo.png" alt="Lead Gen &amp; Outreach automation workflow">
     </div>
     <div class="demo-content">
       <h3 data-i18n="demo.heading">See the Lead Gen system in action</h3>
@@ -475,7 +548,7 @@
 <section id="about">
   <p class="eyebrow" data-i18n="about.eyebrow">ABOUT ME</p>
   <div class="about-row">
-    <div class="avatar-photo"><img src="assets/nicola.jpg" alt="Nicola Da Dalto"></div>
+    <div class="avatar-photo"><img src="/ai-landing/assets/nicola.jpg" alt="Nicola Da Dalto"></div>
     <div class="about-copy">
       <h3 data-i18n="about.heading">Hi, I'm Nicola.</h3>
       <p data-i18n="about.body">I've spent years in growth marketing, building systems for brands you've probably heard of. Now I build AI systems that do the same thing for your business — less manual work, faster results, systems that just run.</p>
@@ -501,7 +574,7 @@
       <h2 data-i18n="final.heading">Ready to see where AI can grow your revenue?</h2>
       <p data-i18n="final.sub">One session, a full report, a live demo — €499. At least 3 real opportunities, or it's free.</p>
       <div class="final-cta-buttons">
-        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="final.cta1">Book the AI Revenue Audit — €499</a>
+        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="final.cta1">Book a Free Discovery Call</a>
         <a class="btn btn-outline light" id="whatsapp-link-2" href="#" target="_blank" rel="noopener" data-i18n="final.cta2">Message Me on WhatsApp</a>
       </div>
     </div>
@@ -512,33 +585,69 @@
 </div>
 
 <footer>
-  <div class="footer-socials">
-    <a href="mailto:dadalto.nicola@gmail.com" aria-label="Email" style="color:#EA4335">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/nicoladadalto/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#0A66C2">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    <a href="https://github.com/ljkhgjvchf/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color:var(--text)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-    </a>
-    <a href="https://www.youtube.com/@OMaharaja4/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#FF0000">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-    </a>
-    <a href="https://substack.com/@nicoladadalto" target="_blank" rel="noopener noreferrer" aria-label="Substack" style="color:#FF6719">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-    </a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-name"><img src="/ai-landing/assets/logo-mark.png" alt="">Convertleads</div>
+      <p data-i18n="footer.tagline">Fixed-price AI audits for real businesses: where AI saves or makes you money, proven live.</p>
+    </div>
+    <div class="footer-middle">
+      <h4 data-i18n="footer.servicesHeading">MARKETING SERVICES</h4>
+      <a class="footer-service-row" href="https://marketing.convertleads.xyz" target="_blank" rel="noopener noreferrer">
+        <span class="icon-chip" style="background:rgba(250,93,41,0.1);color:var(--accent)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+        <span class="footer-service-text">
+          <span class="footer-service-link">marketing.convertleads.xyz</span>
+          <span class="footer-service-sub" data-i18n="footer.servicesSub">Growth &amp; marketing automation services</span>
+        </span>
+      </a>
+    </div>
+    <div class="footer-social">
+      <h4 data-i18n="footer.socialHeading">SOCIAL MEDIA</h4>
+      <div class="footer-social-list">
+        <a class="footer-social-row" href="mailto:dadalto.nicola@gmail.com">
+          <span class="icon-chip" style="background:rgba(234,67,53,0.1);color:#EA4335"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span>Email</span>
+        </a>
+        <a class="footer-social-row" href="https://www.linkedin.com/in/nicoladadalto/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-chip" style="background:rgba(10,102,194,0.1);color:#0A66C2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+          <span>LinkedIn</span>
+        </a>
+        <a class="footer-social-row" href="https://github.com/ljkhgjvchf/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-chip" style="background:rgba(34,34,34,0.08);color:var(--text)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></span>
+          <span>GitHub</span>
+        </a>
+        <a class="footer-social-row" href="https://www.youtube.com/@OMaharaja4/" target="_blank" rel="noopener noreferrer">
+          <span class="icon-chip" style="background:rgba(255,0,0,0.1);color:#FF0000"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></span>
+          <span>YouTube</span>
+        </a>
+        <a class="footer-social-row" href="https://substack.com/@nicoladadalto" target="_blank" rel="noopener noreferrer">
+          <span class="icon-chip" style="background:rgba(255,103,25,0.1);color:#FF6719"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></span>
+          <span>Substack</span>
+        </a>
+      </div>
+    </div>
   </div>
-  <p><span data-i18n="footer.text">© 2026 Convertleads</span> · <a href="https://marketing.convertleads.xyz"><span data-i18n="footer.link">Marketing services →</span></a></p>
+  <div class="footer-bottom">
+    <p><span data-i18n="footer.text">© 2026 Convertleads</span> · <a href="/ai-landing/brand-kit.html" target="_blank" rel="noopener noreferrer"><span data-i18n="footer.brandKit">Brand Kit ↗</span></a></p>
+  </div>
 </footer>
 
 <script>
 // ── Config — edit these before launch ──
 const WHATSAPP_NUMBER = '393897860249'; // international format, digits only, e.g. 393331234567
 const CONTACT_EMAIL = 'dadalto.nicola@gmail.com';
-const VIDEO = { en: '', it: '' }; // Vimeo numeric ID per language, e.g. '824804225'. Leave blank to show placeholder.
+const VIDEO = { en: '1221794996', it: '' }; // Vimeo numeric ID per language. Leave blank to show placeholder.
+const VIDEO_TITLE = { en: 'convertleads-auditoffer-eng', it: 'convertleads-auditoffer-ita' };
 
-const COMPANIES = ['Alpine', 'Bugatti', 'Cointelegraph', 'Hublot', 'Hugo Boss', 'European Union', 'Shiseido', 'Vogue'];
+const COMPANIES = [
+  { name: 'Alpine', logo: '/ai-landing/assets/logos/alpine.svg', height: 32 },
+  { name: 'Bugatti', logo: '/ai-landing/assets/logos/bugatti.svg', height: 32 },
+  { name: 'Cointelegraph', logo: '/ai-landing/assets/logos/cointelegraph.png', height: 28 },
+  { name: 'Hublot', logo: '/ai-landing/assets/logos/hublot.svg', height: 32 },
+  { name: 'Hugo Boss', logo: '/ai-landing/assets/logos/hugo-boss.svg', height: 26 },
+  { name: 'European Union', logo: '/ai-landing/assets/logos/european-union.png', height: 36 },
+  { name: 'Shiseido', logo: '/ai-landing/assets/logos/shiseido.svg', height: 26 },
+  { name: 'Vogue', logo: '/ai-landing/assets/logos/vogue.svg', height: 30 },
+];
 
 const TICKER_PHRASES = {
   en: ['Fixed price, real guarantee', 'One session, a real answer', 'Built once, not rented monthly', "Honest audit — I'll redirect you if I'm not the fit", 'Direct access to me, not a support queue'],
@@ -549,32 +658,34 @@ const T = {
   'nav.services': { en: 'Services', it: 'Servizi' },
   'nav.how': { en: 'How It Works', it: 'Come Funziona' },
   'nav.about': { en: 'About', it: 'Chi Sono' },
-  'nav.cta': { en: 'Book the Audit', it: "Prenota l'Audit" },
+  'nav.cta': { en: 'Book a Discovery Call', it: 'Prenota una Call Conoscitiva' },
   'hero.videoSoon': { en: 'Video coming soon', it: 'Video in arrivo' },
   'hero.eyebrow': { en: 'FIXED PRICE. GUARANTEED.', it: 'PREZZO FISSO. GARANTITO.' },
-  'hero.headline': { en: "I'll show you exactly where AI saves or makes you money — and build you one, live. Or you don't pay.", it: "Ti mostro esattamente dove l'AI ti fa risparmiare o guadagnare — e te ne costruisco una, dal vivo. O non paghi." },
-  'hero.sub': { en: 'A fixed-price audit: one session, a full report, and a live demo of one automation — built in front of you. €499. Guaranteed.', it: "Un audit a prezzo fisso: una sessione, un report completo, e la demo live di un'automazione — costruita davanti a te. €499. Garantito." },
-  'hero.cta1': { en: 'Book the AI Revenue Audit — €499', it: "Prenota l'AI Revenue Audit — €499" },
+  'hero.headline': { en: "You'll know exactly where AI saves or makes you money, and walk out with one already built and running.", it: "Saprai esattamente dove l'AI ti fa risparmiare o guadagnare, e uscirai con un'automazione già costruita e attiva." },
+  'hero.sub': { en: 'A full report of ready-to-install AI integrations, plus one automation you can start using from day 1.', it: 'Un report completo di integrazioni AI pronte da installare, più un\'automazione che puoi usare dal primo giorno.' },
+  'hero.cta1': { en: 'Book a Free Discovery Call', it: 'Prenota una Call Conoscitiva Gratuita' },
   'hero.cta2': { en: 'Message Me on WhatsApp', it: 'Scrivimi su WhatsApp' },
-  'hero.trust': { en: "At least 3 concrete opportunities with estimated impact — or it's free.", it: 'Almeno 3 opportunità concrete con impatto stimato — o è gratis.' },
+  'hero.priceNote': { en: 'The call is free. The AI Revenue Audit itself is a fixed €499.', it: "La call è gratuita. L'AI Revenue Audit vero e proprio ha un prezzo fisso di €499." },
   'included.eyebrow': { en: "WHAT'S INCLUDED", it: 'COSA È INCLUSO' },
   'included.heading': { en: 'One session. Everything you need to see the path.', it: 'Una sessione. Tutto quello che serve per vedere la strada.' },
-  'included.i1.title': { en: '90-Minute Deep Dive', it: '90 Minuti di Analisi' },
-  'included.i1.body': { en: "In person if you're nearby, video call if you're not. I look at how your business actually runs today.", it: 'Di persona se sei nella mia zona, in videochiamata se non lo sei. Guardo come funziona davvero la tua azienda oggi.' },
-  'included.i2.title': { en: 'Full Written Report', it: 'Report Scritto Completo' },
-  'included.i2.body': { en: 'At least 3 AI opportunities I find, ranked by impact and how hard it is to do.', it: 'Almeno 3 opportunità AI che trovo, classificate per impatto e difficoltà di realizzazione.' },
-  'included.i3.title': { en: 'One Real Automation, Yours to Keep', it: 'Una Vera Automazione, Che Resta Tua' },
-  'included.i3.body': { en: "Not a slide — I build it live during the session, and you walk away with it. Ready to use, whether or not we ever work together again.", it: 'Non una slide — la costruisco dal vivo durante la sessione, e te la porti a casa. Pronta da usare, anche se poi non lavoriamo più insieme.' },
-  'included.i4.title': { en: 'A Clear Next Step', it: 'Un Prossimo Passo Chiaro' },
-  'included.i4.body': { en: "With me or without me. You'll know exactly what to do next either way.", it: 'Con me o senza di me. Saprai esattamente cosa fare dopo, in entrambi i casi.' },
+  'included.i1.title': { en: '90-Minute Interview Analysis', it: '90 Minuti di Analisi' },
+  'included.i1.body': { en: "I look at how your business runs today, and find what's worth automating to save you time or make you money.", it: 'Guardo come funziona davvero la tua azienda oggi, e trovo cosa vale la pena automatizzare per farti risparmiare tempo o guadagnare di più.' },
+  'included.i2.title': { en: 'Report with Integrations', it: 'Report con Integrazioni' },
+  'included.i2.body': { en: 'Every opportunity comes with the integration needed, its estimated cost, expected ROI, and how many hours it saves you each week.', it: 'Ogni opportunità include l\'integrazione necessaria, il costo stimato, il ROI atteso e quante ore a settimana ti fa risparmiare.' },
+  'included.i3.title': { en: '+1 Automation, Ready on Day 1', it: '+1 Automazione, Pronta dal Giorno 1' },
+  'included.i3.body': { en: 'Built live, for the one problem that matters most. Installed and running in your business from day 1, yours to keep either way.', it: 'Costruita dal vivo, per il problema che conta di più. Installata e attiva nella tua azienda dal giorno 1, resta tua in ogni caso.' },
+  'included.i4.title': { en: 'A Written Action Plan', it: 'Un Piano d\'Azione Scritto' },
+  'included.i4.body': { en: 'A prioritized roadmap: what to build first, what to skip, and a realistic timeline, whether you hire me or do it yourself.', it: 'Una roadmap con le priorità: cosa costruire prima, cosa saltare, e una tempistica realistica, che tu lavori con me o da solo.' },
   'guarantee.eyebrow': { en: 'THE GUARANTEE', it: 'LA GARANZIA' },
-  'guarantee.heading': { en: "At least 3 real opportunities, each with an estimated impact — or it's free.", it: "Almeno 3 opportunità concrete, ciascuna con un impatto stimato — o è gratis." },
-  'guarantee.body': { en: "No fine print. If I don't identify at least 3 concrete opportunities with an estimated impact, it's free.", it: 'Nessuna lettera piccola. Se non individuo almeno 3 opportunità concrete con un impatto stimato, è gratis.' },
+  'guarantee.heading': { en: "Guarantee: at least 3 real opportunities, each with an estimated impact — or it's FREE.", it: "Garanzia: almeno 3 opportunità concrete, ciascuna con un impatto stimato — o è GRATIS." },
   'services.eyebrow': { en: 'AFTER THE AUDIT', it: "DOPO L'AUDIT" },
   'services.heading': { en: 'Most audits point to the same place.', it: 'La maggior parte degli audit porta allo stesso punto.' },
   'services.s1.tag': { en: 'Sales & Follow-Up Automation', it: 'Automazione di Vendite e Follow-up' },
   'services.s1.headline': { en: "I've built this exact system before — running HubSpot's automation end to end.", it: "Ho già costruito esattamente questo sistema — gestendo l'automazione di HubSpot dall'inizio alla fine." },
-  'services.s1.body': { en: 'I ran the CRM, the pipeline, and the follow-ups for a real company. I can build you the same thing as a simple, custom system — once, not a monthly subscription.', it: 'Ho gestito il CRM, la pipeline e i follow-up per un’azienda vera. Posso costruirti lo stesso sistema, semplice e su misura — una volta sola, non un abbonamento mensile.' },
+  'services.s1.body': { en: 'I ran the CRM, the pipeline, and the follow-ups at Exclusible. I can build you the same thing as a simple, custom system — once, not a monthly subscription.', it: 'Ho gestito il CRM, la pipeline e i follow-up in Exclusible. Posso costruirti lo stesso sistema, semplice e su misura — una volta sola, non un abbonamento mensile.' },
+  'authority.name': { en: 'Exclusible', it: 'Exclusible' },
+  'authority.role': { en: 'Where I ran CRM, pipeline & follow-up automation end to end.', it: 'Dove ho gestito CRM, pipeline e automazione dei follow-up dall\'inizio alla fine.' },
+  'authority.caption': { en: 'Luxury & premium brands I helped convert into clients there', it: 'Brand di lusso e premium che ho contribuito a portare come clienti' },
   'services.s1.o1': { en: 'More leads without more of your time', it: 'Più contatti senza impiegare più tempo' },
   'services.s1.o2': { en: 'Replies in under 60 seconds, any time', it: 'Risposte in meno di 60 secondi, a qualsiasi ora' },
   'services.s1.o3': { en: 'Every lead tracked automatically, nothing lost', it: 'Ogni contatto tracciato automaticamente, niente si perde' },
@@ -639,10 +750,14 @@ const T = {
   'about.body': { en: "I don't just use AI tools — I build the systems that make them work for you. I've spent years finding what works before anyone else, and turning it into results. Now I build AI systems that run, learn, and improve themselves, so you spend less time on repetitive work and more time on what only you can do.", it: 'Non uso solo strumenti AI — costruisco i sistemi che li fanno funzionare per te. Ho passato anni a trovare ciò che funziona prima degli altri, trasformandolo in risultati concreti. Ora costruisco sistemi AI che funzionano, imparano e si migliorano da soli, così tu passi meno tempo su lavoro ripetitivo e più tempo su ciò che solo tu sai fare.' },
   'final.heading': { en: 'Ready to see where AI can grow your revenue?', it: "Pronto a scoprire dove l'AI può far crescere i tuoi ricavi?" },
   'final.sub': { en: "One session, a full report, a live demo — €499. At least 3 real opportunities, or it's free.", it: "Una sessione, un report completo, una demo live — €499. Almeno 3 opportunità concrete, o è gratis." },
-  'final.cta1': { en: 'Book the AI Revenue Audit — €499', it: "Prenota l'AI Revenue Audit — €499" },
+  'final.cta1': { en: 'Book a Free Discovery Call', it: 'Prenota una Call Conoscitiva Gratuita' },
   'final.cta2': { en: 'Message Me on WhatsApp', it: 'Scrivimi su WhatsApp' },
+  'footer.tagline': { en: 'Fixed-price AI audits for real businesses: where AI saves or makes you money, proven live.', it: 'Audit AI a prezzo fisso per aziende vere: dove l\'AI ti fa risparmiare o guadagnare, provato dal vivo.' },
+  'footer.servicesHeading': { en: 'MARKETING SERVICES', it: 'SERVIZI DI MARKETING' },
+  'footer.servicesSub': { en: 'Growth & marketing automation services', it: 'Servizi di crescita e automazione marketing' },
+  'footer.socialHeading': { en: 'SOCIAL MEDIA', it: 'SOCIAL MEDIA' },
   'footer.text': { en: '© 2026 Convertleads', it: '© 2026 Convertleads' },
-  'footer.link': { en: 'Marketing services →', it: 'Servizi di marketing →' }
+  'footer.brandKit': { en: 'Brand Kit ↗', it: 'Brand Kit ↗' }
 };
 
 const WHATSAPP_MSG = {
@@ -667,7 +782,7 @@ function applyLang(lang) {
   const videoId = VIDEO[lang];
   const frame = document.getElementById('video-frame');
   if (videoId) {
-    frame.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(videoId) + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    frame.innerHTML = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(videoId) + '?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&logo=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" title="' + (VIDEO_TITLE[lang] || '') + '" allowfullscreen></iframe>';
   } else if (!frame.querySelector('.video-placeholder')) {
     frame.innerHTML = VIDEO_PLACEHOLDER_HTML;
   }
@@ -697,7 +812,9 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 
 // Trusted-by marquee (duplicated list for seamless loop)
 const marquee = document.getElementById('marquee-track');
-marquee.innerHTML = COMPANIES.concat(COMPANIES).map(c => '<span>' + c + '</span>').join('');
+marquee.innerHTML = COMPANIES.concat(COMPANIES).map(c =>
+  '<img src="' + c.logo + '" alt="' + c.name + ' logo" style="height:' + c.height + 'px">'
+).join('');
 
 // Initial language: ?lang= query param > localStorage > browser > default 'en'
 const params = new URLSearchParams(window.location.search);
@@ -708,6 +825,7 @@ const initialLang = (queryLang === 'it' || queryLang === 'en') ? queryLang : (st
 
 applyLang(initialLang);
 </script>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
 </html>
