@@ -6,5 +6,8 @@
       "destination": "https://convertleads.pro/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

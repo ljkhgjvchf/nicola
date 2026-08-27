@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export const CTASection = () => {
   const { t } = useLanguage();
   const handleBookCall = () => {
-    window.open('https://calendly.com/nicola-da-dalto/15min', '_blank');
+    window.open('https://calendly.com/nicola-da-dalto/60min', '_blank');
   };
   return <section id="contact" className="py-24 px-6 bg-muted/30">
       <div className="max-w-4xl mx-auto text-center">

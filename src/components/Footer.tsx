@@ -20,7 +20,7 @@ const socials: Social[] = [
   { href: 'mailto:dadalto.nicola@gmail.com', label: 'Email', Icon: Mail, color: '#EA4335' },
   { href: 'https://www.linkedin.com/in/nicoladadalto/', label: 'LinkedIn', Icon: Linkedin, color: '#0A66C2' },
   { href: 'https://github.com/ljkhgjvchf/', label: 'GitHub', Icon: Github, useTheme: true },
-  { href: 'https://www.youtube.com/@OMaharaja4/', label: 'YouTube', Icon: Youtube, color: '#FF0000' },
+  { href: 'https://www.youtube.com/@nicoladadalto', label: 'YouTube', Icon: Youtube, color: '#FF0000' },
   { href: 'https://substack.com/@nicoladadalto', label: 'Substack', Icon: SubstackIcon, color: '#FF6719' },
 ];
 
