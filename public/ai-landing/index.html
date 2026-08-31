@@ -314,8 +314,8 @@
   </nav>
   <div class="header-right">
     <div class="lang-toggle">
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <a class="lang-btn" href="/it">IT</a>
     </div>
     <a class="btn btn-primary header-cta" id="header-cta-link" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener" data-i18n="nav.cta">Book a Discovery Call</a>
   </div>
@@ -804,24 +804,14 @@ function applyLang(lang) {
   ticker.innerHTML = phrases.map(p => '<span>' + p + '</span>').join('');
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-});
-
 // Trusted-by marquee (duplicated list for seamless loop)
 const marquee = document.getElementById('marquee-track');
 marquee.innerHTML = COMPANIES.concat(COMPANIES).map(c =>
   '<img src="' + c.logo + '" alt="' + c.name + ' logo" style="height:' + c.height + 'px">'
 ).join('');
 
-// Initial language: ?lang= query param > localStorage > browser > default 'en'
-const params = new URLSearchParams(window.location.search);
-const queryLang = params.get('lang');
-const storedLang = localStorage.getItem('ai-landing-lang');
-const browserLang = (navigator.language || '').toLowerCase().startsWith('it') ? 'it' : 'en';
-const initialLang = (queryLang === 'it' || queryLang === 'en') ? queryLang : (storedLang || browserLang);
-
-applyLang(initialLang);
+// This page is English-only. The IT toggle links to the separate /it page.
+applyLang('en');
 </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 

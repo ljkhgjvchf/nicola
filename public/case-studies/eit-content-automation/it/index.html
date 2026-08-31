@@ -185,21 +185,6 @@
   .stamp .word{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
   .stamp svg{margin-bottom:2px;}
 
-  /* ---------- time ---------- */
-  .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px;}
-  .time-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px 16px;text-align:center;}
-  .time-card .icwrap{
-    width:46px;height:46px;border-radius:12px;background:var(--surface-2);color:var(--accent);
-    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;
-  }
-  .time-card .cat{font-size:1.15rem;font-weight:800;color:var(--ink);margin-bottom:16px;}
-  .time-card .row{display:flex;flex-direction:column;align-items:center;gap:6px;font-variant-numeric:tabular-nums;}
-  .time-card .row .line{display:flex;align-items:baseline;justify-content:center;gap:6px;}
-  .time-card .m{font-size:1.4rem;font-weight:700;color:var(--ink-muted);}
-  .time-card .a{font-size:1.9rem;font-weight:800;color:var(--accent);}
-  .time-card .arrow{color:var(--accent);font-size:1.1rem;}
-  .time-card .unit{font-size:.8rem;color:var(--ink-muted);font-weight:600;}
-
   .spline-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 22px 8px;}
   .spline-card .cap{text-align:center;font-size:.85rem;color:var(--ink-muted);margin-top:6px;padding-top:14px;border-top:1px dashed var(--border);}
   .spline-card .cap b{color:var(--accent);}
@@ -245,7 +230,6 @@
 
   @media (max-width:640px){
     .rspt{grid-template-columns:1fr 1fr;}
-    .time-grid{grid-template-columns:1fr;}
     .cta-grid{grid-template-columns:1fr;}
     .skills-mini{grid-template-columns:1fr;}
     .preview-row{grid-template-columns:1fr;}
@@ -259,7 +243,7 @@
 
   <div class="top-row">
     <div class="eyebrow"><span class="dot"></span>Come funziona</div>
-    <a class="lang-switch" href="../">EN</a>
+    <a class="lang-switch" href="/case-studies/eit-content-automation/">EN</a>
   </div>
   <h1>Pubblicazione e Distribuzione Contenuti, Automatizzata con l'AI</h1>
 
@@ -488,39 +472,9 @@
   </section>
 
   <section>
-    <h2>Tempo, per attivit&agrave;</h2>
-    <div class="time-grid">
-      <div class="time-card">
-        <div class="icwrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div>
-        <div class="cat">Articolo</div>
-        <div class="row">
-          <div class="line"><span class="m">30&ndash;45</span><span class="unit">min</span></div>
-          <span class="arrow">&darr;</span>
-          <div class="line"><span class="a">~4</span><span class="unit">min</span></div>
-        </div>
-      </div>
-      <div class="time-card">
-        <div class="icwrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0"/><path d="M12 18v3"/></svg></div>
-        <div class="cat">Newsletter</div>
-        <div class="row">
-          <div class="line"><span class="m">30</span><span class="unit">min</span></div>
-          <span class="arrow">&darr;</span>
-          <div class="line"><span class="a">~2</span><span class="unit">min</span></div>
-        </div>
-      </div>
-      <div class="time-card">
-        <div class="icwrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-        <div class="cat">Social Media</div>
-        <div class="row">
-          <div class="line"><span class="m">30</span><span class="unit">min</span></div>
-          <span class="arrow">&darr;</span>
-          <div class="line"><span class="a">~3</span><span class="unit">min</span></div>
-        </div>
-      </div>
-    </div>
-
+    <h2>Tempo risparmiato</h2>
     <div class="spline-card">
-      <svg viewBox="0 0 460 190" width="100%" height="auto" role="img" aria-label="Grafico che mostra il tempo per articolo che scende da circa 97 minuti manuali a circa 9 minuti automatizzati.">
+      <svg viewBox="0 0 460 190" width="100%" height="auto" role="img" aria-label="Grafico che mostra il tempo combinato per la creazione di articolo, SMM e newsletter, che scende da circa 90&ndash;105 minuti manuali a circa 9 minuti automatizzati.">
         <defs>
           <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.28"/>
@@ -537,7 +491,7 @@
         <text x="370" y="126" text-anchor="middle" font-size="14" font-weight="800" fill="var(--accent)">~9 min</text>
         <text x="370" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink-muted)" letter-spacing="0.03em">AUTOMATIZZATO</text>
       </svg>
-      <div class="cap">Tempo per portare un articolo dal testo approvato alla pubblicazione, per articolo &middot; <b>~81&ndash;96 min risparmiati</b>, ogni singola volta</div>
+      <div class="cap">Tempo per la creazione di articolo, SMM e newsletter &middot; <b>~81&ndash;96 min risparmiati</b>, ogni singola volta</div>
     </div>
 
     <div class="money-card">
