@@ -172,6 +172,18 @@
   .stat-box { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 10px; text-align: center; }
   .stat-num { font-size: 19px; font-weight: 700; color: var(--accent); }
   .stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  /* Step 01 widget — before/after comparison */
+  .transform-row { display: flex; align-items: stretch; gap: 10px; }
+  .transform-box { flex: 1; border-radius: 10px; padding: 14px; text-align: center; }
+  .transform-box.is-before { background: #fff; border: 1px solid var(--border); }
+  .transform-box.is-after { background: rgba(250,93,41,0.08); border: 1px solid rgba(250,93,41,0.25); }
+  .transform-label { display: block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px; }
+  .transform-box.is-after .transform-label { color: var(--accent); }
+  .transform-value { display: block; font-size: 14px; font-weight: 700; line-height: 1.3; }
+  .transform-box.is-after .transform-value { color: var(--accent); }
+  .transform-arrow { display: flex; align-items: center; color: var(--muted); font-size: 18px; flex-shrink: 0; }
+
   /* Step 02 widget — ranked automation report */
   .report-list { display: flex; flex-direction: column; gap: 8px; }
   .report-row { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
@@ -225,8 +237,6 @@
   .chart-mini-label { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
   .chart-mini-svg-wrap { flex: 1; min-height: 60px; margin: 6px 0; display: flex; align-items: center; }
   .chart-mini-svg-wrap svg { width: 100%; height: auto; aspect-ratio: 160 / 110; display: block; }
-  .how-widget .chart-mini-svg-wrap { flex: none; justify-content: center; margin: 14px 0; }
-  .how-widget .chart-mini-svg-wrap svg { width: auto; height: 100px; }
   .case-cta-mini { display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: #fff; background: var(--accent); padding: 10px 16px; border-radius: 9999px; margin-top: 14px; transition: opacity .15s ease, transform .15s ease; }
   .case-cta-mini:hover { opacity: .88; transform: translateX(2px); }
   .pct-stat { flex: 1; display: flex; flex-direction: column; }
@@ -410,28 +420,15 @@
       <h4 class="how-title">Prenota l'Audit</h4>
       <p class="how-body">Una sessione — di persona o via videochiamata. 90 minuti di intervista guidata per capire quali sono le urgenze, le criticità e dove l'AI può essere usata per aumentare profitto, produzione o ridurre costi.</p>
       <div class="how-widget">
-        <div class="chart-merged-wrap">
-          <div class="chart-mini-row">
-            <span class="chart-mini-val muted">Follow-up manuale</span>
-            <span class="chart-mini-val accent">Follow-up in 60 sec</span>
+        <div class="transform-row">
+          <div class="transform-box is-before">
+            <span class="transform-label">Prima</span>
+            <span class="transform-value">Follow-up manuale</span>
           </div>
-          <div class="chart-mini-svg-wrap">
-            <svg viewBox="0 0 160 110" role="img" aria-label="Esempio reparto Vendite: dal follow-up manuale lento al follow-up automatico in 60 secondi.">
-              <defs>
-                <linearGradient id="salesMiniGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.28"/>
-                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M12,12 C95,12 100,95 148,95 L148,105 L12,105 Z" fill="url(#salesMiniGrad)"/>
-              <path d="M12,12 C95,12 100,95 148,95" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="12" cy="12" r="5" fill="var(--muted)"/>
-              <circle cx="148" cy="95" r="5" fill="var(--accent)"/>
-            </svg>
-          </div>
-          <div class="chart-mini-row">
-            <span class="chart-mini-label">Prima</span>
-            <span class="chart-mini-label">Dopo</span>
+          <div class="transform-arrow">&rarr;</div>
+          <div class="transform-box is-after">
+            <span class="transform-label">Dopo</span>
+            <span class="transform-value">Follow-up in 60 sec</span>
           </div>
         </div>
         <div class="progress-total">+50% conversione lead &rarr; cliente</div>
@@ -443,9 +440,9 @@
       <p class="how-body">Presento un minimo di 3 automazioni, attivabili in 7 giorni, che garantiscono risultati tangibili.</p>
       <div class="how-widget">
         <div class="report-list">
-          <div class="report-row"><span class="report-rank">1</span><span class="report-name">Vendite &mdash; Follow-up automatico lead</span><span class="report-tag">+5h/sett</span></div>
-          <div class="report-row"><span class="report-rank">2</span><span class="report-name">Assistenza Clienti &mdash; Risposte AI istantanee</span><span class="report-tag">+8h/sett</span></div>
-          <div class="report-row"><span class="report-rank">3</span><span class="report-name">Amministrazione &mdash; Fatturazione automatica</span><span class="report-tag">+6h/sett</span></div>
+          <div class="report-row"><span class="report-rank">1</span><span class="report-name">Vendite &mdash; Follow-up automatico lead</span><span class="report-tag">-5h/sett</span></div>
+          <div class="report-row"><span class="report-rank">2</span><span class="report-name">Assistenza Clienti &mdash; Risposte AI istantanee</span><span class="report-tag">-8h/sett</span></div>
+          <div class="report-row"><span class="report-rank">3</span><span class="report-name">Amministrazione &mdash; Fatturazione automatica</span><span class="report-tag">-6h/sett</span></div>
         </div>
         <div class="progress-total">19 ore a settimana risparmiate</div>
       </div>
