@@ -172,11 +172,6 @@
   .stat-box { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 10px; text-align: center; }
   .stat-num { font-size: 19px; font-weight: 700; color: var(--accent); }
   .stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
-  /* Step 01 widget — departments scanned */
-  .dept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-  .dept-chip { display: flex; align-items: center; gap: 9px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 11px 12px; font-size: 12px; font-weight: 600; line-height: 1.25; }
-  .dept-chip svg { flex-shrink: 0; color: var(--accent); }
-
   /* Step 02 widget — ranked automation report */
   .report-list { display: flex; flex-direction: column; gap: 8px; }
   .report-row { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
@@ -413,13 +408,31 @@
       <h4 class="how-title">Prenota l'Audit</h4>
       <p class="how-body">Una sessione — di persona o via videochiamata. 90 minuti di intervista guidata per capire quali sono le urgenze, le criticità e dove l'AI può essere usata per aumentare profitto, produzione o ridurre costi.</p>
       <div class="how-widget">
-        <div class="dept-grid">
-          <div class="dept-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg><span>Vendite</span></div>
-          <div class="dept-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L2 19l3 3 7-7.1a4 4 0 0 0 5.6-5.6l-2.8 2.8-2-2z"/></svg><span>Operazioni</span></div>
-          <div class="dept-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12v-1a9 9 0 0 1 18 0v1"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/></svg><span>Assistenza Clienti</span></div>
-          <div class="dept-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Amministrazione</span></div>
+        <div class="chart-merged-wrap">
+          <div class="chart-mini-row">
+            <span class="chart-mini-val muted">Follow-up manuale</span>
+            <span class="chart-mini-val accent">Follow-up in 60 sec</span>
+          </div>
+          <div class="chart-mini-svg-wrap">
+            <svg viewBox="0 0 160 110" role="img" aria-label="Esempio reparto Vendite: dal follow-up manuale lento al follow-up automatico in 60 secondi.">
+              <defs>
+                <linearGradient id="salesMiniGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.28"/>
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M12,12 C95,12 100,95 148,95 L148,105 L12,105 Z" fill="url(#salesMiniGrad)"/>
+              <path d="M12,12 C95,12 100,95 148,95" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="5" fill="var(--muted)"/>
+              <circle cx="148" cy="95" r="5" fill="var(--accent)"/>
+            </svg>
+          </div>
+          <div class="chart-mini-row">
+            <span class="chart-mini-label">Prima</span>
+            <span class="chart-mini-label">Dopo</span>
+          </div>
         </div>
-        <div class="progress-total">90 minuti di intervista guidata</div>
+        <div class="progress-total">+50% conversione lead &rarr; cliente</div>
       </div>
     </div>
     <div class="how-card">
@@ -428,10 +441,12 @@
       <p class="how-body">Presento un minimo di 3 automazioni, attivabili in 7 giorni, che garantiscono risultati tangibili.</p>
       <div class="how-widget">
         <div class="report-list">
-          <div class="report-row"><span class="report-rank">1</span><span class="report-name">Vendite &mdash; Follow-up automatico lead</span><span class="report-tag">7gg</span></div>
-          <div class="report-row"><span class="report-rank">2</span><span class="report-name">Assistenza Clienti &mdash; Risposte AI istantanee</span><span class="report-tag">5gg</span></div>
-          <div class="report-row"><span class="report-rank">3</span><span class="report-name">Amministrazione &mdash; Fatturazione automatica</span><span class="report-tag">7gg</span></div>
+          <div class="report-row"><span class="report-rank">1</span><span class="report-name">Vendite &mdash; Follow-up automatico lead</span><span class="report-tag">+5h/sett</span></div>
+          <div class="report-row"><span class="report-rank">2</span><span class="report-name">Assistenza Clienti &mdash; Risposte AI istantanee</span><span class="report-tag">+8h/sett</span></div>
+          <div class="report-row"><span class="report-rank">3</span><span class="report-name">Amministrazione &mdash; Fatturazione automatica</span><span class="report-tag">+6h/sett</span></div>
         </div>
+        <div class="progress-total">19 ore a settimana risparmiate</div>
+      </div>
       </div>
     </div>
     <div class="how-card">
