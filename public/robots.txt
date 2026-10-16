@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://convertleads.xyz/sitemap.xml
+Sitemap: https://www.convertleads.xyz/sitemap.xml

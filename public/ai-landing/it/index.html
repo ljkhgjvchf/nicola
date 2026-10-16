@@ -3,8 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convertleads — AI Revenue Audit per la Tua Azienda</title>
-<meta name="description" content="Un report completo di opportunità AI pronte da installare, più un'automazione già costruita e attiva. Prezzo fisso €499, almeno 3 opportunità o è gratis.">
+<title>Consulente AI per aziende a Treviso | Convertleads</title>
+<meta name="description" content="Il tuo responsabile AI esterno, vicino a Treviso. Formazione, integrazioni e automazioni per la tua azienda. I tuoi dati restano tuoi.">
+<link rel="canonical" href="https://www.convertleads.xyz/">
+<link rel="alternate" hreflang="it" href="https://www.convertleads.xyz/">
+<link rel="alternate" hreflang="en" href="https://www.convertleads.xyz/en">
+<link rel="alternate" hreflang="x-default" href="https://www.convertleads.xyz/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Convertleads">
+<meta property="og:title" content="Consulente AI per aziende a Treviso | Convertleads">
+<meta property="og:description" content="Il tuo responsabile AI esterno, vicino a Treviso. Formazione, integrazioni e automazioni per la tua azienda. I tuoi dati restano tuoi.">
+<meta property="og:url" content="https://www.convertleads.xyz/">
+<meta property="og:image" content="https://www.convertleads.xyz/ai-landing/assets/og-it.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Convertleads", "url": "https://www.convertleads.xyz/", "logo": "https://www.convertleads.xyz/ai-landing/assets/favicon-c-source.png", "image": "https://www.convertleads.xyz/ai-landing/assets/og-it.png", "description": "Il tuo responsabile AI esterno, vicino a Treviso. Formazione, integrazioni e automazioni per la tua azienda. I tuoi dati restano tuoi.", "inLanguage": "it", "areaServed": [{"@type": "AdministrativeArea", "name": "Provincia di Treviso"}, {"@type": "AdministrativeArea", "name": "Veneto"}], "founder": {"@type": "Person", "name": "Nicola Da Dalto", "jobTitle": "Consulente AI", "sameAs": ["https://www.linkedin.com/in/nicoladadalto/"]}, "sameAs": ["https://www.linkedin.com/in/nicoladadalto/", "https://www.youtube.com/@nicoladadalto", "https://github.com/ljkhgjvchf/", "https://substack.com/@nicoladadalto"]}</script>
 <meta name="facebook-domain-verification" content="asbnmuqfmznyygduy76q6lyrj5uo9l" />
 <link rel="icon" type="image/png" href="/ai-landing/assets/favicon-c-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/ai-landing/assets/favicon-c-16.png" sizes="16x16">
@@ -540,10 +555,6 @@
       </span>
     </h1>
     <p class="hero-sub">Sono il tuo responsabile AI esterno. Dall'installazione alla formazione, fino alle automazioni.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una Chiamata</a>
-      <a class="btn btn-outline" id="whatsapp-link" href="#" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
-    </div>
   </div>
 </section>
 
@@ -825,7 +836,6 @@ const WHATSAPP_NUMBER = '393897860249';
 const WHATSAPP_MSG = "Ciao Nicola, vorrei prenotare l'AI Revenue Audit.";
 
 const waHref = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(WHATSAPP_MSG);
-document.getElementById('whatsapp-link').href = waHref;
 document.getElementById('whatsapp-link-2').href = waHref;
 
 
@@ -861,14 +871,14 @@ document.getElementById('whatsapp-link-2').href = waHref;
       '<div class="quiz-bar"><span style="width:' + Math.round((n + 1) / (total + 1) * 100) + '%"></span></div>';
     if (n < total) {
       const st = steps()[n];
-      html += '<h2 class="quiz-q">' + esc(st.q) + '</h2><div class="quiz-opts' + (st.two ? ' two' : '') + '">' +
+      html += '<p class="quiz-q">' + esc(st.q) + '</p><div class="quiz-opts' + (st.two ? ' two' : '') + '">' +
         st.opts.map(o => '<button class="quiz-opt" data-opt="' + esc(o) + '">' + esc(o) + '</button>').join('') + '</div>';
     } else {
       const SUBJ = encodeURIComponent('Richiesta dal sito: quiz AI'), BODY = encodeURIComponent(message());
       const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + EMAIL + '&su=' + SUBJ + '&body=' + BODY;
       const outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + EMAIL + '&subject=' + SUBJ + '&body=' + BODY;
       const wa = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message());
-      html += '<h2 class="quiz-q">Ecco la tua richiesta. Mandala con un clic.</h2><ul class="quiz-summary">' +
+      html += '<p class="quiz-q">Ecco la tua richiesta. Mandala con un clic.</p><ul class="quiz-summary">' +
         [["Usi l'AI", a[0]], ['Cerchi', a[1]], ['Budget', a[2]]].map(r => '<li><span>' + r[0] + '</span><span>' + esc(r[1]) + '</span></li>').join('') +
         '</ul><div class="quiz-send"><a class="btn btn-primary" href="' + gmail + '" target="_blank" rel="noopener">Invia con Gmail</a>' +
         '<a class="btn btn-outline" href="' + outlook + '" target="_blank" rel="noopener">Invia con Outlook</a>' +
