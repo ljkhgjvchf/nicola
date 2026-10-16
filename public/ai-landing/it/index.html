@@ -6,9 +6,9 @@
 <title>Convertleads — AI Revenue Audit per la Tua Azienda</title>
 <meta name="description" content="Un report completo di opportunità AI pronte da installare, più un'automazione già costruita e attiva. Prezzo fisso €499, almeno 3 opportunità o è gratis.">
 <meta name="facebook-domain-verification" content="asbnmuqfmznyygduy76q6lyrj5uo9l" />
-<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-16.png" sizes="16x16">
-<link rel="apple-touch-icon" href="/ai-landing/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-c-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/ai-landing/assets/favicon-c-16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="/ai-landing/assets/apple-touch-icon-c.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -94,7 +94,7 @@
   }
   .play-circle { width: 68px; height: 68px; border-radius: 50%; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; }
   .video-placeholder p { margin: 0; font-size: 14px; font-weight: 500; }
-  .hero-headline { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.22; margin: 0 0 16px; }
+  .hero-headline { font-size: 42px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.22; margin: 0 0 16px; }
   @media (max-width: 760px) { .hero-headline { font-size: 28px; } }
   .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.6; margin: 0 0 28px; }
   .hero-ctas { display: flex; flex-direction: column; gap: 12px; }
@@ -136,6 +136,8 @@
     flex: 0 0 auto; width: 72px; height: 72px; border-radius: 50%; background: var(--accent);
     color: #fff; display: flex; align-items: center; justify-content: center;
   }
+  .guarantee-badge { overflow: hidden; }
+  .guarantee-badge img { width: 100%; height: 100%; object-fit: cover; }
   .guarantee-copy .eyebrow { margin-bottom: 10px; }
   .guarantee-copy h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; line-height: 1.3; }
   .guarantee-copy p { font-size: 14.5px; color: var(--muted); line-height: 1.6; margin: 0; }
@@ -229,7 +231,7 @@
   .tile-wide-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
   .tile-wide-head .label { font-size: 11.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
   .logos-cluster { flex: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 6px; }
-  .logos-cluster img { height: 18px; width: auto; opacity: 0.85; }
+  .logos-cluster img { height: 22px; width: auto; opacity: 0.85; }
   .chart-merged-wrap { flex: 1; display: flex; flex-direction: column; }
   .chart-mini-row { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; }
   .chart-mini-val { font-size: 13px; font-weight: 700; line-height: 1.2; }
@@ -242,9 +244,11 @@
   .case-cta-mini:hover { opacity: .88; transform: translateX(2px); }
   .pct-stat { flex: 1; display: flex; flex-direction: column; }
   .pct-stat .pct-num { font-size: 44px; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; line-height: 1; margin-top: 10px; font-variant-numeric: tabular-nums; }
+  .pct-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: auto; }
+  .pct-row .case-cta-mini { margin-top: 0; }
   .pct-stat .pct-sub { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
   @media (max-width: 860px) {
-    .bento-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; }
+    .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; grid-auto-rows: auto; }
     .t-primary-eit, .t-primary-excl { grid-column: 1 / 3; grid-row: auto; min-height: 180px; }
     .t-chart-merged { grid-column: 1 / 3; grid-row: auto; min-height: 220px; }
     .t-small-c, .t-small-d { grid-column: span 1; grid-row: auto; min-height: 100px; }
@@ -257,6 +261,10 @@
   .avatar-photo-full img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .about-copy { flex: 1; min-width: 260px; }
   .about-copy h3 { font-size: 26px; font-weight: 500; margin: 0 0 16px; }
+  .about-copy h3.about-why { font-size: 20px; font-weight: 600; margin: 28px 0 14px; }
+  .about-why-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+  .about-why-list li { display: flex; gap: 10px; font-size: 15px; line-height: 1.6; color: var(--text); }
+  .about-why-list svg { flex-shrink: 0; margin-top: 4px; color: var(--accent); }
   .about-copy p { font-size: 15px; color: var(--muted); line-height: 1.7; margin: 0; }
   @media (max-width: 700px) { .about-row { flex-direction: column; text-align: center; } .avatar-photo-full { width: 220px; margin: 0 auto; } }
 
@@ -312,19 +320,200 @@
   .footer-social-row { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: var(--text); transition: opacity .15s ease; }
   .footer-social-row:hover { opacity: .7; }
   .footer-social-row .icon-chip { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .footer-bottom { max-width: 1136px; margin: 40px auto 0; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
-  .footer-bottom p { margin: 0; font-size: 13px; color: var(--muted); }
-  .footer-bottom p a { color: var(--muted); text-decoration: underline; }
+  .footer-brand .footer-copy { font-size: 13px; }
+  .footer-copy a { text-decoration: underline; }
   @media (max-width: 560px) { .footer-inner { text-align: left; } }
+  /* Pricing */
+  #prezzi { position: relative; text-align: center; }
+  #prezzi::before {
+    content: ''; position: absolute; inset: 0; z-index: -1; opacity: .5;
+    background: linear-gradient(to right,#4f4f4f1a 1px,transparent 1px),linear-gradient(to bottom,#4f4f4f1a 1px,transparent 1px);
+    background-size: 35px 35px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%,#000 70%,transparent 110%);
+    mask-image: radial-gradient(ellipse 80% 50% at 50% 0%,#000 70%,transparent 110%);
+  }
+  #prezzi h2.section-heading { margin: 0 auto 34px; }
+  .pricing-sub { color: var(--muted); font-size: 16px; line-height: 1.6; margin: 0 auto 48px; max-width: 620px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: left; }
+  .pricing-card { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 24px; padding: 28px 24px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; }
+  .pricing-card > * { position: relative; }
+  .pricing-card.popular { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .pricing-card.popular::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(250,93,41,0.10), rgba(255,255,255,0)); }
+  .pricing-card.dark { background: var(--text); color: #fff; border-color: var(--text); }
+  .pricing-card.dark::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right,#ffffff14 1px,transparent 1px),linear-gradient(to bottom,#ffffff14 1px,transparent 1px);
+    background-size: 45px 45px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%,#000 70%,transparent 110%);
+    mask-image: radial-gradient(ellipse 80% 50% at 50% 0%,#000 70%,transparent 110%);
+  }
+  .pricing-name { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0; font-size: 20px; font-weight: 600; }
+  .pricing-badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 9999px; background: rgba(250,93,41,0.12); color: #C43E12; }
+  .pricing-price { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .pricing-price small { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 500; letter-spacing: 0; color: var(--muted); }
+  .pricing-card.dark .pricing-price small, .pricing-card.dark .pricing-features li { color: rgba(255,255,255,0.75); }
+  .pricing-body { flex: 1; }
+  .pricing-for { margin: 0 0 12px; font-size: 14px; font-weight: 600; }
+  .pricing-features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .pricing-features li { display: flex; gap: 9px; font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+  .pricing-features svg { flex-shrink: 0; margin-top: 1px; color: var(--accent); }
+  .pricing-card .btn { width: 100%; padding: 14px 20px; font-size: 15px; }
+  .pricing-card.dark .btn-primary { background: #fff; color: var(--text); }
+  @media (max-width: 1100px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .pricing-grid { grid-template-columns: 1fr; } }
+
+  /* Halftone wordmark */
+  .halftone { position: relative; width: 100%; height: clamp(64px, 11vw, 200px); overflow: hidden; background: var(--bg); }
+  .halftone canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  /* Come funziona: Ink Orbit bento (port of 21st.dev ink-orbit-features) */
+  #how { padding-top: 72px; }
+.ib-root{--ib-page:#0b0b0b;--ib-hatch:rgba(255,255,255,.05);--ib-paper:#121212;--ib-card:#181818;--ib-raise:#1e1e1e;--ib-ink:#eeeeee;--ib-soft:#c9c9c9;--ib-muted:#8d8d8d;--ib-faint:#5d5d5d;--ib-line:#262626;--ib-line-strong:#363636;--ib-bracket:#444444;--ib-inv:#efefef;--ib-inv-ink:#121212;--ib-shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);--ib-sans:'Inter Tight',Inter,ui-sans-serif,system-ui,sans-serif;--ib-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;position:relative;width:100%;box-sizing:border-box;background-color:var(--ib-page);background-image:repeating-linear-gradient(135deg,var(--ib-hatch) 0 1px,transparent 1px 10px);color:var(--ib-ink);font-family:var(--ib-sans);font-size:15px;line-height:1.5;padding:28px clamp(10px,2.4vw,28px);border-radius:20px}
+.ib-root :where(*){box-sizing:border-box}
+.ib-root :focus-visible{outline:2px solid var(--ib-ink);outline-offset:2px}
+.ib-root :where(svg){display:block;max-width:none;flex:none}
+.ib-root :where(h2,h3,p){margin:0;padding:0;font-size:inherit;font-weight:inherit}
+.ib-shell{width:100%;max-width:1180px;margin:0 auto;container-type:inline-size}
+.ib-sec{position:relative;background:var(--ib-paper);border:1px solid var(--ib-line);padding:clamp(20px,4cqw,48px) clamp(16px,4cqw,48px)}
+.ib-reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.ib-reveal[data-in="true"]{opacity:1;transform:none}
+.ib-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:clamp(28px,4.5cqw,52px)}
+.ib-tag{display:inline-block;padding:4px 10px;font-size:11.5px;letter-spacing:.02em;color:var(--ib-soft);background:var(--ib-card);border:1px solid var(--ib-line)}
+.ib-h2{font-size:clamp(28px,4.4cqw,44px);line-height:1.08;letter-spacing:-.025em;font-weight:500}
+.ib-h2>span{display:block}
+.ib-muted{color:var(--ib-faint)}
+.ib-frame{position:relative}
+.ib-c{position:absolute;width:12px;height:12px;border-color:var(--ib-bracket);border-style:solid;border-width:0;pointer-events:none;transition:border-color .3s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.ib-c-tl{top:-6px;left:-6px;border-top-width:1.5px;border-left-width:1.5px}
+.ib-c-tr{top:-6px;right:-6px;border-top-width:1.5px;border-right-width:1.5px}
+.ib-c-bl{bottom:-6px;left:-6px;border-bottom-width:1.5px;border-left-width:1.5px}
+.ib-c-br{bottom:-6px;right:-6px;border-bottom-width:1.5px;border-right-width:1.5px}
+.ib-frame:hover>.ib-c{border-color:var(--ib-ink)}
+.ib-frame:hover>.ib-c-tl{transform:translate(-3px,-3px)}
+.ib-frame:hover>.ib-c-tr{transform:translate(3px,-3px)}
+.ib-frame:hover>.ib-c-bl{transform:translate(-3px,3px)}
+.ib-frame:hover>.ib-c-br{transform:translate(3px,3px)}
+.ib-bento{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(22px,3cqw,34px)}
+@container (min-width:720px){.ib-bento{grid-template-columns:repeat(2,minmax(0,1fr))}.ib-wide{grid-column:1 / -1;width:min(100%,820px);justify-self:center}}
+.ib-card{background:linear-gradient(180deg,var(--ib-raise),var(--ib-card));border:1px solid var(--ib-line);padding:clamp(14px,2cqw,22px);display:flex;flex-direction:column;gap:14px;transition:border-color .3s,box-shadow .35s}
+.ib-card:hover{border-color:var(--ib-line-strong);box-shadow:var(--ib-shadow)}
+.ib-card h3{font-size:13.5px;font-weight:600;letter-spacing:-.005em}
+.ib-card p{font-size:12.5px;line-height:1.55;color:var(--ib-muted);max-width:40ch}
+.ib-diagram{width:100%;height:auto;overflow:visible}
+.ib-wide-copy{display:grid;grid-template-columns:1fr;gap:16px}
+@container (min-width:560px){.ib-wide-copy{grid-template-columns:1fr 1fr}.ib-wide-copy>div:last-child{justify-self:end;text-align:left}}
+.ib-flow{stroke:var(--ib-line-strong);fill:none;stroke-width:1.2;transition:stroke .3s}
+.ib-flow-on{stroke:var(--ib-ink)}
+.ib-dash{stroke-dasharray:3 4;animation:ib-dash 1.2s linear infinite}
+.ib-pkt{fill:var(--ib-ink)}
+.ib-node{fill:var(--ib-raise);stroke:var(--ib-line-strong);transition:stroke .3s}
+.ib-av{cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform-box:fill-box;transform-origin:center}
+.ib-av:hover,.ib-av:focus-visible{transform:scale(1.18)}
+.ib-av-tip{opacity:0;transition:opacity .2s;pointer-events:none}
+.ib-av:hover .ib-av-tip,.ib-av:focus .ib-av-tip{opacity:1}
+.ib-presence{animation:ib-pulse 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ib-sheet-new{animation:ib-sheet-in .7s cubic-bezier(.2,.8,.2,1) both}
+.ib-tool{cursor:pointer;transition:transform .3s cubic-bezier(.2,.8,.2,1);transform-box:fill-box;transform-origin:center}
+.ib-tool:hover,.ib-tool-on{transform:translateY(-2px)}
+.ib-tool-on rect.ib-node{stroke:var(--ib-ink)}
+.ib-tool text{transition:opacity .25s}
+.ib-chart{cursor:crosshair}
+.ib-line-draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.4,.1,.2,1)}
+[data-in="true"] .ib-line-draw{stroke-dashoffset:0}
+.ib-glow{animation:ib-pulse 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes ib-dash{to{stroke-dashoffset:-14}}
+@keyframes ib-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(1.35)}}
+@keyframes ib-sheet-in{from{opacity:0;transform:translate(14px,-10px) rotate(4deg)}to{opacity:1;transform:none}}
+.ib-bento>.ib-frame{display:flex;flex-direction:column}
+.ib-bento>.ib-frame>.ib-card{flex:1}
+@media (prefers-reduced-motion:reduce){.ib-reveal{opacity:1;transform:none;transition:none}.ib-dash,.ib-presence,.ib-glow,.ib-sheet-new{animation:none}.ib-line-draw{transition:none;stroke-dashoffset:0}}
+  /* Rotating second line of the H1 */
+  .hero-static { display: block; }
+  .hero-rotator { display: grid; color: var(--accent); }
+  .hero-rotator > span { grid-area: 1 / 1; opacity: 0; transform: translateY(40%); filter: blur(6px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1), filter .6s ease; }
+  .hero-rotator > span.is-on { opacity: 1; transform: none; filter: none; }
+  .hero-rotator > span.is-out { opacity: 0; transform: translateY(-40%); filter: blur(6px); }
+  @media (prefers-reduced-motion: reduce) { .hero-rotator > span { transition: none; filter: none; } }
+
+  /* Lead quiz (replaces the hero video) */
+  .hero-video-col { display: flex; align-items: center; }
+  .quiz-card { width: 100%; background: var(--card-bg); border: 2px solid var(--accent); border-radius: 20px; padding: 36px 40px; box-shadow: 0 0 0 6px rgba(250,93,41,0.08), 0 24px 48px -28px rgba(0,0,0,0.25); min-height: 380px; display: flex; flex-direction: column; }
+  .quiz-card { position: relative; overflow: hidden; transition: background .35s ease, border-color .35s ease; }
+  .quiz-card.is-dark { background: linear-gradient(155deg, #43181D 0%, #221512 55%, #17120F 100%); border-color: transparent; color: #fff; }
+  .quiz-card.is-dark::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px); background-size: 20px 20px; -webkit-mask-image: radial-gradient(ellipse 90% 70% at 100% 0%, #000 20%, transparent 100%); mask-image: radial-gradient(ellipse 90% 70% at 100% 0%, #000 20%, transparent 100%); pointer-events: none; }
+  .quiz-card.is-dark .quiz-pane { position: relative; }
+  .quiz-card.is-dark .quiz-step { color: rgba(255,255,255,0.55); }
+  .quiz-card.is-dark .quiz-bar { background: rgba(255,255,255,0.15); }
+  .quiz-card.is-dark .quiz-opt { background: transparent; color: #fff; border-color: #fff; }
+  .quiz-card.is-dark .quiz-opt:hover { background: rgba(255,255,255,0.1); }
+  .quiz-card.is-dark .quiz-opt:active { background: #fff; color: var(--text); }
+  .quiz-intro { margin: 0 0 22px; font-size: 32px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; color: var(--accent); }
+  .quiz-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  .quiz-step { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .quiz-back { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer; }
+  .quiz-back:hover { color: var(--text); }
+  .quiz-bar { height: 4px; border-radius: 9999px; background: var(--border); overflow: hidden; margin-bottom: 26px; }
+  .quiz-bar span { display: block; height: 100%; background: var(--accent); border-radius: inherit; transition: width .4s ease; }
+  .quiz-q { font-size: 26px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; margin: 0 0 22px; }
+  .quiz-opts { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .quiz-opts.two { grid-template-columns: 1fr 1fr; }
+  .quiz-opt { font: inherit; cursor: pointer; background: #fff; color: var(--text); border: 2px solid var(--text); border-radius: 12px; padding: 14px 20px; font-size: 16px; font-weight: 600; line-height: 1.3; text-align: center; transition: all .18s ease; }
+  .quiz-opt:hover { background: rgba(34,34,34,0.05); }
+  .quiz-opt:active { background: var(--text); color: #fff; }
+  .quiz-pane { animation: quiz-in .35s ease both; display: flex; flex-direction: column; flex: 1; }
+  @keyframes quiz-in { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+  .quiz-summary { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .quiz-summary li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; font-size: 14px; }
+  .quiz-summary li span:first-child { color: var(--muted); }
+  .quiz-summary li span:last-child { font-weight: 600; text-align: right; }
+  .quiz-send { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+  .quiz-send .btn { width: 100%; padding-left: 12px; padding-right: 12px; }
+  .quiz-send .btn-whatsapp, .quiz-send .quiz-note { grid-column: 1 / -1; }
+  .btn-whatsapp { background: #1EA952; color: #fff; border-radius: 9999px; padding: 17px 32px; font-size: 16px; font-weight: 600; }
+  .btn-whatsapp:hover { opacity: .9; }
+  .quiz-note { margin: 4px 0 0; font-size: 13px; color: var(--muted); text-align: center; }
+  .quiz-note button { background: none; border: 0; padding: 0; font: inherit; color: var(--muted); text-decoration: underline; cursor: pointer; }
+  @media (min-width: 901px) { .hero { gap: 96px; } .hero-video-col { flex-basis: 52%; } }
+  @media (max-width: 900px) { .hero-cta-col { order: -1; } .quiz-card { min-height: 0; } }
+  @media (max-width: 520px) { .quiz-card { padding: 26px 20px; } .quiz-q { font-size: 22px; } .quiz-intro { font-size: 24px; } }
+  @media (prefers-reduced-motion: reduce) { .quiz-pane { animation: none; } }
+
+  /* Spacing under Chi sono */
+  #about { padding-bottom: 122px; }
+
+  /* Come funziona: light, site-style skin over the ink-orbit widget */
+  .ib-root { --ib-page: transparent; --ib-hatch: transparent; --ib-paper: #fff; --ib-card: #fff; --ib-raise: #fff; --ib-ink: #222; --ib-soft: #444; --ib-muted: #6B6B6B; --ib-faint: #9a9a9a; --ib-line: #E4E4E4; --ib-line-strong: #d2d2d2; --ib-bracket: transparent; --ib-inv: #222; --ib-inv-ink: #fff; --ib-shadow: 0 16px 32px -20px rgba(0,0,0,.18); background: none; padding: 0; border-radius: 0; }
+  .ib-sec { background: none; border: 0; padding: 0; }
+  .ib-card { background: #fff; border-radius: 14px; }
+  .ib-c { display: none; }
+  .ib-wide { width: 100% !important; }
+  .ib-flow-on { stroke: var(--accent); }
+  .ib-pkt { fill: var(--accent); }
+  .ib-tool-on rect.ib-node { stroke: var(--accent); }
+  .ib-line-draw { stroke: var(--accent); opacity: 1; }
+  .ib-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .ib-card p { font-size: 14px; color: var(--muted); }
+  /* Type scale: one size per text role (documented in /ai-landing/brand-kit.html) */
+  :root { --fs-h1: 48px; --fs-h2: 40px; --fs-h3: 22px; --fs-body: 16px; --fs-small: 14px; --fs-eyebrow: 13px; --fs-caption: 12px; }
+  @media (max-width: 760px) { :root { --fs-h1: 32px; --fs-h2: 30px; --fs-h3: 20px; } }
+  .hero-headline { font-size: var(--fs-h1); font-weight: 500; }
+  h2.section-heading, .final-cta-inner h2 { font-size: var(--fs-h2); font-weight: 500; }
+  .quiz-q, .pricing-name, .about-copy h3, .about-copy h3.about-why, .ib-card h3 { font-size: var(--fs-h3); font-weight: 600; }
+  .hero-sub, .about-copy p, .about-why-list li, .final-cta-inner p { font-size: var(--fs-body); }
+  .ib-card p, .pricing-features li, .pricing-for, .quiz-summary li, .footer-brand p, .footer-service-link, .footer-social-row { font-size: var(--fs-small); }
+  .eyebrow, .trusted-heading, .quiz-step, .quiz-note, .footer-brand .footer-copy { font-size: var(--fs-eyebrow); }
+  .tile-stat .cap, .tile-small .label, .tile-wide-head .label, .footer-service-sub, .pricing-price small, .pricing-badge { font-size: var(--fs-caption); }
+  .btn, .pricing-card .btn { font-size: var(--fs-body); }
+  .header-cta { font-size: 13px; }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-  <div class="brand"><img src="/ai-landing/assets/logo-mark.png" alt="" width="26" height="26">Convertleads</div>
+  <div class="brand"><img src="/ai-landing/assets/favicon-c-source.png" alt="" width="26" height="26">Convertleads</div>
   <nav class="main-nav">
-    <a href="#included">Cosa Offro</a>
+    <a href="#how">Come Funziona</a>
     <a href="#case-studies">Risultati</a>
+    <a href="#prezzi">Prezzi</a>
     <a href="#about">Chi Sono</a>
   </nav>
   <div class="header-right">
@@ -338,21 +527,21 @@
 
 <section class="hero">
   <div class="hero-video-col">
-    <div class="video-frame" id="video-frame">
-      <div class="video-placeholder">
-        <div class="play-circle">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <p>Video in arrivo</p>
-      </div>
-    </div>
+    <div class="quiz-card" id="quiz" aria-live="polite"></div>
   </div>
   <div class="hero-cta-col">
-    <p class="eyebrow">€499. RISULTATO GARANTITO</p>
-    <h1 class="hero-headline">Integra Ai nella tua azienda. -50% costi e +100% vendite.</h1>
-    <p class="hero-sub">Prenota la consulenza. Saprai esattamente dove l'AI ti fa risparmiare o guadagnare, e uscirai con un'automazione già costruita e attiva.</p>
+    <h1 class="hero-headline">
+      <span class="hero-static">Usa l'AI in azienda.</span>
+      <span class="hero-rotator" id="hero-rotator">
+        <span class="is-on">Mantenendo la tua privacy.</span>
+        <span aria-hidden="true">Aumentando le tue vendite.</span>
+        <span aria-hidden="true">Nel rispetto dell'AI Act.</span>
+        <span aria-hidden="true">Aumentando la produttività.</span>
+      </span>
+    </h1>
+    <p class="hero-sub">Sono il tuo responsabile AI esterno. Dall'installazione alla formazione, fino alle automazioni.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una Videochiamata</a>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una Chiamata</a>
       <a class="btn btn-outline" id="whatsapp-link" href="#" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
     </div>
   </div>
@@ -365,116 +554,12 @@
   </div>
 </section>
 
-<section id="included">
-  <p class="eyebrow">COSA OFFRO</p>
-  <h2 class="section-heading">AI per aumentare vendite, automatizzare processi manuali, velocizzare la produzione.</h2>
-  <div class="included-track">
-    <div class="track-pulse"></div>
-    <div class="included-grid">
-    <div class="included-card">
-      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
-      <h4>90 Minuti di Analisi</h4>
-      <p>Guardo come funziona davvero la tua azienda oggi, e trovo cosa vale la pena automatizzare per farti risparmiare tempo o guadagnare di più.</p>
-    </div>
-    <div class="included-card">
-      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
-      <h4>Report con Integrazioni</h4>
-      <p>Ogni opportunità include l'integrazione necessaria, il costo stimato, il ROI atteso e quante ore a settimana ti fa risparmiare.</p>
-    </div>
-    <div class="included-card">
-      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m8 21 4-3 4 3"/><path d="m8 11 3 3 5-5"/></svg></div>
-      <h4>+1 Automazione, Pronta dal Giorno 1</h4>
-      <p>Costruita dal vivo, per il problema che conta di più. Installata e attiva nella tua azienda dal giorno 1, resta tua in ogni caso.</p>
-    </div>
-    <div class="included-card">
-      <div class="included-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <h4>Un Piano d'Azione Scritto</h4>
-      <p>Una roadmap con le priorità: cosa costruire prima, cosa saltare, e una tempistica realistica, che tu lavori con me o da solo.</p>
-    </div>
-    </div>
-  </div>
-</section>
 
-<section class="guarantee-section">
-  <div class="price-guarantee-row">
-    <div class="guarantee-card">
-      <div class="guarantee-badge"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
-      <div class="guarantee-copy">
-        <p class="eyebrow">LA GARANZIA</p>
-        <h3>Almeno 3 automazioni, dove migliorano o velocizzano i tuoi attuali processi del 200% — o è GRATIS.</h3>
-      </div>
-    </div>
-    <div class="price-card">
-      <p class="eyebrow">INVESTIMENTO</p>
-      <div class="price-value">€499</div>
-      <p class="price-note">Prezzo fisso, una tantum.</p>
-    </div>
-  </div>
-</section>
 
 <section id="how">
   <p class="eyebrow">COME FUNZIONA</p>
-  <h2 class="section-heading">Dall'audit alla risposta, velocemente.</h2>
-  <div class="how-grid">
-    <div class="how-card">
-      <div class="how-step-num">FASE 01</div>
-      <h4 class="how-title">Prenota l'Audit</h4>
-      <p class="how-body">Una sessione — di persona o via videochiamata. 90 minuti di intervista guidata per capire quali sono le urgenze, le criticità e dove l'AI può essere usata per aumentare profitto, produzione o ridurre costi.</p>
-      <div class="how-widget">
-        <div class="transform-row">
-          <div class="transform-box is-before">
-            <span class="transform-label">Prima</span>
-            <span class="transform-value">Follow-up manuale</span>
-          </div>
-          <div class="transform-arrow">&rarr;</div>
-          <div class="transform-box is-after">
-            <span class="transform-label">Dopo</span>
-            <span class="transform-value">Follow-up in 60 sec</span>
-          </div>
-        </div>
-        <div class="progress-total">+50% conversione lead &rarr; cliente</div>
-      </div>
-    </div>
-    <div class="how-card">
-      <div class="how-step-num">FASE 02</div>
-      <h4 class="how-title">Report + Demo Live</h4>
-      <p class="how-body">Presento un minimo di 3 automazioni, attivabili in 7 giorni, che garantiscono risultati tangibili.</p>
-      <div class="how-widget">
-        <div class="report-list">
-          <div class="report-row"><span class="report-rank">1</span><span class="report-name">Vendite &mdash; Follow-up automatico lead</span><span class="report-tag">-5h/sett</span></div>
-          <div class="report-row"><span class="report-rank">2</span><span class="report-name">Assistenza Clienti &mdash; Risposte AI istantanee</span><span class="report-tag">-8h/sett</span></div>
-          <div class="report-row"><span class="report-rank">3</span><span class="report-name">Amministrazione &mdash; Fatturazione automatica</span><span class="report-tag">-6h/sett</span></div>
-        </div>
-        <div class="progress-total">19 ore a settimana risparmiate</div>
-      </div>
-    </div>
-    <div class="how-card">
-      <div class="how-step-num">FASE 03</div>
-      <h4 class="how-title">Lo Costruisco, Se Vuoi Procedere</h4>
-      <p class="how-body">1 delle tre automazioni viene costruita e integrata subito, così vedi i risultati fin dal giorno 1.</p>
-      <div class="how-widget">
-        <div class="timeline-widget">
-          <div class="tl-node"><div class="tl-circle done">&#10003;</div><div class="tl-label">Chiamata</div><div class="tl-sub">Giorno 1</div></div>
-          <div class="tl-node"><div class="tl-circle done">&#10003;</div><div class="tl-label">Costruzione</div><div class="tl-sub">Giorno 2&ndash;4</div></div>
-          <div class="tl-node"><div class="tl-circle active">03</div><div class="tl-label">Test</div><div class="tl-sub">Giorno 5</div></div>
-          <div class="tl-node"><div class="tl-circle pending">04</div><div class="tl-label">Attivo</div><div class="tl-sub">Giorno 6</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="how-card">
-      <div class="how-step-num">FASE 04</div>
-      <h4 class="how-title">Supporto Vero</h4>
-      <p class="how-body">Domande dopo il lancio? Scrivi direttamente a me — non a un ticket di supporto, a me.</p>
-      <div class="how-widget">
-        <div class="stat-grid">
-          <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Sempre Attivo</div></div>
-          <div class="stat-box"><div class="stat-num">30gg</div><div class="stat-label">Supporto Incluso</div></div>
-          <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Codice Richiesto</div></div>
-          <div class="stat-box"><div class="stat-num">Tuo</div><div class="stat-label">Il Sistema è Tuo</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h2 class="section-heading">Come lavora l'AI nella tua azienda.</h2>
+  <div class="ib-root" id="ib-root"></div>
 </section>
 
 <section id="case-studies">
@@ -553,14 +638,16 @@
       </div>
       <div class="pct-stat">
         <span class="pct-num">90%</span>
-        <span class="pct-sub">Automatizzato &middot; 10% supervisione umana</span>
+        <div class="pct-row">
+          <span class="pct-sub">Automatizzato &middot; 10% supervisione umana</span>
+          <a class="case-cta-mini" href="/case-studies/eit-content-automation/it/" target="_blank" rel="noopener">Leggi il case study completo &rarr;</a>
+        </div>
       </div>
-      <a class="case-cta-mini" href="/case-studies/eit-content-automation/it/" target="_blank" rel="noopener">Leggi il case study completo &rarr;</a>
     </div>
 
     <div class="tile tile-light t-wide-logos">
       <div class="tile-wide-head">
-        <span class="label">6 Brand di Lusso Acquisiti</span>
+        <span class="label">+29 Brand Acquisiti</span>
       </div>
       <div class="logos-cluster">
         <img src="/ai-landing/assets/logos/bugatti.svg" alt="Logo Bugatti">
@@ -575,13 +662,85 @@
   </div>
 </section>
 
+<section id="prezzi">
+  <p class="eyebrow">PREZZI</p>
+  <h2 class="section-heading">Scegli da dove partire.</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card ">
+      <h3 class="pricing-name">Inizio</h3>
+      <div class="pricing-price">€3.500<small>Una tantum</small></div>
+      <div class="pricing-body">
+        <p class="pricing-for">Per chi parte da zero con l'AI</p>
+        <ul class="pricing-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>2 giornate in azienda</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Formazione per reparti, conforme all'AI Act (art. 4)</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Policy d'uso dell'AI</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Setup di uno strumento sicuro per il team</span></li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="pricing-card ">
+      <h3 class="pricing-name">Miglioro</h3>
+      <div class="pricing-price">€4.000<small>Una tantum. Scalato se prosegui con il piano Completo</small></div>
+      <div class="pricing-body">
+        <p class="pricing-for">Per chi usa già qualche strumento AI</p>
+        <ul class="pricing-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>2–3 settimane di lavoro</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Mappa dei processi: dove l'AI serve e dove no</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Rischi privacy</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Business case in ore e in euro</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Roadmap di 6 mesi</span></li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="pricing-card popular">
+      <h3 class="pricing-name">Completo <span class="pricing-badge">Consigliato</span></h3>
+      <div class="pricing-price">da €5.000<small>Al mese, minimo 6 mesi</small></div>
+      <div class="pricing-body">
+        <p class="pricing-for">Per chi vuole un responsabile AI senza assumerlo</p>
+        <ul class="pricing-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Responsabile AI esterno, 1 giorno a settimana</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Assistente AI sui documenti interni</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Automazioni di ordini e offerte, reporting</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Formazione continua</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Governance GDPR e AI Act</span></li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="pricing-card dark">
+      <h3 class="pricing-name">Enterprise</h3>
+      <div class="pricing-price">Su misura<small>Preventivo dopo la prima call</small></div>
+      <div class="pricing-body">
+        <p class="pricing-for">Per gruppi con più sedi o reparti</p>
+        <ul class="pricing-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Tutto quello che c'è nel piano Completo</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Più reparti e sedi in parallelo</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Integrazioni con ERP e CRM</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Governance AI Act per tutto il gruppo</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Referente dedicato</span></li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Parliamone <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <section id="about">
   <p class="eyebrow">CHI SONO</p>
   <div class="about-row">
     <div class="avatar-photo-full"><img src="/ai-landing/assets/nicola-full.webp" alt="Nicola Da Dalto"></div>
     <div class="about-copy">
       <h3>Ciao, sono Nicola.</h3>
-      <p>Non uso solo strumenti AI — costruisco i sistemi che li fanno funzionare per te. Ho passato anni a trovare ciò che funziona prima degli altri, trasformandolo in risultati concreti. Ora costruisco sistemi AI che funzionano, imparano e si migliorano da soli, così tu passi meno tempo su lavoro ripetitivo e più tempo su ciò che solo tu sai fare.</p>
+      <p>Da 8 anni faccio marketing per aziende tech in molti paesi. Oggi lavoro anche per l'EIT, un ente dell'Unione Europea. Lì le regole sulla privacy sono rigide. Ho tolto i dati di analisi da Google. Ora usano strumenti open source. Con n8n creo flussi che fanno sbagliare meno l'AI. Porto questo metodo nelle aziende vicino a Vazzola. I tuoi dati restano tuoi.</p>
+      <h3 class="about-why">Perché scegliermi</h3>
+      <ul class="about-why-list">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>I tuoi dati restano tuoi. Uso strumenti open source.</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Seguo il metodo di un ente europeo su GDPR e AI Act.</span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>Misuro i risultati in ore risparmiate. Al team marketing EIT faccio risparmiare 48 ore al mese.</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -601,10 +760,10 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
     </div>
     <div class="final-cta-inner">
-      <h2>Pronto a scoprire dove l'AI può far crescere i tuoi ricavi?</h2>
-      <p>Una sessione, un report completo, una demo live — €499. Almeno 3 opportunità concrete, o è gratis.</p>
+      <h2>Pronto a scoprire dove l'AI può aiutarti?</h2>
+      <p>Una chiamata gratuita di 30 minuti. Ti dico dove l'AI ti fa risparmiare ore. I tuoi dati restano in azienda.</p>
       <div class="final-cta-buttons">
-        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una Videochiamata</a>
+        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Prenota una Chiamata</a>
         <a class="btn btn-outline light" id="whatsapp-link-2" href="#" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
       </div>
     </div>
@@ -617,8 +776,9 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-brand-name"><img src="/ai-landing/assets/logo-mark.png" alt="">Convertleads</div>
+      <div class="footer-brand-name"><img src="/ai-landing/assets/favicon-c-source.png" alt="">Convertleads</div>
       <p>Audit AI a prezzo fisso per aziende vere: dove l'AI ti fa risparmiare o guadagnare, provato dal vivo.</p>
+      <p class="footer-copy">© 2026 Convertleads · <a href="/ai-landing/brand-kit.html" target="_blank" rel="noopener noreferrer">Brand Kit ↗</a></p>
     </div>
     <div class="footer-middle">
       <h4>SERVIZI DI MARKETING</h4>
@@ -656,28 +816,78 @@
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2026 Convertleads · <a href="/ai-landing/brand-kit.html" target="_blank" rel="noopener noreferrer">Brand Kit ↗</a></p>
-  </div>
 </footer>
+
+<div class="halftone" id="halftone" aria-hidden="true"><canvas></canvas></div>
 
 <script>
 const WHATSAPP_NUMBER = '393897860249';
 const WHATSAPP_MSG = "Ciao Nicola, vorrei prenotare l'AI Revenue Audit.";
-const VIDEO_ID = '1221794996'; // Video EN riusato temporaneamente finché non c'è una versione italiana.
 
 const waHref = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(WHATSAPP_MSG);
 document.getElementById('whatsapp-link').href = waHref;
 document.getElementById('whatsapp-link-2').href = waHref;
 
-if (VIDEO_ID) {
-  document.getElementById('video-frame').innerHTML =
-    '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(VIDEO_ID) +
-    '?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&logo=0&dnt=1" ' +
-    'allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" ' +
-    'referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" ' +
-    'title="convertleads-auditoffer-ita" allowfullscreen></iframe>';
-}
+
+// Hero lead quiz: 3 questions, then a prefilled email (or WhatsApp) with the answers.
+(function () {
+  const box = document.getElementById('quiz');
+  const EMAIL = 'dadalto.nicola@gmail.com';
+  const Q2 = {
+    'Sì': { q: 'Cosa stai cercando?', opts: ['Formare il mio team', "Collegare l'AI ai miei sistemi", "Capire dove l'AI mi serve davvero", 'Un servizio completo'] },
+    'No': { q: 'Cosa ti serve di più?', opts: ['Capire da dove partire', 'Formare il mio team', 'Risparmiare ore di lavoro', 'Mantenere la privacy dei dati'] },
+  };
+  const BUDGET = ['Meno di €3.500', 'Da €3.500 a €6.000', 'Più di €6.000', 'Non lo so ancora'];
+  let a = [];
+  const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+  function steps() {
+    return [
+      { q: "Usi già l'AI in azienda?", opts: ['Sì', 'No'], two: true },
+      Q2[a[0]] || Q2['No'],
+      { q: 'Che budget hai in mente?', opts: BUDGET },
+    ];
+  }
+  function message() {
+    return 'Ciao Nicola,\nho fatto il quiz sul sito.\n\n' +
+      "Uso già l'AI: " + a[0] + '\nCosa cerco: ' + a[1] + '\nBudget: ' + a[2] +
+      '\n\nNome:\nAzienda:\nTelefono:\n\nGrazie';
+  }
+  function render() {
+    const n = a.length, total = 3;
+    let html = '<div class="quiz-pane">' + (n === 0 ? '<p class="quiz-intro">3 domande, 30 secondi. Ti dico da dove partire con l\'AI.</p>' : '') + '<div class="quiz-top"><span class="quiz-step">' +
+      (n < total ? 'Domanda ' + (n + 1) + ' di ' + total : 'Ultimo passo') + '</span>' +
+      (n ? '<button class="quiz-back" data-back>← Indietro</button>' : '') + '</div>' +
+      '<div class="quiz-bar"><span style="width:' + Math.round((n + 1) / (total + 1) * 100) + '%"></span></div>';
+    if (n < total) {
+      const st = steps()[n];
+      html += '<h2 class="quiz-q">' + esc(st.q) + '</h2><div class="quiz-opts' + (st.two ? ' two' : '') + '">' +
+        st.opts.map(o => '<button class="quiz-opt" data-opt="' + esc(o) + '">' + esc(o) + '</button>').join('') + '</div>';
+    } else {
+      const SUBJ = encodeURIComponent('Richiesta dal sito: quiz AI'), BODY = encodeURIComponent(message());
+      const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + EMAIL + '&su=' + SUBJ + '&body=' + BODY;
+      const outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + EMAIL + '&subject=' + SUBJ + '&body=' + BODY;
+      const wa = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message());
+      html += '<h2 class="quiz-q">Ecco la tua richiesta. Mandala con un clic.</h2><ul class="quiz-summary">' +
+        [["Usi l'AI", a[0]], ['Cerchi', a[1]], ['Budget', a[2]]].map(r => '<li><span>' + r[0] + '</span><span>' + esc(r[1]) + '</span></li>').join('') +
+        '</ul><div class="quiz-send"><a class="btn btn-primary" href="' + gmail + '" target="_blank" rel="noopener">Invia con Gmail</a>' +
+        '<a class="btn btn-outline" href="' + outlook + '" target="_blank" rel="noopener">Invia con Outlook</a>' +
+        '<a class="btn btn-whatsapp" href="' + wa + '" target="_blank" rel="noopener">Invia su WhatsApp</a>' +
+        '<p class="quiz-note">Ti rispondo per fissare una chiamata. <button data-reset>Ricomincia</button></p></div>';
+    }
+    box.classList.toggle('is-dark', n === 0);
+    box.innerHTML = html + '</div>';
+  }
+  box.addEventListener('click', e => {
+    const t = e.target.closest('button');
+    if (!t) return;
+    if (t.hasAttribute('data-opt')) a.push(t.dataset.opt);
+    else if (t.hasAttribute('data-back')) a.pop();
+    else if (t.hasAttribute('data-reset')) a = [];
+    render();
+  });
+  render();
+})();
 
 const COMPANIES = [
   { name: 'Alpine', logo: '/ai-landing/assets/logos/alpine.svg', height: 32 },
@@ -704,6 +914,301 @@ const TICKER_PHRASES = [
 const ticker = document.getElementById('ticker-track');
 const phrases = TICKER_PHRASES.concat(TICKER_PHRASES);
 ticker.innerHTML = phrases.map(p => '<span>' + p + '</span>').join('');
+// Halftone wordmark: the word printed as dots that part around the pointer and warm toward the accent.
+(function () {
+  const root = document.getElementById('halftone');
+  const canvas = root.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+  const WORD = 'Convertleads', RADIUS = 80, CROP = 0.2;
+  let GAP = 6;
+  const css = getComputedStyle(document.documentElement);
+  const BG = css.getPropertyValue('--bg').trim(), INK = css.getPropertyValue('--text').trim();
+  const hex = h => { h = h.replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); };
+  const ink = hex(INK), warm = hex(css.getPropertyValue('--accent').trim());
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let w = 0, h = 0, dpr = 1, px = -1e5, py = -1e5, raf = 0, visible = true, awake = true;
+  let ring = { x: 0, y: 0, t: -1 }, dots = new Float32Array(0), count = 0;
+
+  function layout() {
+    const r = root.getBoundingClientRect();
+    w = Math.max(1, Math.round(r.width)); h = Math.max(1, Math.round(r.height));
+    GAP = w < 600 ? 3 : 6;
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    const mask = document.createElement('canvas'); mask.width = w; mask.height = h;
+    const m = mask.getContext('2d', { willReadFrequently: true });
+    const face = "800 100px 'Inter Tight', Inter, Arial, sans-serif";
+    m.font = face;
+    const fit = (w * 0.98 / m.measureText(WORD).width) * 100;
+    m.font = face.replace('100px', fit + 'px');
+    const box = m.measureText(WORD), cap = box.actualBoundingBoxAscent || fit * 0.72;
+    m.fillText(WORD, (w - box.width) / 2, h + cap * CROP);
+    const img = m.getImageData(0, 0, w, h).data, tmp = [];
+    for (let gy = 0; gy < Math.ceil(h / GAP); gy++) for (let gx = 0; gx < Math.ceil(w / GAP); gx++) {
+      let sum = 0;
+      for (let sy = 0; sy < 3; sy++) for (let sx = 0; sx < 3; sx++) {
+        const x = Math.min(w - 1, Math.floor(gx * GAP + (sx + .5) * GAP / 3));
+        const y = Math.min(h - 1, Math.floor(gy * GAP + (sy + .5) * GAP / 3));
+        sum += img[(y * w + x) * 4 + 3];
+      }
+      const cov = sum / (9 * 255);
+      if (cov < .06) continue;
+      const hx = gx * GAP + GAP / 2, hy = gy * GAP + GAP / 2;
+      tmp.push(hx, hy, 0, 0, hx, hy, Math.sqrt(cov) * GAP * .56);
+    }
+    dots = new Float32Array(tmp); count = tmp.length / 7; awake = true;
+  }
+
+  function draw(now) {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = BG; ctx.fillRect(0, 0, w, h);
+    const r = reduced ? 0 : RADIUS, age = ring.t < 0 ? 1e9 : now - ring.t, ringR = age * .9;
+    let moving = false;
+    for (let i = 0; i < count; i++) {
+      const j = i * 7, hx = dots[j + 4], hy = dots[j + 5];
+      let x = dots[j], y = dots[j + 1], vx = dots[j + 2], vy = dots[j + 3];
+      if (!reduced) {
+        if (age < 900) {
+          const dx = hx - ring.x, dy = hy - ring.y, d = Math.hypot(dx, dy) + .001;
+          const band = 1 - Math.min(1, Math.abs(d - ringR) / 26);
+          if (band > 0) { const f = band * 3.2 * (1 - age / 900); vx += dx / d * f; vy += dy / d * f; }
+        }
+        const dx = x - px, dy = y - py, d2 = dx * dx + dy * dy;
+        if (d2 < r * r) { const d = Math.sqrt(d2) + .001, f = (1 - d / r) * 2.6; vx += dx / d * f; vy += dy / d * f; }
+        vx = (vx + (hx - x) * .05) * .84; vy = (vy + (hy - y) * .05) * .84;
+        x += vx; y += vy;
+        if (Math.abs(vx) + Math.abs(vy) > .02 || Math.abs(x - hx) + Math.abs(y - hy) > .05) moving = true;
+        else { x = hx; y = hy; vx = 0; vy = 0; }
+        dots[j] = x; dots[j + 1] = y; dots[j + 2] = vx; dots[j + 3] = vy;
+      }
+      const k = Math.min(1, Math.hypot(x - hx, y - hy) / 28);
+      ctx.fillStyle = k > .02 ? 'rgb(' + ink.map((c, n) => Math.round(c + (warm[n] - c) * k)).join(',') + ')' : INK;
+      ctx.beginPath(); ctx.arc(x, y, dots[j + 6], 0, 6.2832); ctx.fill();
+    }
+    awake = moving || age < 900 || px > -1e4;
+  }
+
+  function loop(now) { raf = 0; if (!visible) return; draw(now); if (awake) raf = requestAnimationFrame(loop); }
+  function wake() { awake = true; if (!raf && visible) raf = requestAnimationFrame(loop); }
+  const local = e => { const b = canvas.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
+  root.addEventListener('pointermove', e => { [px, py] = local(e); wake(); });
+  root.addEventListener('pointerleave', () => { px = py = -1e5; wake(); });
+  root.addEventListener('pointerdown', e => { if (reduced) return; const [x, y] = local(e); ring = { x, y, t: performance.now() }; wake(); });
+  new ResizeObserver(() => { layout(); wake(); }).observe(root);
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) wake(); }).observe(root);
+  document.fonts && document.fonts.ready.then(() => { layout(); wake(); });
+  layout(); draw(performance.now()); wake();
+})();
+
+window.IB_COPY = {
+  tag: 'Come funziona',
+  title: "<span>Come lavora l'AI</span><span class=\"ib-muted\">nella tua azienda</span>",
+  flowAria: "Il lavoro del team passa dall'AI e diventa report pronti",
+  a: { t: 'Il team lavora come sempre', d: 'Le persone usano i file di ogni giorno: ordini, offerte, listini. Non devono cambiare strumenti.' },
+  b: { t: "L'AI prepara il lavoro", d: 'Legge i dati e scrive report, offerte e risposte. Una persona controlla prima di inviare.' },
+  i: { t: 'Tutti i tuoi strumenti, in un solo sistema', d: 'Collego i tuoi strumenti in un unico sistema AI: Slack, Google Workspace, CRM e database.' },
+  p: { t: 'Previsioni dai tuoi dati', d: "L'AI legge i tuoi dati e ti dà previsioni in tempo reale. Puoi agire subito." },
+};
+// Come funziona: Ink Orbit bento (static port of 21st.dev ink-orbit-features, dark theme, Claude mark as the AI hub).
+(function () {
+  const root = document.getElementById('ib-root');
+  if (!root) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const NS = 'http://www.w3.org/2000/svg';
+  const MARK = (x, y, s) => '<image href="/ai-landing/assets/logos/claude.svg" x="' + x + '" y="' + y + '" width="' + s + '" height="' + s + '"/>';
+  const BR = '<span class="ib-c ib-c-tl"></span><span class="ib-c ib-c-tr"></span><span class="ib-c ib-c-bl"></span><span class="ib-c ib-c-br"></span>';
+  const inView = (el, th, cb) => {
+    if (!('IntersectionObserver' in window)) return cb();
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { cb(); io.disconnect(); } }, { threshold: th });
+    io.observe(el);
+  };
+
+  // drawn greyscale portraits
+  const PORTRAITS = [
+    { hair: 'short', beard: true, glasses: false, skin: '#b9b4ae', hairC: '#2b2a29', shirt: '#3a3a3a', bg: '#d9d6d2' },
+    { hair: 'long', beard: false, glasses: false, skin: '#d6d0c9', hairC: '#8d7f6c', shirt: '#7b7b7b', bg: '#e6e3df' },
+    { hair: 'buzz', beard: false, glasses: true, skin: '#a7a19a', hairC: '#3d3c3a', shirt: '#1f1f1f', bg: '#cfcfcf' },
+    { hair: 'bun', beard: false, glasses: true, skin: '#9a8f84', hairC: '#1e1d1c', shirt: '#5a5a5a', bg: '#dedbd6' },
+    { hair: 'side', beard: true, glasses: true, skin: '#c7c0b8', hairC: '#5b5650', shirt: '#2c2c2c', bg: '#e1ded9' },
+  ];
+  function portrait(i) {
+    const p = PORTRAITS[i], id = 'ibpt' + i;
+    let s = '<defs><linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + p.bg + '"/><stop offset="1" stop-color="#9d9a96"/></linearGradient></defs>' +
+      '<rect width="64" height="64" fill="url(#' + id + ')"/>';
+    if (p.hair === 'long') s += '<path d="M18 30c0-12 6-19 14-19s14 7 14 19v20H18z" fill="' + p.hairC + '"/>';
+    s += '<path d="M8 64c2-12 12-18 24-18s22 6 24 18z" fill="' + p.shirt + '"/><rect x="27.5" y="36" width="9" height="11" rx="3" fill="' + p.skin + '"/>' +
+      '<ellipse cx="32" cy="28" rx="11" ry="13" fill="' + p.skin + '"/>';
+    if (p.hair === 'short') s += '<path d="M21 25c0-9 5-13 11-13s11 4 11 13c-2-4-6-6-11-6s-9 2-11 6z" fill="' + p.hairC + '"/>';
+    if (p.hair === 'buzz') s += '<path d="M21.5 24c.5-8 5-11.5 10.5-11.5S42 16 42.5 24c-3-3-6.5-4-10.5-4s-7.5 1-10.5 4z" fill="' + p.hairC + '" opacity=".85"/>';
+    if (p.hair === 'bun') s += '<circle cx="32" cy="11" r="6" fill="' + p.hairC + '"/><path d="M21 26c0-10 5-14 11-14s11 4 11 14c-2-5-6-7.5-11-7.5S23 21 21 26z" fill="' + p.hairC + '"/>';
+    if (p.hair === 'long') s += '<path d="M21 27c0-10 5-15 11-15s11 5 11 15c-3-6-8-8-14-7-3 .5-6 3-8 7z" fill="' + p.hairC + '"/>';
+    if (p.hair === 'side') s += '<path d="M21 26c-1-9 5-14 12-14 6 0 11 4 10 12-4-5-10-6-17-3-2 1-4 3-5 5z" fill="' + p.hairC + '"/>';
+    if (p.beard) s += '<path d="M21.5 30c1 9 5 12 10.5 12s9.5-3 10.5-12c-2 4-5 5-10.5 5s-8.5-1-10.5-5z" fill="' + p.hairC + '" opacity=".9"/>';
+    s += '<circle cx="27.5" cy="28" r="1.2" fill="#1a1a1a"/><circle cx="36.5" cy="28" r="1.2" fill="#1a1a1a"/>';
+    if (p.glasses) s += '<g fill="none" stroke="#1a1a1a" stroke-width="1.1"><circle cx="27.5" cy="28" r="3.6"/><circle cx="36.5" cy="28" r="3.6"/><path d="M31.1 28h1.8"/></g>';
+    return s + '<path d="M29 34.5c1.8 1.2 4.2 1.2 6 0" fill="none" stroke="#1a1a1a" stroke-width="1" stroke-linecap="round" opacity=".7"/>';
+  }
+
+  /* ---- card 1: team -> AI -> reports ---- */
+  const team = [
+    { x: 58, y: 38, name: 'Marco · ufficio offerte' },
+    { x: 104, y: 22, name: 'Giulia · ordini' },
+    { x: 150, y: 40, name: 'Luca · produzione' },
+    { x: 46, y: 92, name: 'Sara · amministrazione' },
+    { x: 146, y: 114, name: 'Paolo · in pausa' },
+  ];
+  const L1 = 'M117,67 C190,67 200,100 244,100', L2 = 'M117,73 C182,73 196,120 244,120';
+  const R1 = 'M396,100 C420,100 424,86 450,86', R2 = 'M396,120 C420,120 424,134 450,134';
+  const rays = [-62, -38, -14, 14, 38, 62].map(a => {
+    const r = d => d * Math.PI / 180;
+    return '<path d="M320,110 L' + (320 + Math.sin(r(a)) * 260) + ',' + (110 - Math.cos(r(a)) * 260) + ' L' + (320 + Math.sin(r(a + 7)) * 260) + ',' + (110 - Math.cos(r(a + 7)) * 260) + 'Z" fill="url(#ibrays)" opacity=".5"/>';
+  }).join('');
+  let flow = '<defs><radialGradient id="ibglow" cx="320" cy="110" r="190" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="var(--ib-raise)" stop-opacity="1"/><stop offset="1" stop-color="var(--ib-raise)" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="ibrays" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ib-line-strong)" stop-opacity=".55"/><stop offset="1" stop-color="var(--ib-line-strong)" stop-opacity="0"/></linearGradient></defs>' +
+    '<rect width="640" height="178" fill="url(#ibglow)"/>' + rays +
+    '<g data-side="left"><rect x="20" y="8" width="170" height="130" fill="transparent"/>' +
+    team.map(m => '<line x1="' + m.x + '" y1="' + m.y + '" x2="104" y2="70" stroke="var(--ib-line-strong)" stroke-dasharray="2 3"/>').join('') +
+    '<rect x="91" y="57" width="26" height="26" rx="5" class="ib-node"/>' + MARK(96, 62, 16) +
+    team.map((m, i) => '<g class="ib-av" tabindex="0" role="img" aria-label="' + m.name + '">' +
+      '<svg x="' + (m.x - 11) + '" y="' + (m.y - 11) + '" width="22" height="22" viewBox="0 0 22 22" overflow="visible"><clipPath id="ibavc' + i + '"><circle cx="11" cy="11" r="11"/></clipPath>' +
+      '<g clip-path="url(#ibavc' + i + ')"><svg width="22" height="22" viewBox="0 0 64 64">' + portrait(i) + '</svg></g><circle cx="11" cy="11" r="10.5" fill="none" stroke="var(--ib-paper)" stroke-width="1.5"/></svg>' +
+      '<circle cx="' + (m.x + 8) + '" cy="' + (m.y + 8) + '" r="2.6" fill="' + (i === 4 ? 'var(--ib-faint)' : '#22c55e') + '" stroke="var(--ib-paper)"' + (i === 4 ? '' : ' class="ib-presence"') + '/>' +
+      '<g class="ib-av-tip" transform="translate(' + m.x + ',' + (m.y - 18) + ')"><rect x="' + (-m.name.length * 2.45 - 6) + '" y="-9" width="' + (m.name.length * 4.9 + 12) + '" height="14" rx="2" fill="var(--ib-inv)"/>' +
+      '<text x="0" y="1" text-anchor="middle" font-size="7.5" fill="var(--ib-inv-ink)" font-family="var(--ib-sans)">' + m.name + '</text></g></g>').join('') + '</g>' +
+    [L1, L2].map((d, i) => '<path d="' + d + '" class="ib-flow' + (i ? ' ib-dash' : '') + '" data-flow="left"/>').join('') +
+    [R1, R2].map((d, i) => '<path d="' + d + '" class="ib-flow' + (i ? ' ib-dash' : '') + '" data-flow="right"/>').join('') +
+    (reduced ? '' : [L1, L2, R1, R2].map((d, i) => '<circle r="2.2" class="ib-pkt"><animateMotion dur="' + (2.2 + (i % 2) * 0.6) + 's" begin="' + (i * 0.35) + 's" repeatCount="indefinite" path="' + d + '"/></circle>').join('')) +
+    '<g transform="translate(244,88)"><rect x="-4" y="-4" width="160" height="52" rx="8" fill="none" stroke="var(--ib-line)"' + (reduced ? '' : ' class="ib-glow"') + '/>' +
+    '<rect width="152" height="44" rx="6" class="ib-node" style="filter:drop-shadow(0 6px 10px rgba(0,0,0,.08))"/>' + MARK(13, 14, 16) +
+    '<text x="36" y="26" font-size="8.5" letter-spacing="1.4" font-weight="600" fill="var(--ib-soft)" font-family="var(--ib-sans)">AI CENTRALIZZATO</text></g>' +
+    '<g data-side="right" id="ib-stack"></g>';
+
+  function stack(n) {
+    let s = '';
+    [2, 1, 0].forEach(k => {
+      s += '<g transform="translate(' + (450 + k * 12) + ',' + (40 - k * 10) + ')" opacity="' + (1 - k * 0.25) + '"><g' + (k === 0 ? ' class="ib-sheet-new"' : '') + '>' +
+        '<rect width="138" height="102" rx="3" fill="var(--ib-raise)" stroke="var(--ib-line-strong)"/>';
+      if (k === 0) {
+        s += '<text x="10" y="16" font-size="7" fill="var(--ib-muted)" font-family="var(--ib-mono)">REPORT #' + n + '</text>' +
+          '<rect x="10" y="24" width="64" height="5" rx="1" fill="var(--ib-ink)" opacity=".75"/><rect x="10" y="33" width="92" height="3" rx="1" fill="var(--ib-line-strong)"/><rect x="10" y="39" width="80" height="3" rx="1" fill="var(--ib-line-strong)"/>' +
+          [18, 26, 14, 30, 22, 34].map((h, j) => '<rect x="' + (12 + j * 13) + '" y="' + (92 - h) + '" width="8" height="' + h + '" fill="var(--ib-ink)" opacity="' + (0.25 + j * 0.12) + '"/>').join('') +
+          '<path d="M92 64h34M92 72h28M92 80h32" stroke="var(--ib-line-strong)" stroke-width="2.5"/>';
+      }
+      s += '</g></g>';
+    });
+    return s;
+  }
+
+  /* ---- card 2: integrations ---- */
+  const tools = ['Sheets', 'Drive', 'Docs', 'Search'];
+  const tiles = [{ x: 66, y: 34 }, { x: 66, y: 116 }, { x: 234, y: 34 }, { x: 234, y: 116 }];
+  const tpath = i => { const t = tiles[i], d = t.x < 150 ? -1 : 1; return 'M' + (150 + d * 17) + ',75 H' + (150 + d * 42) + ' V' + t.y + ' H' + (t.x - d * 15); };
+  const glyph = k => '<g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">' + [
+    '<rect x="-6" y="-6" width="12" height="12" rx="1.5"/><path d="M-6 -2h12M-6 2h12M-1.5 -6v12"/>',
+    '<path d="M-6.5 4 -2 -5h4l4.5 9zm2.4 0h9.2M-2 -5l4.5 9"/>',
+    '<path d="M-4.5 -6.5h6l3 3v10h-9z"/><path d="M-2 0h4.5M-2 3h4.5"/>',
+    '<circle cx="-1" cy="-1" r="4.5"/><path d="M2.4 2.4 6 6"/>'][k] + '</g>';
+  const integ = tiles.map((_, i) => '<path d="' + tpath(i) + '" class="ib-flow" data-tool-path="' + i + '"/>').join('') +
+    '<circle r="2.2" class="ib-pkt" id="ib-tpkt" style="display:none"><animateMotion id="ib-tmotion" dur="1.1s" repeatCount="indefinite" path="' + tpath(0) + '"/></circle>' +
+    '<rect x="133" y="58" width="34" height="34" rx="7" class="ib-node" style="filter:drop-shadow(0 4px 8px rgba(0,0,0,.08))"/>' + MARK(141, 66, 18) +
+    tiles.map((t, i) => '<g class="ib-tool" tabindex="0" role="img" aria-label="' + tools[i] + '" data-tool="' + i + '"><rect x="' + (t.x - 15) + '" y="' + (t.y - 15) + '" width="30" height="30" rx="6" class="ib-node"/>' +
+      '<g transform="translate(' + t.x + ',' + t.y + ')" style="color:var(--ib-ink)">' + glyph(i) + '</g>' +
+      '<text x="' + t.x + '" y="' + (t.y + (t.y < 75 ? -21 : 28)) + '" text-anchor="middle" font-size="8" fill="var(--ib-muted)" font-family="var(--ib-sans)" opacity="0">' + tools[i] + '</text></g>').join('') +
+    '<text x="150" y="112" text-anchor="middle" font-size="7" fill="var(--ib-faint)" font-family="var(--ib-mono)" id="ib-tstatus">4 collegati</text>';
+
+  /* ---- card 3: insights chart ---- */
+  const W = 300, H = 130, vals = [22, 26, 24, 31, 29, 36, 34, 41, 39, 47, 52, 58], split = 8, pad = 14;
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  const pts = vals.map((v, i) => [pad + i / (vals.length - 1) * (W - pad * 2), H - pad - (v - lo) / (hi - lo) * (H - pad * 2)]);
+  let line = '';
+  pts.forEach(([x, y], i) => { if (!i) { line = 'M' + x.toFixed(1) + ',' + y.toFixed(1); return; } const [px, py] = pts[i - 1], cx = (px + x) / 2; line += ' C' + cx.toFixed(1) + ',' + py.toFixed(1) + ' ' + cx.toFixed(1) + ',' + y.toFixed(1) + ' ' + x.toFixed(1) + ',' + y.toFixed(1); });
+  const area = line + ' L' + pts[pts.length - 1][0].toFixed(1) + ',' + (H - pad) + ' L' + pts[0][0].toFixed(1) + ',' + (H - pad) + ' Z';
+  const last = pts[pts.length - 1];
+  const chart = '<defs><linearGradient id="ibarea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ib-ink)" stop-opacity=".12"/><stop offset="1" stop-color="var(--ib-ink)" stop-opacity="0"/></linearGradient></defs>' +
+    [0.25, 0.5, 0.75].map(g => '<line x1="14" x2="' + (W - 14) + '" y1="' + H * g + '" y2="' + H * g + '" stroke="var(--ib-line)"/>').join('') +
+    '<path d="' + area + '" fill="url(#ibarea)"/><path d="' + line + '" fill="none" stroke="var(--ib-ink)" stroke-width="1.4" pathLength="1" class="ib-line-draw" opacity=".85"/>' +
+    '<line x1="' + pts[split][0] + '" x2="' + pts[split][0] + '" y1="10" y2="' + (H - 14) + '" stroke="var(--ib-line-strong)" stroke-dasharray="2 3"/>' +
+    '<text x="' + (pts[split][0] - 4) + '" y="' + (H - 18) + '" text-anchor="end" font-size="7" fill="var(--ib-faint)" font-family="var(--ib-mono)">PREVISIONE</text>' +
+    '<line id="ib-cx" y1="8" y2="' + (H - 14) + '" stroke="var(--ib-ink)" stroke-opacity=".35" style="display:none"/>' +
+    (reduced ? '' : '<circle id="ib-cglow" cx="' + last[0] + '" cy="' + last[1] + '" r="7" fill="var(--ib-ink)" opacity=".15" class="ib-glow"/>') +
+    '<circle id="ib-cdot" r="3.2" fill="var(--ib-raise)" stroke="var(--ib-ink)" stroke-width="1.5"/>' +
+    '<g id="ib-ctip"><rect x="-30" y="-11" width="60" height="15" rx="2" fill="var(--ib-inv)"/><text x="0" y="-1" text-anchor="middle" font-size="7.5" fill="var(--ib-inv-ink)" font-family="var(--ib-mono)"></text></g>';
+
+  const c = window.IB_COPY;
+  root.innerHTML = '<div class="ib-shell"><div class="ib-sec"><div class="ib-reveal" id="ib-reveal">' +
+    '<div class="ib-bento">' +
+    '<div class="ib-frame ib-wide">' + BR + '<div class="ib-card" style="padding:0;overflow:hidden"><svg class="ib-diagram" viewBox="0 0 640 178" role="img" aria-label="' + c.flowAria + '">' + flow + '</svg>' +
+    '<div class="ib-wide-copy" style="padding:0 22px 20px"><div><h3>' + c.a.t + '</h3><p>' + c.a.d + '</p></div><div><h3>' + c.b.t + '</h3><p>' + c.b.d + '</p></div></div></div></div>' +
+    '<div class="ib-frame">' + BR + '<div class="ib-card"><svg class="ib-diagram" viewBox="0 0 300 150" role="group" aria-label="Integrazioni">' + integ + '</svg><div style="margin-top:auto"><h3>' + c.i.t + '</h3><p>' + c.i.d + '</p></div></div></div>' +
+    '<div class="ib-frame" id="ib-insights">' + BR + '<div class="ib-card"><svg class="ib-diagram ib-chart" viewBox="0 0 ' + W + ' ' + (H + 6) + '" role="img" aria-label="' + c.p.t + '">' + chart + '</svg><div style="margin-top:auto"><h3>' + c.p.t + '</h3><p>' + c.p.d + '</p></div></div></div>' +
+    '</div></div></div></div>';
+
+  const $ = id => document.getElementById(id);
+  inView($('ib-reveal'), 0.12, () => $('ib-reveal').dataset.in = 'true');
+  inView($('ib-insights'), 0.3, () => $('ib-insights').dataset.in = 'true');
+
+  // reports keep printing
+  let n = 128;
+  $('ib-stack').innerHTML = stack(n);
+  if (!reduced) inView($('ib-reveal'), 0.12, () => setInterval(() => { $('ib-stack').innerHTML = stack(++n); }, 2800));
+
+  // hovering either side lights its connectors
+  root.querySelectorAll('[data-side]').forEach(g => {
+    const side = g.dataset.side;
+    g.addEventListener('mouseenter', () => root.querySelectorAll('[data-flow="' + side + '"]').forEach(p => p.classList.add('ib-flow-on')));
+    g.addEventListener('mouseleave', () => root.querySelectorAll('[data-flow]').forEach(p => p.classList.remove('ib-flow-on')));
+  });
+
+  // integrations: sync one tool at a time, hover takes over
+  let auto = 0, hover = -1;
+  function setTool() {
+    const on = hover >= 0 ? hover : reduced ? -1 : auto;
+    root.querySelectorAll('[data-tool]').forEach(g => { const me = +g.dataset.tool === on; g.classList.toggle('ib-tool-on', me); g.querySelector('text').setAttribute('opacity', me ? 1 : 0); });
+    root.querySelectorAll('[data-tool-path]').forEach(p => p.classList.toggle('ib-flow-on', +p.dataset.toolPath === on));
+    const pk = $('ib-tpkt');
+    if (pk) { pk.style.display = on >= 0 && !reduced ? '' : 'none'; if (on >= 0) $('ib-tmotion').setAttribute('path', tpath(on)); }
+    $('ib-tstatus').textContent = on >= 0 ? 'sync · ' + tools[on].toLowerCase() : '4 collegati';
+  }
+  root.querySelectorAll('[data-tool]').forEach(g => {
+    const i = +g.dataset.tool, enter = () => { hover = i; setTool(); }, leave = () => { hover = -1; setTool(); };
+    g.addEventListener('mouseenter', enter); g.addEventListener('focus', enter);
+    g.addEventListener('mouseleave', leave); g.addEventListener('blur', leave);
+  });
+  if (!reduced) setInterval(() => { if (hover < 0) { auto = (auto + 1) % 4; setTool(); } }, 1700);
+  setTool();
+
+  // chart: scrub to read each week
+  const svgC = root.querySelector('.ib-chart');
+  function setPoint(h) {
+    const i = h >= 0 ? h : pts.length - 1, p = pts[i];
+    const pct = Math.round((vals[i] - vals[0]) / vals[0] * 100);
+    $('ib-cdot').setAttribute('cx', p[0]); $('ib-cdot').setAttribute('cy', p[1]);
+    $('ib-cx').style.display = h >= 0 ? '' : 'none'; $('ib-cx').setAttribute('x1', p[0]); $('ib-cx').setAttribute('x2', p[0]);
+    if ($('ib-cglow')) $('ib-cglow').style.display = h >= 0 ? 'none' : '';
+    $('ib-ctip').setAttribute('transform', 'translate(' + Math.min(W - 40, Math.max(40, p[0])) + ',' + (p[1] < 34 ? p[1] + 22 : p[1] - 12) + ')');
+    $('ib-ctip').querySelector('text').textContent = (i >= split ? 'prev ' : 'sett ' + (i + 1) + ' ') + (pct >= 0 ? '+' : '') + pct + '%';
+  }
+  svgC.addEventListener('pointermove', e => {
+    const r = svgC.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
+    let best = 0; pts.forEach((q, i) => { if (Math.abs(q[0] - x) < Math.abs(pts[best][0] - x)) best = i; });
+    setPoint(best);
+  });
+  svgC.addEventListener('pointerleave', () => setPoint(-1));
+  setPoint(-1);
+})();
+
+// Hero: the second line cycles through 4 endings.
+(function () {
+  const items = [...document.querySelectorAll('#hero-rotator > span')];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let i = 0;
+  setInterval(() => {
+    const out = items[i]; i = (i + 1) % items.length; const next = items[i];
+    out.classList.remove('is-on'); out.classList.add('is-out'); out.setAttribute('aria-hidden', 'true');
+    next.classList.remove('is-out'); next.classList.add('is-on'); next.removeAttribute('aria-hidden');
+    setTimeout(() => out.classList.remove('is-out'), 650);
+  }, 2800);
+})();
 </script>
 
 </body>

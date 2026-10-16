@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Convertleads — Brand Identity Kit</title>
 <meta name="description" content="Logo, color palette, and typography for the Convertleads brand.">
-<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/favicon-c-32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -74,12 +74,27 @@
     .logo-tiles { grid-template-columns: 1fr; }
     .color-grid { grid-template-columns: 1fr 1fr; }
   }
+  /* Type scale + buttons */
+  .scale { border: 1px solid var(--border); border-radius: 14px; background: var(--card-bg); overflow: hidden; margin-top: 16px; }
+  .scale-row { display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: baseline; padding: 18px 24px; border-top: 1px solid var(--border); }
+  .scale-row:first-child { border-top: 0; }
+  .scale-meta { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .scale-meta b { display: block; color: var(--text); font-size: 13px; }
+  .scale-sample { margin: 0; color: var(--text); overflow-wrap: anywhere; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; border: 1px solid var(--border); border-radius: 14px; background: var(--card-bg); padding: 24px; }
+  .b { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-size: 16px; font-weight: 600; text-decoration: none; }
+  .b-primary { background: var(--accent); color: #fff; border-radius: 9999px; padding: 17px 32px; }
+  .b-outline { color: var(--accent); border: 2px solid var(--accent); border-radius: 9999px; padding: 15px 30px; }
+  .b-wa { background: #1EA952; color: #fff; border-radius: 9999px; padding: 17px 32px; }
+  .b-choice { color: var(--text); border: 2px solid var(--text); border-radius: 12px; padding: 14px 20px; background: #fff; }
+  .kit-section { margin-bottom: 64px; }
+  @media (max-width: 640px) { .scale-row { grid-template-columns: 1fr; gap: 6px; } }
 </style>
 </head>
 <body>
 <main>
   <div class="kit-header">
-    <div class="kit-logo-row"><img src="assets/logo-mark.png" alt="Convertleads logo"><span>Convertleads</span></div>
+    <div class="kit-logo-row"><img src="assets/favicon-c-source.png" alt="Convertleads logo"><span>Convertleads</span></div>
     <h1>Brand Identity Kit</h1>
     <p>Logo, color palette, and typography for Convertleads. For partners, press, and anyone building something with the brand.</p>
   </div>
@@ -88,15 +103,15 @@
     <p class="kit-eyebrow">LOGO</p>
     <h2>Mark &amp; usage</h2>
     <div class="logo-tiles">
-      <div class="logo-tile light"><img src="assets/logo-mark.png" alt="Logo on light background"></div>
-      <div class="logo-tile dark"><img src="assets/logo-mark.png" alt="Logo on dark background"></div>
+      <div class="logo-tile light"><img src="assets/favicon-c-source.png" alt="Logo on light background"></div>
+      <div class="logo-tile dark"><img src="assets/logo-c-light.png" alt="Logo on dark background"></div>
     </div>
     <div class="logo-sizes">
-      <div class="logo-size-item"><img src="assets/favicon-48.png" width="48" height="48" alt="48px"><span>48px</span></div>
-      <div class="logo-size-item"><img src="assets/favicon-32.png" width="32" height="32" alt="32px"><span>32px</span></div>
-      <div class="logo-size-item"><img src="assets/favicon-16.png" width="16" height="16" alt="16px"><span>16px</span></div>
+      <div class="logo-size-item"><img src="assets/favicon-c-48.png" width="48" height="48" alt="48px"><span>48px</span></div>
+      <div class="logo-size-item"><img src="assets/favicon-c-32.png" width="32" height="32" alt="32px"><span>32px</span></div>
+      <div class="logo-size-item"><img src="assets/favicon-c-16.png" width="16" height="16" alt="16px"><span>16px</span></div>
     </div>
-    <p class="kit-note">Keep clear space around the mark equal to at least the width of one pixel block (roughly 10% of the mark's width). Don't recolor the mark, don't place it on backgrounds with less contrast than the two shown above, and don't use it below 16px, it stops reading as a "C" past that point.</p>
+    <p class="kit-note">The mark is the "C" of the halftone wordmark in the site footer: Inter Tight 800, printed as dots. Use the dark version (#222222) on light backgrounds and the white version on dark ones. Keep clear space around it equal to about 10% of its width. Don't recolor it with other colors and don't use it below 16px.</p>
   </section>
 
   <section class="kit-section">
@@ -108,6 +123,7 @@
       <div class="color-card"><div class="color-swatch" style="background:#6B6B6B"></div><div class="color-info"><p class="color-name">Muted</p><p class="color-hex">#6B6B6B</p></div></div>
       <div class="color-card"><div class="color-swatch" style="background:#F8F8F8;border-bottom:1px solid #E4E4E4"></div><div class="color-info"><p class="color-name">Background</p><p class="color-hex">#F8F8F8</p></div></div>
       <div class="color-card"><div class="color-swatch" style="background:#E4E4E4"></div><div class="color-info"><p class="color-name">Border</p><p class="color-hex">#E4E4E4</p></div></div>
+      <div class="color-card"><div class="color-swatch" style="background:#1EA952"></div><div class="color-info"><p class="color-name">WhatsApp (button only)</p><p class="color-hex">#1EA952</p></div></div>
       <div class="color-card"><div class="color-swatch" style="background:linear-gradient(150deg,#43181D 0%,#221512 52%,#17120F 100%)"></div><div class="color-info"><p class="color-name">Dark panel</p><p class="color-hex">#43181D → #17120F</p></div></div>
     </div>
   </section>
@@ -125,16 +141,39 @@
       <p class="type-sample">Aa Bb Cc 123</p>
       <div class="type-weights"><span>Inter Tight 300</span><span>400</span><span>500</span><span>600</span><span>700</span></div>
     </div>
+    <div class="scale">
+      <div class="scale-row"><div class="scale-meta"><b>H1 · hero</b>48px / 500 · mobile 32px</div><p class="scale-sample" style="font-size:48px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">Usa l'AI in azienda.</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>H2 · section title</b>40px / 500 · mobile 30px</div><p class="scale-sample" style="font-size:40px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">Scegli da dove partire.</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>H3 · card title</b>22px / 600 · mobile 20px</div><p class="scale-sample" style="font-size:22px;font-weight:600">Previsioni dai tuoi dati</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>Body</b>16px / 400 · line 1.6</div><p class="scale-sample" style="font-size:16px;line-height:1.6;color:#6B6B6B">Sono il tuo responsabile AI esterno.</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>Small · card text</b>14px / 400</div><p class="scale-sample" style="font-size:14px;color:#6B6B6B">Legge i dati e scrive report, offerte e risposte.</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>Eyebrow · labels</b>13px / 600 · caps · 0.08em</div><p class="scale-sample" style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#FA5D29">Come funziona</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>Caption</b>12px / 400–600</div><p class="scale-sample" style="font-size:12px;color:#6B6B6B">Una tantum</p></div>
+      <div class="scale-row"><div class="scale-meta"><b>Button</b>16px / 600</div><p class="scale-sample" style="font-size:16px;font-weight:600">Prenota una Chiamata</p></div>
+    </div>
+  </section>
+
+  <section class="kit-section">
+    <p class="kit-eyebrow">COMPONENTS</p>
+    <h2>Buttons</h2>
+    <div class="btn-row">
+      <span class="b b-primary">Primary CTA</span>
+      <span class="b b-outline">Secondary CTA</span>
+      <span class="b b-wa">WhatsApp</span>
+      <span class="b b-choice">Quiz answer</span>
+    </div>
+    <p class="kit-note">CTAs are full pills. Quiz answers are black rounded rectangles (12px radius), so a choice never looks like a call to action. WhatsApp green appears only on the WhatsApp button.</p>
   </section>
 
   <section class="kit-section">
     <p class="kit-eyebrow">DOWNLOADS</p>
     <h2>Assets</h2>
     <div class="download-list">
-      <a class="download-row" href="assets/logo-mark.png" download><span>Logo mark — PNG, 512×512</span><span class="dl-arrow">↓</span></a>
-      <a class="download-row" href="assets/favicon-48.png" download><span>Favicon — 48×48</span><span class="dl-arrow">↓</span></a>
-      <a class="download-row" href="assets/favicon-32.png" download><span>Favicon — 32×32</span><span class="dl-arrow">↓</span></a>
-      <a class="download-row" href="assets/apple-touch-icon.png" download><span>Apple touch icon — 180×180</span><span class="dl-arrow">↓</span></a>
+      <a class="download-row" href="assets/favicon-c-source.png" download><span>Logo mark, dark — PNG, 198×198</span><span class="dl-arrow">↓</span></a>
+      <a class="download-row" href="assets/logo-c-light.png" download><span>Logo mark, white — PNG, 198×198</span><span class="dl-arrow">↓</span></a>
+      <a class="download-row" href="assets/favicon-c-48.png" download><span>Favicon — 48×48</span><span class="dl-arrow">↓</span></a>
+      <a class="download-row" href="assets/favicon-c-32.png" download><span>Favicon — 32×32</span><span class="dl-arrow">↓</span></a>
+      <a class="download-row" href="assets/apple-touch-icon-c.png" download><span>Apple touch icon — 180×180</span><span class="dl-arrow">↓</span></a>
     </div>
   </section>
 </main>
