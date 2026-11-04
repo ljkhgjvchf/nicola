@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"Mgfu9YcVNwYxqfJi7V1VcR",debug:true});</script>
 <title>Convertleads — AI Revenue Audit for Your Business</title>
 <meta name="description" content="A full report of ready-to-install AI opportunities, plus one automation already built and running. Fixed price €499, at least 3 opportunities or it's free.">
 <link rel="canonical" href="https://www.convertleads.xyz/en">
@@ -337,7 +338,7 @@
       <button class="lang-btn active" data-lang="en">EN</button>
       <a class="lang-btn" href="/it">IT</a>
     </div>
-    <a class="btn btn-primary header-cta" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Contact Me</a>
+    <a class="btn btn-primary header-cta" href="https://cal.com/nicoladadalto/30min" data-cal-link="nicoladadalto/30min" target="_blank" rel="noopener">Contact Me</a>
   </div>
 </header>
 
@@ -357,7 +358,7 @@
     <h1 class="hero-headline">Integrate AI into your business. -50% costs and +100% sales.</h1>
     <p class="hero-sub">Book the consultation. You'll know exactly where AI saves or makes you money, and walk out with one already built and running.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Book a Video Call</a>
+      <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" data-cal-link="nicoladadalto/30min" target="_blank" rel="noopener">Book a Video Call</a>
       <a class="btn btn-outline" id="whatsapp-link" href="#" target="_blank" rel="noopener">Message Me on WhatsApp</a>
     </div>
   </div>
@@ -609,7 +610,7 @@
       <h2>Ready to see where AI can grow your revenue?</h2>
       <p>One session, a full report, a live demo — €499. At least 3 real opportunities, or it's free.</p>
       <div class="final-cta-buttons">
-        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" target="_blank" rel="noopener">Book a Video Call</a>
+        <a class="btn btn-primary" href="https://cal.com/nicoladadalto/30min" data-cal-link="nicoladadalto/30min" target="_blank" rel="noopener">Book a Video Call</a>
         <a class="btn btn-outline light" id="whatsapp-link-2" href="#" target="_blank" rel="noopener">Message Me on WhatsApp</a>
       </div>
     </div>
@@ -713,5 +714,18 @@ ticker.innerHTML = phrases.map(p => '<span>' + p + '</span>').join('');
 </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
 
+<script>
+// Cal.com popup on every [data-cal-link] button, so the page sees the booking and fires the OpenAI pixel.
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", { origin: "https://cal.com" });
+let bookingTracked = false;
+const trackBooking = function () {
+  if (bookingTracked) return;
+  bookingTracked = true;
+  oaiq("measure", "appointment_scheduled", { type: "customer_action" });
+};
+Cal("on", { action: "bookingSuccessfulV2", callback: trackBooking });
+Cal("on", { action: "bookingSuccessful", callback: trackBooking });
+</script>
 </body>
 </html>
