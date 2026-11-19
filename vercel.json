@@ -10,6 +10,9 @@
   "rewrites": [
     { "source": "/dashboard", "destination": "https://convertleads-dashboard-rho.vercel.app/dashboard" },
     { "source": "/dashboard/:path*", "destination": "https://convertleads-dashboard-rho.vercel.app/dashboard/:path*" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/blog", "destination": "/index.html" },
+    { "source": "/blog/:slug", "destination": "/index.html" },
+    { "source": "/case-study/:slug", "destination": "/index.html" },
+    { "source": "/tools", "destination": "/index.html" }
   ]
 }

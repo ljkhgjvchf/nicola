@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina non trovata · Convertleads</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/ai-landing/assets/favicon-c-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/ai-landing/assets/favicon-c-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/ai-landing/assets/apple-touch-icon-c.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<style>
+  /* Convertleads brand kit: www.convertleads.xyz/ai-landing/brand-kit.html */
+  :root { --bg: #F8F8F8; --text: #222222; --muted: #6B6B6B; --accent: #FA5D29; --card-bg: #FFFFFF; --border: #E4E4E4; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter Tight', -apple-system, system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+  body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+  a { color: inherit; text-decoration: none; }
+
+  .top { display: flex; align-items: center; padding: 20px 24px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 17px; }
+  .brand img { width: 26px; height: 26px; }
+
+  main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px 48px; text-align: center; }
+  /* "404" printed as dots; faded toward the bottom like the masked headline in the template */
+  .digits { position: relative; width: min(760px, 100%); height: clamp(150px, 30vw, 300px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 25%, transparent 92%); mask-image: linear-gradient(to bottom, #000 25%, transparent 92%); }
+  .halftone canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  h1 { margin: -14px 0 0; font-size: 22px; font-weight: 600; position: relative; }
+  p.lead { margin: 10px 0 0; max-width: 380px; font-size: 16px; line-height: 1.6; color: var(--muted); }
+  .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 22px; border-radius: 999px; font-size: 16px; font-weight: 600; transition: transform .15s ease, filter .15s ease, background-color .15s ease; }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 18px; height: 18px; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { filter: brightness(1.06); }
+  .btn-secondary { background: var(--card-bg); border: 1px solid var(--border); }
+  .btn-secondary:hover { background: #f1f1f1; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* footer wordmark, same as the site footer */
+  .wordmark { position: relative; width: 100%; height: clamp(64px, 11vw, 200px); overflow: hidden; }
+  .foot { padding: 14px 24px 20px; text-align: center; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/"><img src="/ai-landing/assets/favicon-c-source.png" alt="">Convertleads</a>
+  </header>
+
+  <main>
+    <div class="digits halftone" id="ht-404" aria-hidden="true"><canvas></canvas></div>
+    <h1 id="t-title">Pagina non trovata</h1>
+    <p class="lead" id="t-lead">Questa pagina non esiste o è stata spostata.</p>
+    <div class="actions">
+      <a class="btn btn-primary" id="t-home" href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+        <span>Torna alla home</span>
+      </a>
+      <a class="btn btn-secondary" id="t-explore" href="/dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>
+        <span>Esplora la dashboard</span>
+      </a>
+    </div>
+  </main>
+
+  <div class="wordmark halftone" id="ht-word" aria-hidden="true"><canvas></canvas></div>
+  <div class="foot">© 2026 Convertleads</div>
+
+<script>
+// English copy for visitors on /en/... or with a non-Italian browser.
+(function () {
+  const en = location.pathname.startsWith('/en') || !/^it\b/i.test(navigator.language || 'it');
+  if (!en) return;
+  document.documentElement.lang = 'en';
+  document.title = 'Page not found · Convertleads';
+  document.getElementById('t-title').textContent = 'Page not found';
+  document.getElementById('t-lead').textContent = "This page doesn't exist or has moved.";
+  const home = document.getElementById('t-home');
+  home.href = '/en'; home.querySelector('span').textContent = 'Back to home';
+  document.getElementById('t-explore').querySelector('span').textContent = 'Explore the dashboard';
+})();
+
+// Halftone text, same effect as the site footer: dots part around the pointer,
+// warm toward the accent, and ripple on click. `crop` sinks the word below the
+// bottom edge like the footer; omit it to centre the text.
+function halftone(root, WORD, opts) {
+  const canvas = root.querySelector('canvas'), ctx = canvas.getContext('2d');
+  const RADIUS = opts.radius || 80, CROP = opts.crop;
+  let GAP = 6;
+  const css = getComputedStyle(document.documentElement);
+  const BG = css.getPropertyValue('--bg').trim(), INK = css.getPropertyValue('--text').trim();
+  const hex = h => { h = h.replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)); };
+  const ink = hex(INK), warm = hex(css.getPropertyValue('--accent').trim());
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let w = 0, h = 0, dpr = 1, px = -1e5, py = -1e5, raf = 0, visible = true, awake = true;
+  let ring = { x: 0, y: 0, t: -1 }, dots = new Float32Array(0), count = 0;
+
+  function layout() {
+    const r = root.getBoundingClientRect();
+    w = Math.max(1, Math.round(r.width)); h = Math.max(1, Math.round(r.height));
+    GAP = w < 600 ? (opts.gapSmall || 3) : (opts.gap || 6);
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    const mask = document.createElement('canvas'); mask.width = w; mask.height = h;
+    const m = mask.getContext('2d', { willReadFrequently: true });
+    const face = "800 100px 'Inter Tight', Inter, Arial, sans-serif";
+    m.font = face;
+    let fit = (w * 0.98 / m.measureText(WORD).width) * 100;
+    if (CROP === undefined) fit = Math.min(fit, h * 1.25); // centred text must also fit the height
+    m.font = face.replace('100px', fit + 'px');
+    const box = m.measureText(WORD), cap = box.actualBoundingBoxAscent || fit * 0.72;
+    const y = CROP === undefined ? (h + cap) / 2 : h + cap * CROP;
+    m.fillText(WORD, (w - box.width) / 2, y);
+    const img = m.getImageData(0, 0, w, h).data, tmp = [];
+    for (let gy = 0; gy < Math.ceil(h / GAP); gy++) for (let gx = 0; gx < Math.ceil(w / GAP); gx++) {
+      let sum = 0;
+      for (let sy = 0; sy < 3; sy++) for (let sx = 0; sx < 3; sx++) {
+        const x = Math.min(w - 1, Math.floor(gx * GAP + (sx + .5) * GAP / 3));
+        const yy = Math.min(h - 1, Math.floor(gy * GAP + (sy + .5) * GAP / 3));
+        sum += img[(yy * w + x) * 4 + 3];
+      }
+      const cov = sum / (9 * 255);
+      if (cov < .06) continue;
+      const hx = gx * GAP + GAP / 2, hy = gy * GAP + GAP / 2;
+      tmp.push(hx, hy, 0, 0, hx, hy, Math.sqrt(cov) * GAP * .56);
+    }
+    dots = new Float32Array(tmp); count = tmp.length / 7; awake = true;
+  }
+
+  function draw(now) {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = BG; ctx.fillRect(0, 0, w, h);
+    const r = reduced ? 0 : RADIUS, age = ring.t < 0 ? 1e9 : now - ring.t, ringR = age * .9;
+    let moving = false;
+    for (let i = 0; i < count; i++) {
+      const j = i * 7, hx = dots[j + 4], hy = dots[j + 5];
+      let x = dots[j], y = dots[j + 1], vx = dots[j + 2], vy = dots[j + 3];
+      if (!reduced) {
+        if (age < 900) {
+          const dx = hx - ring.x, dy = hy - ring.y, d = Math.hypot(dx, dy) + .001;
+          const band = 1 - Math.min(1, Math.abs(d - ringR) / 26);
+          if (band > 0) { const f = band * 3.2 * (1 - age / 900); vx += dx / d * f; vy += dy / d * f; }
+        }
+        const dx = x - px, dy = y - py, d2 = dx * dx + dy * dy;
+        if (d2 < r * r) { const d = Math.sqrt(d2) + .001, f = (1 - d / r) * 2.6; vx += dx / d * f; vy += dy / d * f; }
+        vx = (vx + (hx - x) * .05) * .84; vy = (vy + (hy - y) * .05) * .84;
+        x += vx; y += vy;
+        if (Math.abs(vx) + Math.abs(vy) > .02 || Math.abs(x - hx) + Math.abs(y - hy) > .05) moving = true;
+        else { x = hx; y = hy; vx = 0; vy = 0; }
+        dots[j] = x; dots[j + 1] = y; dots[j + 2] = vx; dots[j + 3] = vy;
+      }
+      const k = Math.min(1, Math.hypot(x - hx, y - hy) / 28);
+      ctx.fillStyle = k > .02 ? 'rgb(' + ink.map((c, n) => Math.round(c + (warm[n] - c) * k)).join(',') + ')' : INK;
+      ctx.beginPath(); ctx.arc(x, y, dots[j + 6], 0, 6.2832); ctx.fill();
+    }
+    awake = moving || age < 900 || px > -1e4;
+  }
+
+  function loop(now) { raf = 0; if (!visible) return; draw(now); if (awake) raf = requestAnimationFrame(loop); }
+  function wake() { awake = true; if (!raf && visible) raf = requestAnimationFrame(loop); }
+  const local = e => { const b = canvas.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
+  root.addEventListener('pointermove', e => { [px, py] = local(e); wake(); });
+  root.addEventListener('pointerleave', () => { px = py = -1e5; wake(); });
+  root.addEventListener('pointerdown', e => { if (reduced) return; const [x, y] = local(e); ring = { x, y, t: performance.now() }; wake(); });
+  new ResizeObserver(() => { layout(); wake(); }).observe(root);
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) wake(); }).observe(root);
+  document.fonts && document.fonts.ready.then(() => { layout(); wake(); });
+  layout(); draw(performance.now()); wake();
+  return { ripple(x, y) { if (!reduced) { ring = { x, y, t: performance.now() }; wake(); } } };
+}
+
+const big = halftone(document.getElementById('ht-404'), '404', { radius: 110, gap: 7, gapSmall: 5 });
+halftone(document.getElementById('ht-word'), 'Convertleads', { crop: 0.2 });
+// one ripple on arrival, so the page feels alive before anyone moves the mouse
+document.fonts && document.fonts.ready.then(() => setTimeout(() => {
+  const r = document.getElementById('ht-404').getBoundingClientRect();
+  big.ripple(r.width / 2, r.height / 2);
+}, 350));
+</script>
+</body>
+</html>
