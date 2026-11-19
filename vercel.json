@@ -8,6 +8,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/dashboard", "destination": "https://convertleads-dashboard-rho.vercel.app/dashboard" },
+    { "source": "/dashboard/:path*", "destination": "https://convertleads-dashboard-rho.vercel.app/dashboard/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
